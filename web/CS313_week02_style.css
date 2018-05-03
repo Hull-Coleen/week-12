@@ -1,7 +1,34 @@
-div:hover {
+.bold:hover {
    
 	font-weight: bold;
 }
-div#dOne{
+div#div1{
 	color:blue;
+	text-align: center;
+	font-size: 160%;
+	background-color: Fuchsia;
 }
+div#div2{
+	color:red;
+	text-align: center;
+	background-color: LightSkyBlue;
+}
+div#div3{
+	color:green;
+	text-align: center;
+	font-size: 120%;
+	background-color: DeepSkyBlue;
+	//background-size: 100% 100%;
+}
+h1 {
+	text-align: center;
+}
+
+.col-md-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  
+}
+
