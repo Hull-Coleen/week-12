@@ -1,0 +1,38 @@
+body {
+  background-color: #ccffff;
+  font-size: 30px;
+}
+img:hover
+ {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+h1 {
+	text-align: center;
+	background-color: #00ffff;
+	//background-color: #99ffff;
+    font-family: Comic Sans MS;
+	//color: white;
+	}
+p {
+	text-align: center;
+}
+div#time {
+	text-align: center;
+}
+.carousel img {
+    max-height: 425px;
+	//margin-left: 75px;
+    //margin-right: 75px;
+	margin: 0 auto;
+	width: 50%;
+}
+.container-fluid {
+	background-color: #ccfff;
+}

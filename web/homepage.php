@@ -16,22 +16,90 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" > </script>
 
 <script type="text/javascript" src="CS313_week02js.js"></script>
-<link rel="stylesheet" type="text/css" href="CS313_week02_style.css">
+<link rel="stylesheet" type="text/css" href="homepage_style.css">
 
 </head>
 <body > 
-   <img class="img-responsive" src="/Mom.jpg" alt="Me" style="max-height:220px">
-   <?php
-   echo "hello World";
-   ?>
-   
-   <?php
-   echo "Hello World!";
-   
-   ?>
-   <?php
-   date_default_timezone_set("America/New_York");
-   echo "The time is " . date("h:i:sa");
-   ?>
+    <h1>Coleen Hull</h1><br><br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4"> 
+	    <p>About Me</p>
+	  </div>
+      <div class="col-md-4">
+        <img class="img-responsive" src="/C:/Users/chhul/Pictures/Mom.jpg" alt="Me"style="max-height:420px" >
+      </div>
+      <div class="col-md-4">
+        
+      <!-- </div>
+    </div>
+  </div> -->
+  <!-- <div class="container"> -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+		<li data-target="#myCarousel" data-slide-to="5"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/C:/Users/chhul/Pictures/Ashley.jpg" alt="Los Angeles" style="width:80%;">
+        </div>
+
+        <div class="carousel-item">
+          <img src="/C:/Users/chhul/Pictures/Katelynn3.jpg" alt="Chicago" style="width:80%;">
+        </div>
+    
+        <div class="carousel-item">
+          <img src="/C:/Users/chhul/Pictures/Kristine.jpg" alt="New york" style="width:80%;">
+        </div>
+		<div class="carousel-item">
+          <img src="/C:/Users/chhul/Pictures/Scott2.jpg" alt="Chicago" style="width:80%;">
+        </div>
+    
+        <div class="carousel-item">
+          <img src="/C:/Users/chhul/Pictures/Kristine.jpg" alt="New york" style="width:80%;">
+        </div>
+		<div class="carousel-item">
+          <img src="/C:/Users/chhul/Pictures/Kristine.jpg" alt="New york" style="width:80%;">
+        </div>
+		
+      </div>
+	  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+      <!-- Left and right controls -->
+     <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div>
+  </div>
+  </div>
+  </div>
+
+ 
+   <br><br>
+   <div id="time">
+     <?php
+     date_default_timezone_set("America/New_York");
+     echo "The time is " . date("h:i:sa");
+     ?>
+   </div>
 </body>
 </html>
