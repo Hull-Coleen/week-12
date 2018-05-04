@@ -9,12 +9,12 @@ p#Me:hover {
 	
 }
 .carousel-indicators {
-  bottom:-50px;
+  bottom:-10px;
   background-color: #00ffff;
 }
 
 .carousel-inner {
-   margin-bottom:50px;
+   margin-bottom:10px;
 }
 img:hover
  {
@@ -49,11 +49,12 @@ div#time:hover {
 .carousel img {
     max-height: 425px;
 	min-height: 425px;
-	//margin: 10px;
 	margin: 0 auto;
 	
 }
 p#name {
-	margin-bottom: 0px;
+	//margin-bottom: 0px;
+	font-family: ;
+	font-size: 80%;
 }
 
