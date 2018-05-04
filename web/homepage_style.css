@@ -28,9 +28,15 @@ p {
 }
 div#time {
 	text-align: center;
+	color: green;
+	
+}
+div#time:hover {
+	color :red;
 }
 .carousel img {
     max-height: 425px;
+	min-height: 425px;
 	margin: 0 auto;
 	//width: 50%;
 }
