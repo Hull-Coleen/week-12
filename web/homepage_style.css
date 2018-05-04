@@ -2,6 +2,9 @@ body {
   background-color: #ccffff;
   font-size: 30px;
 }
+p#Me:hover {
+	color: green;
+}
 img:hover
  {
     opacity: 0.5;
@@ -28,11 +31,6 @@ div#time {
 }
 .carousel img {
     max-height: 425px;
-	//margin-left: 75px;
-    //margin-right: 75px;
 	margin: 0 auto;
-	width: 50%;
-}
-.container-fluid {
-	background-color: #ccfff;
+	//width: 50%;
 }
