@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <script type="text/javascript" src="CS313_week02js.js"></script>
+ <script type="text/javascript" src="homepageJs.js"></script>
 <link rel="stylesheet" type="text/css" href="homepage_style.css">
 </head>
 <body > 
@@ -33,7 +33,7 @@
 		</script>
 	  </div>
       <div class="col-md-4">
-        <img class="img-responsive" src="C:\Users\chhul\Pictures/Mom.jpg" alt="Me"style="max-height:425px" >
+        <img class="img-responsive" src="/Mom.jpg" alt="Me"style="max-height:425px" >
       </div>
       <div class="col-md-4">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -51,42 +51,42 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img src="C:\Users\chhul\Pictures/Kristine.jpg" alt="Los Angeles" style="width:70%;">
+            <img src="/Kristine.jpg" alt="Los Angeles" style="width:70%;">
             <div>
 		      <p>Kristine</p>
 			</div>
 		  </div>
 
           <div class="item">
-            <img src="C:\Users\chhul\Pictures/Ashley.jpg" alt="Chicago" style="width:70%;">
+            <img src="/Ashley.jpg" alt="Chicago" style="width:70%;">
 		    <div>
 		      <p>Ashley</p>
 		    </div>
           </div>
     
           <div class="item">
-            <img src="C:\Users\chhul\Pictures/Katelynn3.jpg" alt="New york" style="width:70%;">
+            <img src="/Katelynn3.jpg" alt="New york" style="width:70%;">
 		    <div>
 		      <p>Katelynn</p>
 			</div>
           </div>
 		  
 		  <div class="item">
-            <img src="C:\Users\chhul\Pictures/Scott1.JPG" alt="Chicago" style="width:70%;">
+            <img src="/Scott1.JPG" alt="Chicago" style="width:70%;">
 		    <div>
 		      <p>Scott</p>
 			</div>
           </div>
     
           <div class="item">
-            <img src="C:\Users\chhul\Pictures/Kristine.jpg" alt="New york" style="width:70%;">
+            <img src="/Kristine.jpg" alt="New york" style="width:70%;">
 		    <div>
 		      <p>Sara</p>
 			</div>
           </div>
 		
 		  <div class="item">
-            <img src="C:\Users\chhul\Pictures/Kristine.jpg" alt="New york" style="width:70%;">
+            <img src="/Kristine.jpg" alt="New york" style="width:70%;">
 		    <div>
 		      <p>Emily</p>
 			</div>
