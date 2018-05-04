@@ -27,7 +27,7 @@
 	    <p>About Me</p>
 	  </div>
       <div class="col-md-4">
-        <img class="img-responsive" src="/web/Mom.jpg" alt="Me"style="max-height:420px" >
+        <img class="img-responsive" src="/Mom.jpg" alt="Me"style="max-height:420px" >
       </div>
       <div class="col-md-4">
         
