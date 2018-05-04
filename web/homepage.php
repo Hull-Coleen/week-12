@@ -54,7 +54,7 @@
 		  <div class="item active">
             <img src="/Jared.jpg" alt="Los Angeles" style="width:70%;">
             <div>
-		      <p>Kristine</p>
+		      <p>Jared</p>
 			</div>
 		  </div>
 
@@ -87,14 +87,14 @@
           </div>
     
           <div class="item">
-            <img src="/Sara.jpg" alt="New york" style="width:70%;">
+            <img src="/Sara.JPG" alt="New york" style="width:70%;">
 		    <div>
 		      <p>Sara</p>
 			</div>
           </div>
 		
 		  <div class="item">
-            <img src="/Emily.jpg" alt="New york" style="width:70%;">
+            <img src="/Emily.JPG" alt="New york" style="width:70%;">
 		    <div>
 		      <p>Emily</p>
 			</div>
