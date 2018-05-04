@@ -22,6 +22,10 @@
 <body > 
    <img class="img-responsive" src="/web/Mom.jpg" alt="Me" style="max-height:220px">
    <?php
+   echo "hello World";
+   ?>
+   
+   <?php
    echo "Hello World!";
    ?>
 </body>
