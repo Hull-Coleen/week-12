@@ -27,7 +27,7 @@
 	    <p>About Me</p>
 	  </div>
       <div class="col-md-4">
-        <img class="img-responsive" src="/C:/Users/chhul/Pictures/Mom.jpg" alt="Me"style="max-height:420px" >
+        <img class="img-responsive" src="/web/Mom.jpg" alt="Me"style="max-height:420px" >
       </div>
       <div class="col-md-4">
         
@@ -49,25 +49,25 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/C:/Users/chhul/Pictures/Ashley.jpg" alt="Los Angeles" style="width:80%;">
+          <img src="/Ashley.jpg" alt="Los Angeles" style="width:80%;">
         </div>
 
         <div class="carousel-item">
-          <img src="/C:/Users/chhul/Pictures/Katelynn3.jpg" alt="Chicago" style="width:80%;">
+          <img src="/Katelynn3.jpg" alt="Chicago" style="width:80%;">
         </div>
     
         <div class="carousel-item">
-          <img src="/C:/Users/chhul/Pictures/Kristine.jpg" alt="New york" style="width:80%;">
+          <img src="/Kristine.jpg" alt="New york" style="width:80%;">
         </div>
 		<div class="carousel-item">
-          <img src="/C:/Users/chhul/Pictures/Scott2.jpg" alt="Chicago" style="width:80%;">
+          <img src="/Scott2.jpg" alt="Chicago" style="width:80%;">
         </div>
     
         <div class="carousel-item">
-          <img src="/C:/Users/chhul/Pictures/Kristine.jpg" alt="New york" style="width:80%;">
+          <img src="/Kristine.jpg" alt="New york" style="width:80%;">
         </div>
 		<div class="carousel-item">
-          <img src="/C:/Users/chhul/Pictures/Kristine.jpg" alt="New york" style="width:80%;">
+          <img src="/Kristine.jpg" alt="New york" style="width:80%;">
         </div>
 		
       </div>
