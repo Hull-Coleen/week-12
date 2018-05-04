@@ -8,6 +8,14 @@ p#Me:hover {
 	//text-align: center;
 	
 }
+.carousel-indicators {
+  bottom:-50px;
+  background-color: #00ffff;
+}
+
+.carousel-inner {
+   margin-bottom:50px;
+}
 img:hover
  {
     opacity: 0.5;
