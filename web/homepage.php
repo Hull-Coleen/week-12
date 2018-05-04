@@ -46,11 +46,19 @@
 		  <li data-target="#myCarousel" data-slide-to="3"></li>
           <li data-target="#myCarousel" data-slide-to="4"></li>
 		  <li data-target="#myCarousel" data-slide-to="5"></li>
+		  <li data-target="#myCarousel" data-slide-to="6"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-          <div class="item active">
+		  <div class="item active">
+            <img src="/Jared.jpg" alt="Los Angeles" style="width:70%;">
+            <div>
+		      <p>Kristine</p>
+			</div>
+		  </div>
+
+          <div class="item">
             <img src="/Kristine.jpg" alt="Los Angeles" style="width:70%;">
             <div>
 		      <p>Kristine</p>
@@ -79,14 +87,14 @@
           </div>
     
           <div class="item">
-            <img src="/Kristine.jpg" alt="New york" style="width:70%;">
+            <img src="/Sara.jpg" alt="New york" style="width:70%;">
 		    <div>
 		      <p>Sara</p>
 			</div>
           </div>
 		
 		  <div class="item">
-            <img src="/Kristine.jpg" alt="New york" style="width:70%;">
+            <img src="/Emily.jpg" alt="New york" style="width:70%;">
 		    <div>
 		      <p>Emily</p>
 			</div>
