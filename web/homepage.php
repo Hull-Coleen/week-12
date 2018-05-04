@@ -51,18 +51,18 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="/Ashley.jpg" alt="Los Angeles" style="width:80%;">
+          <img src="/Kristine.jpg" alt="Los Angeles" style="width:80%;">
         </div>
 
         <div class="item">
-          <img src="/Katelynn3.jpg" alt="Chicago" style="width:80%;">
+          <img src="/Ashley.jpg" alt="Chicago" style="width:80%;">
         </div>
     
         <div class="item">
-          <img src="/Kristine.jpg" alt="New york" style="width:80%;">
+          <img src="/Katelynn3.jpg" alt="New york" style="width:80%;">
         </div>
 		<div class="item">
-          <img src="/Scott2.jpg" alt="Chicago" style="width:80%;">
+          <img src="/Scott1.JPG" alt="Chicago" style="width:80%;">
         </div>
     
         <div class="item">
