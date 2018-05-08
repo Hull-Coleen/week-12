@@ -41,9 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["major"])) {
-    $majorrErr = "Major is required";
+    $majorErr = "Major is required";
   } else {
-    $majorr = test_input($_POST["majorr"]);
+    $major = test_input($_POST["major"]);
   }
 }
 
