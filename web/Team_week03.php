@@ -11,7 +11,7 @@
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $majorErr = "";
-$name = $email = $major = $comment = "";
+$name = $email = $major = $comment = $continent = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -45,6 +45,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $major = test_input($_POST["major"]);
   }
+  if (empty($_POST["continent"])) {
+	  continent = "";
+  }
+  else {
+	  $N = count("continent");
+      for($i=0; $i < $N; $i++) {
+        $temp = $continent[i];
+      }
+	  $continent = $temp;
+  }
+
 }
 
 function test_input($data) {
@@ -77,6 +88,15 @@ function test_input($data) {
 	  echo "checked";?> value="CIT"> Computer Information Technology 
   <span class="error">* <?php echo $majorErr;?></span>
   <br><br>
+  Continents:
+  <input type="checkbox" name="continent[]" value="NA">North American<br>
+  <input type="checkbox" name="continent[]" value="SA">South America<br>
+  <input type="checkbox" name="continent[]" value="EU">Europe<br>
+  <input type="checkbox" name="continent[]" value="AS">Asia<br>
+  <input type="checkbox" name="continent[]" value="AU">Australia<br>
+  <input type="checkbox" name="continent[]" value="AF">Africa<br>
+  <input type="checkbox" name="continent[]" value="AN">Antarctica<br
+
   <input type="submit" name="submit" value="Submit">  
 </form>
 
@@ -89,6 +109,8 @@ echo "<br>";
 echo $comment;
 echo "<br>";
 echo $major;
+echo "<br>";
+echo $continent;
 ?>
 
 </body>
