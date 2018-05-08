@@ -84,7 +84,7 @@ function test_input($data) {
 	  echo "checked";?> value="CIT"> Computer Information Technology 
   <span class="error">* <?php echo $majorErr;?></span>
   <br><br>
-  
+   Continents:<br>
   <?php
   $continents = array("NA" => "North Amercian", "SA" => "South America", "EU" => "Europe", "AS" =>  "Asia", "AU" => "Australia", "AF" => "Africa", "AN" => "Antarctica");
   foreach($continents as $key => $value) {
@@ -95,15 +95,8 @@ function test_input($data) {
   
   
   ?>
-  Continents:<br>
-  <input type="checkbox" name="continent[]" value="NA">North American<br>
-  <input type="checkbox" name="continent[]" value="SA">South America<br>
-  <input type="checkbox" name="continent[]" value="EU">Europe<br>
-  <input type="checkbox" name="continent[]" value="AS">Asia<br>
-  <input type="checkbox" name="continent[]" value="AU">Australia<br>
-  <input type="checkbox" name="continent[]" value="AF">Africa<br>
-  <input type="checkbox" name="continent[]" value="AN">Antarctica<br><br><br>
-
+ 
+  
   <input type="submit" name="submit" value="Submit">  
 </form>
 
