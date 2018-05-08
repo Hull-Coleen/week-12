@@ -88,7 +88,7 @@ function test_input($data) {
   <?php
   $continents = array("NA" => "North Amercian", "SA" => "South America", "EU" => "Europe", "AS" =>  "Asia", "AU" => "Australia", "AF" => "Africa", "AN" => "Antarctica");
   foreach($continents as $key => $value) {
-  echo "<input type='checkbox' name='continent[]' value=$key>$value<br>";
+  echo "<input type='checkbox' name='continent' value=$key>$value<br>";
 	  
   }
 	  
@@ -113,6 +113,7 @@ echo "<br>";
 echo $sCon;
 echo "<br>";
 echo $continent;
+print_r($continents);
 ?>
 
 </body>
