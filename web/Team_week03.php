@@ -46,10 +46,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $major = test_input($_POST["major"]);
   }
   if (!empty($_POST['continent'])) {
-	  foreach($_POST['continent'] as $selected){
-		  $sCon += $selected;
-		  echo $selected;
-	  }
+	  //foreach($_POST['continent'] as $selected){
+		//  $sCon += $selected;
+		  //echo $selected;
+	  //}
+	  $test = $_POST["continent"];
 	  
   }
 }
@@ -113,7 +114,7 @@ echo "<br>";
 echo $sCon;
 echo "<br>";
 echo $continent;
-print_r($continents);
+print_r($test);
 ?>
 
 </body>
