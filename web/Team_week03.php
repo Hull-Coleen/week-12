@@ -67,10 +67,14 @@ function test_input($data) {
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
   Major:
-  <input type="radio" name="major" <?php if (isset($major) && $major=="CS") echo "checked";?> value="CS">Computer Science
-  <input type="radio" name="major" <?php if (isset($major) && $major=="CE") echo "checked";?> value="CE">Computer Engineering
-  <input type="radio" name="major" <?php if (isset($major) && $major=="WDD") echo "checked";?> value="WDD">Web Design and Development
-  <input type="radio" name="major" <?php if (isset($major) && $major=="CIT") echo "checked";?> value="CIT"> Computer Information Technology 
+  <input type="radio" name="major" <?php if (isset($major) && $major=="CS")
+	  echo "checked";?> value="CS">Computer Science
+  <input type="radio" name="major" <?php if (isset($major) && $major=="CE") 
+	  echo "checked";?> value="CE">Computer Engineering
+  <input type="radio" name="major" <?php if (isset($major) && $major=="WDD") 
+	  echo "checked";?> value="WDD">Web Design and Development
+  <input type="radio" name="major" <?php if (isset($major) && $major=="CIT") 
+	  echo "checked";?> value="CIT"> Computer Information Technology 
   <span class="error">* <?php echo $majorErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
