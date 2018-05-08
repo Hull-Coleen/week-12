@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $major = test_input($_POST["major"]);
   }
-  if (empty($_POST["continent"])) {
+  if (empty($_POST['continent'])) {
 	$sCon = "";
   }
   else {
@@ -112,6 +112,8 @@ echo "<br>";
 echo $major;
 echo "<br>";
 echo $sCon;
+echo "<br>";
+echo implode(" ",$continent);
 ?>
 
 </body>
