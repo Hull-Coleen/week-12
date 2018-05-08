@@ -11,7 +11,7 @@
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $majorErr = "";
-$name = $email = $major = $comment = $continent = "";
+$name = $email = $major = $comment = $continent = $sCon = "" ;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -46,15 +46,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $major = test_input($_POST["major"]);
   }
   if (empty($_POST["continent"])) {
-	// continent = "";
+	$sCon = "";
   }
-  //else {
-	//  $N = count("continent");
+  else {
+	 $N = count($continent);
       //for($i=0; $i < $N; $i++) {
         //$temp = $continent[i];
       //}
 	  //$continent = $temp;
-  //}
+  }
 
 }
 
