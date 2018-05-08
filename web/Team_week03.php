@@ -48,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!empty($_POST['continent'])) {
 	  foreach($_POST['check_list'] as $selected){
 		  $sCon += $selected;
+		  echo $selected;
 	  }
 	  
   }
