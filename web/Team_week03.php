@@ -90,7 +90,8 @@ function test_input($data) {
   <span class="error">* <?php echo $majorErr;?></span>
   <br><br>
   Continents:<br>
-  <input type="checkbox" name="continent[]" value="NA">North American<br>
+  <input type="checkbox" name="continent[]" <?php if (isset($continent) && $continent=="NA") 
+	  echo "checked";?> value="NA">North American<br>
   <input type="checkbox" name="continent[]" value="SA">South America<br>
   <input type="checkbox" name="continent[]" value="EU">Europe<br>
   <input type="checkbox" name="continent[]" value="AS">Asia<br>
