@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>  
 <html>
 <head>
@@ -12,6 +11,8 @@
 // define variables and set to empty values
 $nameErr = $emailErr = $majorErr = "";
 $name = $email = $major = $comment = $continent = $sCon = "" ;
+$continents = array("NA" => "North Amercian", "SA" => "South America", "EU" => "Europe", "AS" =>  "Asia", "AU" => "Australia", "AF" => "Africa", "AN" => "Antarctica");
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -46,12 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $major = test_input($_POST["major"]);
   }
   if (!empty($_POST['continent'])) {
-	  //foreach($_POST['continent'] as $selected){
+	 // foreach($_POST['continent'] as $selected){
 		//  $sCon += $selected;
 		  //echo $selected;
 	  //}
-	  $test = $_POST["continent"];
-	  
+	  $seenContinents = $_POST["continent"];
   }
 }
 
@@ -85,19 +85,26 @@ function test_input($data) {
 	  echo "checked";?> value="CIT"> Computer Information Technology 
   <span class="error">* <?php echo $majorErr;?></span>
   <br><br>
-   Continents:<br>
+  
   <?php
-  $continents = array("NA" => "North Amercian", "SA" => "South America", "EU" => "Europe", "AS" =>  "Asia", "AU" => "Australia", "AF" => "Africa", "AN" => "Antarctica");
-  foreach($continents as $key => $value) {
-  echo "<input type='checkbox' name='continent[]' value=$key>$value<br>";
+  foreach($continents as $key => $value)
+  for ($i = 0; $i < count($continents); $i++) {
+  echo <input type="checkbox" name="continent[]" value=$key>$value<br>;
 	  
   }
 	  
-  
+  }
   
   ?>
- 
-  
+  Continents:<br>
+  <input type="checkbox" name="continent[]" value="NA">North American<br>
+  <input type="checkbox" name="continent[]" value="SA">South America<br>
+  <input type="checkbox" name="continent[]" value="EU">Europe<br>
+  <input type="checkbox" name="continent[]" value="AS">Asia<br>
+  <input type="checkbox" name="continent[]" value="AU">Australia<br>
+  <input type="checkbox" name="continent[]" value="AF">Africa<br>
+  <input type="checkbox" name="continent[]" value="AN">Antarctica<br><br><br>
+
   <input type="submit" name="submit" value="Submit">  
 </form>
 
@@ -111,13 +118,13 @@ echo $comment;
 echo "<br>";
 echo $major;
 echo "<br>";
-echo $sCon;
-echo "<br>";
-echo $continent;
-print_r($test);
+foreach ($seenContinents as $c) {
+	echo $continents[$c];
+}
 ?>
 
 </body>
 </html>
+
 
 
