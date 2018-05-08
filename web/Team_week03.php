@@ -46,15 +46,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $major = test_input($_POST["major"]);
   }
   if (empty($_POST["continent"])) {
-	  continent = "";
+	// continent = "";
   }
-  else {
-	  $N = count("continent");
-      for($i=0; $i < $N; $i++) {
-        $temp = $continent[i];
-      }
-	  $continent = $temp;
-  }
+  //else {
+	//  $N = count("continent");
+      //for($i=0; $i < $N; $i++) {
+        //$temp = $continent[i];
+      //}
+	  //$continent = $temp;
+  //}
 
 }
 
