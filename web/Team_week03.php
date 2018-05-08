@@ -50,9 +50,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   else {
 	 $N = count($continent);
-      //for($i=0; $i < $N; $i++) {
+     for($i=0; $i < $N; $i++) {
         //$temp = $continent[i];
-      //}
+		$sCon += $continent[$i];
+     }
 	  //$continent = $temp;
   }
 
@@ -110,7 +111,7 @@ echo $comment;
 echo "<br>";
 echo $major;
 echo "<br>";
-echo $continent;
+echo $sCon;
 ?>
 
 </body>
