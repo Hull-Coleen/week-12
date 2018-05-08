@@ -111,7 +111,7 @@ echo "<br>";
 echo $major;
 echo "<br>";
 foreach ($seenContinents as $c) {
-	echo $continents[$c];
+	echo $continents[$c] + " ";
 }
 ?>
 
