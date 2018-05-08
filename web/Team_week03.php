@@ -119,7 +119,7 @@ echo $major;
 echo "<br>";
 echo $sCon;
 echo "<br>";
-echo implode(" ",$continent);
+echo $continent;
 ?>
 
 </body>
