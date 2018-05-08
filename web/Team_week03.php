@@ -92,17 +92,17 @@ function test_input($data) {
 
 <?php
 echo "<h2>Your Input:</h2>";
-echo $name;
+echo "Your name is " . $name;
 echo "<br>";
-echo $email;
+echo "Mail to " . $email;
 echo "<br>";
 echo $comment;
 echo "<br>";
-echo $majors[$major];
+echo "Your major is " . $majors[$major];
 echo "<br>";
+echo "You've been to ";
 foreach ($seenContinents as $c) {
-	echo $continents[$c];
-	echo " ";
+	echo $continents[$key] . ", ";
 }
 ?>
 
