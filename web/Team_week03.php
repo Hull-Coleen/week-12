@@ -88,7 +88,7 @@ function test_input($data) {
   
   <?php
   foreach($continents as $key => $value) {
-  echo <input type="checkbox" name="continent[]" value=$key>$value<br>;
+  echo "<input type='checkbox' name='continent[]' value=$key>$value<br>";
 	  
   }
 	  
