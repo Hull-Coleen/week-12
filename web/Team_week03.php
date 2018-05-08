@@ -87,13 +87,12 @@ function test_input($data) {
   <br><br>
   
   <?php
-  foreach($continents as $key => $value)
-  for ($i = 0; $i < count($continents); $i++) {
+  foreach($continents as $key => $value) {
   echo <input type="checkbox" name="continent[]" value=$key>$value<br>;
 	  
   }
 	  
-  }
+  
   
   ?>
   Continents:<br>
