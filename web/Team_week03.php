@@ -10,9 +10,11 @@
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $majorErr = "";
-$name = $email = $major = $comment = $continent = $sCon = "" ;
-$continents = array("NA" => "North Amercian", "SA" => "South America", "EU" => "Europe", "AS" =>  "Asia", "AU" => "Australia", "AF" => "Africa", "AN" => "Antarctica");
-
+$name = $email = $major = $comment = $continent = "" ;
+$continents = array("NA" => "North Amercian", "SA" => "South America", "EU" => "Europe", 
+                    "AS" =>  "Asia", "AU" => "Australia", "AF" => "Africa", "AN" => "Antarctica");
+$majors = array("CS" => "Computer Science", "CE" => "Computer Engineering",
+                "WDD" => "Web Design and Development", "CIT" => "Computer Information Technology");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -47,10 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $major = test_input($_POST["major"]);
   }
   if (!empty($_POST['continent'])) {
-	 // foreach($_POST['continent'] as $selected){
-		//  $sCon += $selected;
-		  //echo $selected;
-	  //}
 	  $seenContinents = $_POST["continent"];
   }
 }
@@ -74,15 +72,12 @@ function test_input($data) {
   <br><br>
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
-  Major:
-  <input type="radio" name="major" <?php if (isset($major) && $major=="CS")
-	  echo "checked";?> value="CS">Computer Science
-  <input type="radio" name="major" <?php if (isset($major) && $major=="CE") 
-	  echo "checked";?> value="CE">Computer Engineering
-  <input type="radio" name="major" <?php if (isset($major) && $major=="WDD") 
-	  echo "checked";?> value="WDD">Web Design and Development
-  <input type="radio" name="major" <?php if (isset($major) && $major=="CIT") 
-	  echo "checked";?> value="CIT"> Computer Information Technology 
+  Major: <br>
+   <?php
+  foreach($majors as $key => $value){
+  echo "<input type='radio' name='major' value=$key>$value</br>";
+  }
+  ?>
   <span class="error">* <?php echo $majorErr;?></span>
   <br><br>
    Continents:<br>
@@ -91,12 +86,7 @@ function test_input($data) {
   echo "<input type='checkbox' name='continent[]' value=$key>$value<br>";
 	  
   }
-	  
-  
-  
   ?>
-
-
   <input type="submit" name="submit" value="Submit">  
 </form>
 
@@ -108,7 +98,7 @@ echo $email;
 echo "<br>";
 echo $comment;
 echo "<br>";
-echo $major;
+echo $majors[$major];
 echo "<br>";
 foreach ($seenContinents as $c) {
 	echo $continents[$c];
