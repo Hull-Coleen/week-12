@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $major = test_input($_POST["major"]);
   }
   if (!empty($_POST['continent'])) {
-	  foreach($_POST['check_list'] as $selected){
+	  foreach($_POST['continent'] as $selected){
 		  $sCon += $selected;
 		  echo $selected;
 	  }
