@@ -45,18 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $major = test_input($_POST["major"]);
   }
-  if (empty($_POST['continent'])) {
-	$sCon = "";
+  if (!empty($_POST['continent'])) {
+	  foreach($_POST['check_list'] as $selected){
+		  $sCon += $selected;
+	  }
+	  
   }
-  else {
-	 $N = count($continent);
-     for($i=0; $i < $N; $i++) {
-        //$temp = $continent[i];
-		$sCon += $continent[$i];
-     }
-	  //$continent = $temp;
-  }
-
 }
 
 function test_input($data) {
@@ -90,8 +84,7 @@ function test_input($data) {
   <span class="error">* <?php echo $majorErr;?></span>
   <br><br>
   Continents:<br>
-  <input type="checkbox" name="continent[]" <?php if (isset($continent) && $continent=="NA") 
-	  echo "checked";?> value="NA">North American<br>
+  <input type="checkbox" name="continent[]" value="NA">North American<br>
   <input type="checkbox" name="continent[]" value="SA">South America<br>
   <input type="checkbox" name="continent[]" value="EU">Europe<br>
   <input type="checkbox" name="continent[]" value="AS">Asia<br>
