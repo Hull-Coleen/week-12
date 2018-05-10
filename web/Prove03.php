@@ -11,9 +11,10 @@
 
 $flowers = array("RS" => "Red Small", "RM" => "Red Med", "RL" => "Red Large", "BS" => "Blue Small", 
                  "BM" => "Blue Med", "BL" => "Blue Large", "YS" => "Yellow Small", "YM" => "Yellow Med", 
-				 "YL" => "Yellow Large", "PS" => "Purple Small", "PM" => "Purple Med", "PL" => "Purple Large",);
+				 "YL" => "Yellow Large", "PS" => "Purple Small", "PM" => "Purple Med", "PL" => "Purple Large");
+?>
 
-
+<form>
 
   <?php
     foreach($flowers as $key => $value){
@@ -24,7 +25,7 @@ $flowers = array("RS" => "Red Small", "RM" => "Red Med", "RL" => "Red Large", "B
   <br><br>
  
   <input type="submit" name="submit" value="Submit">  
->
+</form>
 
 </body>
 </html>
