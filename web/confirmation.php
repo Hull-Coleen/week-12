@@ -20,7 +20,7 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 	foreach ($_SESSION["cart"] as $fl)
 {
 	$flower_c = htmlspecialchars($fl);
-	echo "<p>$flower_c</p>";
+	echo "<p>$flower_c_value</p>";
 } ?>
 <?php
 // remove all session variables
