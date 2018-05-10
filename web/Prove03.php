@@ -4,6 +4,8 @@ $_SESSION["cart"];
 $_SESSION["name"];
 $_SESSION["address"];
 $_SESSION["email"];
+$_SESSION["item"];
+$_SESSION["num"];
 
 ?>
 
@@ -28,12 +30,19 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 <br><br>
   <?php
     foreach($flowers as $key => $value){
-      echo "<input type='checkbox' name='flower[]' value=$key>$value";
-	 
-	  $num++;
-	  if ($num % 3 == 0)
-         echo "<br><br>";
-    }
+?>
+      
+	  <div>
+	  <a href="info.asp">
+          <img src="Ashley.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+      </a>
+	  <p><?php echo $value ?> </p>
+	  
+	  
+	  </div>
+    
+	<?php
+	}
 	$_SESSION["cart"] = $_POST["flower"];
   ?>
   
