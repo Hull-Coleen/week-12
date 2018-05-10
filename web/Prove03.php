@@ -64,7 +64,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	  </div>
     
 	<?php
-	$_SESSION["item"] = myVar;
+	//$_SESSION["item"] = myVar;
 	//}
 	//$_SESSION["cart"] = $_POST["flower"];
   ?>
