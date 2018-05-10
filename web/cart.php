@@ -8,7 +8,11 @@ $flowers = $_POST["flower"];
 <title></title>
 </head>
 <body>
+
 <?
+foreach ($flowers as $f) {
+	echo $flowers[$key] . ", ";
+}
 foreach ($flowers as $flower)
 {
 	$flower_clean = htmlspecialchars($flower);
