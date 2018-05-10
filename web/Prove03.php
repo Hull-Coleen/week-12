@@ -14,7 +14,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
                  "BM" => "Blue Med     ", "BL" => "Blue Large   ", "YS" => "Yellow Small ", "YM" => "Yellow Med   ", 
 				 "YL" => "Yellow Large ", "PS" => "Purple Small ", "PM" => "Purple Med    ", "PL" => "Purple Large ");
 ?>
-<a href="/cart.php">Caart</a>
+<a href="/cart.php">Cart</a>
 <form method="POST" action="cart.php">
 <br><br>
   <?php
