@@ -17,7 +17,7 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 	<p>Your email is: <?php echo $_SESSION["email"] ?></p>
 	
 <?php
-	foreach ($_SESSION["cart"] as $fl)
+	foreach ($_SESSION["cart"] as $fl => $fl_value)
 {
 	$flower_c = htmlspecialchars($fl);
 	echo "<p>$flower_c_value</p>";
