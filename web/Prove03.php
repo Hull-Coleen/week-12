@@ -29,15 +29,27 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 <form method="POST" action="cart.php">
 <br><br>
   <?php
-    foreach($flowers as $key => $value){
+   // foreach($flowers as $key => $value){
 ?>
-      
+     <div>
 	  <div>
 	  <a href="info.php">
           <img src="Ashley.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
       </a>
-	  <p><?php echo $value ?> </p>
-	  
+	  <p>Red Small</p>
+	  </div>
+	  <div>
+	  <a href="info.php">
+          <img src="Katelynn3.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+      </a>
+	  <p>Red Medium</p>
+	  </div>
+	  <div>
+	  <a href="info.php">
+          <img src="Krsitne.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+      </a>
+	  <p>Red Large</p>
+	  </div>
 	  
 	  </div>
     
@@ -45,6 +57,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	}
 	//$_SESSION["cart"] = $_POST["flower"];
   ?>
+  
   
   <br><br>
  
