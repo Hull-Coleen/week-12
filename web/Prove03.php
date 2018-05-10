@@ -36,24 +36,25 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	  <a href="info.php">
           <img src="Ashley.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
       </a>
-	  <p>Red Small</p>
+	  <p><var id="myVar">Red Small</var></p>
 	  </div>
 	  <div>
 	  <a href="info.php">
           <img src="Katelynn3.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
       </a>
-	  <p>Red Medium</p>
+	  <p><var id="myVar">Red Medium</var></p>
 	  </div>
 	  <div>
 	  <a href="info.php">
           <img src="Krsitne.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
       </a>
-	  <p>Red Large</p>
+	  <p><var id="myVar">Red Large</var></p>
 	  </div>
 	  
 	  </div>
     
 	<?php
+	$_SESSION["item"] = myVar;
 	//}
 	//$_SESSION["cart"] = $_POST["flower"];
   ?>

@@ -10,7 +10,7 @@ session_start();
     
 	
 <?php
-
+ echo $_SESSION["item"];
 
 ?>
 
