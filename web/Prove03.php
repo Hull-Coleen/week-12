@@ -38,10 +38,10 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
       </a>
 	  <p><var id="myVar">Red Small</var></p>
 	  <?php
-	$_SESSION["item"] = Red Small;
+	  $_SESSION["item"] = "Red Small";
 	//}
 	//$_SESSION["cart"] = $_POST["flower"];
-  ?>
+      ?>
 	  </div>
 	  <div>
 	  <a href="info.php">
@@ -49,7 +49,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
       </a>
 	  <p><var id="myVar">Red Medium</var></p>
 	  <?php
-	$_SESSION["item"] = Red Medium;
+	    $_SESSION["item"] = "Red Medium";
 	//}
 	//$_SESSION["cart"] = $_POST["flower"];
   ?>
