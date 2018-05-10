@@ -16,10 +16,10 @@ $f = $_SESSION["cart"];
 <body>
 
 <?
-foreach ($f as $fl)
+foreach ($_SESSION["cart"] as $fl)
 {
-	$flower_clean = htmlspecialchars($fl);
-	echo "<p>$flower_clean</p>";
+	$flower_c = htmlspecialchars($fl);
+	echo "<p>$flower-_c</p>";
 }
 foreach ($flowers as $flower)
 {
