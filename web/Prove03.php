@@ -1,4 +1,8 @@
-<!DOCTYPE HTML>  
+<?php
+session_start();
+?>
+
+<!DOCTYPE HTML>   
 <html>
 <head>
 <style>

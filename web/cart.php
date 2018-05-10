@@ -4,6 +4,8 @@ session_start();
 
 <?php
 $flowers = $_POST["flower"];
+$_SESSION["cart"] = $_POST["flower"];
+$f = $_SESSION["cart"];
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +16,10 @@ $flowers = $_POST["flower"];
 <body>
 
 <?
-foreach ($flowers as $f) {
-	echo $flowers[$key] . ", ";
+foreach ($f as $fl)
+{
+	$flower_clean = htmlspecialchars($fl);
+	echo "<p>$flower_clean</p>";
 }
 foreach ($flowers as $flower)
 {
