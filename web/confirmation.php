@@ -2,7 +2,7 @@
 session_start();
 $_SESSION["name"] = htmlspecialchars($_POST["name"]);
 $_SESSION["email"] = htmlspecialchars($_POST["email"]);
-$_SESSION["adress"] = htmlspecialchars($_POST["address"]);
+$_SESSION["address"] = htmlspecialchars($_POST["address"]);
 
 
 ?>
