@@ -1,6 +1,10 @@
 <?php
 session_start();
 $_SESSION["cart"];
+$_SESSION["name"];
+$_SESSION["address"];
+$_SESSION["email"];
+
 ?>
 
 <!DOCTYPE HTML>   
