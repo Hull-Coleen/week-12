@@ -19,7 +19,7 @@ $f = $_SESSION["cart"];
 foreach ($_SESSION["cart"] as $fl)
 {
 	$flower_c = htmlspecialchars($fl);
-	echo "<p>$flower-_c</p>";
+	echo "<p>$flower_c</p>";
 }
 foreach ($flowers as $flower)
 {
