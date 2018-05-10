@@ -33,7 +33,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 ?>
       
 	  <div>
-	  <a href="info.asp">
+	  <a href="info.php">
           <img src="Ashley.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
       </a>
 	  <p><?php echo $value ?> </p>
@@ -43,7 +43,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
     
 	<?php
 	}
-	$_SESSION["cart"] = $_POST["flower"];
+	//$_SESSION["cart"] = $_POST["flower"];
   ?>
   
   <br><br>
