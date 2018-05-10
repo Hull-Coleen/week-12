@@ -12,9 +12,9 @@ $_SESSION["adress"] = htmlspecialchars($_POST["address"]);
 <title>Confirmation Page</title>
 </head>
 <body>
-<p>Your name is: <?=$name ?></p>
-	<p>Your email is: <a href="mailto:<?=$email ?>"><?=$email ?></a></p>
-	<p>Your adress is: <?=$address ?></p>
+    <p> <?php echo $_SESSION["name"] ?></p>
+	<p>Your address is: <?php echo $_SESSION["address"] ?></p>
+	<p>Your email is: <?php echo $_SESSION["email"] ?></p>
 <?php
 // remove all session variables
 session_unset(); 
