@@ -24,7 +24,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 				 "YL" => "Yellow Large ", "PS" => "Purple Small ", "PM" => "Purple Med    ", "PL" => "Purple Large ");
 ?>
 <a href="/cart.php">Cart</a>
-<form method="POST" action="">
+<form method="POST" action="cart.php">
 <br><br>
   <?php
     foreach($flowers as $key => $value){
