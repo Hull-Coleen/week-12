@@ -11,7 +11,7 @@ $flowers = $_POST["flower"];
 <?
 foreach ($flowers as $flower)
 {
-	$flower_clean = htmlspecialchars($flower);
+	$flower_clean = htmlspecialchars($flowers);
 	echo "<p>$flower_clean</p>";
 }
 ?>
