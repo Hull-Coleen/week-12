@@ -19,6 +19,7 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 	foreach ($_SESSION["cart"] as $fl)
 {
 	$flower_c = htmlspecialchars($fl);
+	echo $flower_c;
 	
 } 
 foreach($flower_c as $f => $f_value) {
