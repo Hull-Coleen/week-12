@@ -16,11 +16,12 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 	<p>Your address is: <?php echo $_SESSION["address"] ?></p>
 	<p>Your email is: <?php echo $_SESSION["email"] ?></p>
 	
+<?php
 	foreach ($_SESSION["cart"] as $fl)
 {
 	$flower_c = htmlspecialchars($fl);
 	echo "<p>$flower_c</p>";
-}
+} ?>
 <?php
 // remove all session variables
 session_unset(); 
