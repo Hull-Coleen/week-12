@@ -3,8 +3,7 @@ session_start();
 $_SESSION["name"] = htmlspecialchars($_POST["name"]);
 $_SESSION["email"] = htmlspecialchars($_POST["email"]);
 $_SESSION["address"] = htmlspecialchars($_POST["address"]);
-
-
+ 
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +18,7 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 <?php
 	foreach ($_SESSION["cart"] as $fl => $fl_value)
 {
-	$flower_c = htmlspecialchars($fl);
+	$flower_c = htmlspecialchars($fl => $fl_value);
 	echo "<p>$flower_c_value</p>";
 } ?>
 <?php
