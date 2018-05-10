@@ -1,4 +1,8 @@
-<php
+<?php
+session_start();
+?>
+
+<?php
 $flowers = $_POST["flower"];
 ?>
 
