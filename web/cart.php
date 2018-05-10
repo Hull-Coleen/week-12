@@ -14,7 +14,8 @@ $f = $_SESSION["cart"];
 <title></title>
 </head>
 <body>
-
+<a href="/Prove03.php">Continue Shopping</a>
+<a href="/checkout.php">Checkout</a>
 <?
 foreach ($_SESSION["cart"] as $fl)
 {
