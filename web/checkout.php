@@ -17,11 +17,11 @@ session_start();
 			<label for="email">Email</label>
 			<input type="text" placeholder="Email Address" id="email" name="email">
 			<br />
-			<label for="email">Adress</label>
+			<label for="email">Address</label>
 			<input type="text" placeholder="Address" id="address" name="address">
 			<br />
 			</p>
-			<input type="submit" value="Submit Answers">
+			<input type="submit" value="Complete Checkout">
 
 
 		</form>
