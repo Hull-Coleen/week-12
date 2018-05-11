@@ -26,6 +26,9 @@ img {
 	max-height: 340px;
 	
 }
+p {
+	text-align: center;
+}
 </style>
 </head>
 <body>
@@ -40,7 +43,9 @@ img {
  array_push($_SESSION["cart"], $f);
 
  foreach ($_SESSION["cart"] as $fl) {
-	 echo "session " . htmlspecialchars($fl);
+	 ?>
+	 <p> <?php echo "session " . htmlspecialchars($fl); ?> </p>
+	 <?php
  }
  
  echo "<br><br>" . count($_SESSION["cart"]);
