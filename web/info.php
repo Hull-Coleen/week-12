@@ -14,6 +14,7 @@ session_start();
 	//$_SESSION["item"] = $_POST["name"];
 
  echo $_SESSION["item"];
+ echo $_SESSION["num"];
 
 ?>
 
