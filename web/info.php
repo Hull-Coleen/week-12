@@ -2,7 +2,7 @@
 session_start();
 $test;
 $_SESSION["item"] = $_POST["item"];
-//$f = $_SESSION["item"];
+$f = $_SESSION["item"];
 
 if($f == "Red Small") {
 	$img = "Ashley.jpg";
@@ -31,7 +31,7 @@ else {
 	//$_SESSION["num"] = $_POST["num"];
 
  echo $_SESSION["item"];
- echo $t;
+ echo "t" . $t . "f" . $f . "<br>"; 
  //echo $_SESSION["num"];
  $t = $_SESSION["item"];
  //$test = array($_SESSION["item"] => $_SESSION["num"]);
@@ -41,7 +41,7 @@ else {
 	 //echo $value;
 	 
  //}
- array_push($_SESSION["cart"], $t);
+ array_push($_SESSION["cart"], $f);
  //array_push($_SESSION["cart"], $_SESSION["item"]);
  foreach ($_SESSION["cart"] as $fl) {
 	 echo htmlspecialchars($fl);
