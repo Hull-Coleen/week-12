@@ -7,7 +7,8 @@ session_start();
 <title>Info Page</title>
 </head>
 <body>
-	
+<a href="/Prove03.php">Continue Shopping</a>
+<a href="/cart.php">Cart</a>	
 <?php
 //$_SESSION["item"] = $_POST["name"];
 //if ($_SERVER["REQUEST_METHOD"] == "POST") {
