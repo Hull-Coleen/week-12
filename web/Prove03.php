@@ -32,8 +32,8 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 <br><br>
   <?php
    foreach($flowers as $key => $value){
-	   $pl = htmlspecialchars($key => $value);
-	   echo "<input type='checkbox' name='flower[]' value=$key>$value<br>";
+	//   $pl = htmlspecialchars($key => $value);
+	  // echo "<input type='checkbox' name='flower[]' value=$key>$value<br>";
    }
 	
 ?> 
