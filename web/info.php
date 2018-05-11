@@ -4,6 +4,7 @@ $test;
 $_SESSION["item"] = $_POST["item"];
 $f = $_SESSION["item"];
 //$a = $_SESSION["cart"];
+$a = array($f);
 if($f == "Red Small") {
 	$img = "Ashley.jpg";
 	
@@ -42,16 +43,16 @@ else {
 	 //echo $value;
 	 
  //}
- $a = array($f);
+ 
  //array_push($a, $f);
  //$_SESSION["cart"] = $a;
- array_merge($a,$_SESSION["cart"]);
+ //array_merge($a,$_SESSION["cart"]);
  
  foreach ($a as $fl) {
 	 echo "session " . htmlspecialchars($fl);
  }
  //array_push(echo "<br><br>" . count($_SESSION["cart"]);, $a);
- //array_push($_SESSION["cart"], $f);
+ array_push($_SESSION["cart"], $f);
  //array_push($_SESSION["cart"], $_SESSION["item"]);
  foreach ($_SESSION["cart"] as $fl) {
 	 echo "session " . htmlspecialchars($fl);
