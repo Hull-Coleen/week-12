@@ -13,7 +13,7 @@ $test;
 $test = document.getElementById("myVar").value;
 </script>	
 <?php
- echo $_SESSION["item"] = myElement;
+ echo $_SESSION["item"] = $test;
 
 ?>
 
