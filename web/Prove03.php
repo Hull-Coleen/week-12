@@ -45,7 +45,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
   </div>
   <div>
   <input type="radio" name="item" value="Red Medium">RM<br />
-  <input type="hidden" name="num" value="1" />
+  <input type="hidden" name="num" value="2" />
   </div>
   <div>
   <input type="radio" name="item" value="Red Large">RL<br />
