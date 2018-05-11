@@ -39,6 +39,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	  <a href="info.php">
           <img src="Ashley.jpg" alt="HTML tutorial" class="c" name="a" style="width:42px;height:42px;border:0;">
       </a>
+	  <input type="hidden" name="userid" value="<?=$userid?>" />
 	  <p><var id="myVar">Red Small</var></p>
 	  <?php
 	  //$_SESSION["item"] = "Red Small";
