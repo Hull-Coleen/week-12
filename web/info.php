@@ -16,6 +16,8 @@ session_start();
 
  echo $_SESSION["item"];
  echo $_SESSION["num"];
+ $_SESSION["cart"]_push($$_SESSION["item"], $_SESSION["num"]);
+ //array_push($data,$question);
 
 ?>
 
