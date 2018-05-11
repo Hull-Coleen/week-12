@@ -83,7 +83,7 @@ p {
 	<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 <?php
 
-// array_push($_SESSION["cart"], $f);
+// 
 
  //foreach ($_SESSION["cart"] as $fl) {
 	 ?>
@@ -92,13 +92,19 @@ p {
 	 <p> <?php echo htmlspecialchars($f);
 	           echo "<br>";
 			   echo $d; ?> <br>
-			<button type="submit" formmethod="POST">Add to Cart</button>   
+			<button type="submit" name="add" value="RUN">Add to Cart</button>   
 			   </p>
 	</form>		   
 	 <?php
-// }
- 
- //echo "<br><br>" . count($_SESSION["cart"]);
+	 function testfun()
+{
+   echo "Your test function on button click is working";
+   array_push($_SESSION["cart"], $f);
+}
+
+if(array_key_exists('add',$_POST)){
+   testfun();
+}
  
  
 
