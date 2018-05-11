@@ -1,16 +1,17 @@
 <?php
 session_start();
-$test;
 $_SESSION["item"] = $_POST["item"];
+$d;
 $f = $_SESSION["item"];
-//$a = $_SESSION["cart"];
-$a = array($f);
+
 if($f == "Red Small") {
 	$img = "Ashley.jpg";
+	$d = "Small Bouquet of Red Roses";
 	
 }
 else if ($f == "Blue Small") {
 	$img = "Kristine.jpg";
+	$d = "Small Bouquet of Blue Flowers";
 }
 else {
 	$img = "world.jpg";
@@ -44,7 +45,7 @@ p {
 
  foreach ($_SESSION["cart"] as $fl) {
 	 ?>
-	 <p> <?php echo "session " . htmlspecialchars($fl); ?> </p>
+	 <p> <?php echo htmlspecialchars($fl) . "<br>" . $d; ?> </p>
 	 <?php
  }
  
