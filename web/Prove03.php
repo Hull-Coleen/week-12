@@ -67,12 +67,12 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	  </div>
 	  </form>
 	  <script>
-	  $(document).ready(function() {
+	 // $(document).ready(function() {
 
-    $( ".c" ).click(function() {
-      $( "#info.php" ).submit();
-    });
-     }); </script>
+    //$( ".c" ).click(function() {
+      //$( "#info.php" ).submit();
+    //});
+     //}); </script>
     
 	<?php
 	//$_SESSION["item"] = myVar;
