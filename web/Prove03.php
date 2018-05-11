@@ -39,7 +39,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	  <a href="info.php">
           <img src="Ashley.jpg" alt="HTML tutorial" class="c" name="a" style="width:42px;height:42px;border:0;">
       </a>
-	  <input type="hidden" name="userid" value="a" />
+	  <input type="hidden" name="name" value="a" />
 	  <p><var id="myVar">Red Small</var></p>
 	  <?php
 	  //$_SESSION["item"] = "Red Small";
@@ -47,6 +47,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	//$_SESSION["cart"] = $_POST["flower"];
       ?>
 	  </div>
+	  </form><form method="POST">
 	  <div>
 	  <a href="info.php">
           <img src="Katelynn3.jpg" alt="HTML tutorial" class="c" style="width:42px;height:42px;border:0;">
@@ -57,7 +58,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	//}
 	//$_SESSION["cart"] = $_POST["flower"];
   ?>
-	  </div>
+	  </div><form method="POST">
 	  <div>
 	  <a href="info.php">
           <img src="Krsitne.jpg" alt="HTML tutorial" class="c" style="width:42px;height:42px;border:0;">
@@ -83,9 +84,6 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
   
   
   <br><br>
- 
-  <input type="submit" name="submit" value="Submit">  
-</form>
 
 </body>
 </html>
