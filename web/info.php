@@ -19,12 +19,13 @@ $test;
  echo $_SESSION["item"];
  echo $_SESSION["num"];
  $test = array($_SESSION["item"] => $_SESSION["num"]);
+ $result = array_merge($test, $_SESSION["cart"]);
  foreach ($test as $key => $value) {
 	 echo $key;
 	 echo $value;
 	 
  }
- $_SESSION["cart"] += $test;
+ $_SESSION["cart"] = $result;
  //$_SESSION["cart"] = array_push_assoc($_SESSION["cart"], $_SESSION["item"] , $_SESSION["num"]);
  //$_SESSION["cart"]_push($$_SESSION["item"], $_SESSION["num"]);
  //array_push($data,$question);
