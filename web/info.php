@@ -1,8 +1,5 @@
 <?php
 session_start();
-$test;
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,10 +7,7 @@ $test;
 <title>Info Page</title>
 </head>
 <body>
-    
-<script>
-//$test = document.getElementById("myVar").value;
-</script>	
+	
 <?php
 //$_SESSION["item"] = $_POST["name"];
 //if ($_SERVER["REQUEST_METHOD"] == "POST") {
