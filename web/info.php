@@ -1,6 +1,19 @@
 <?php
 session_start();
 $test;
+$_SESSION["item"] = $_POST["item"];
+$f = $_SESSION["item"];
+if($f = "Red Small") {
+	$img = "Ashley.jpg";
+	
+}
+else if ($f = "Blue Small") {
+	$img = "Kristine.jpg";
+}
+else {
+	$img = "world.jpg";
+}
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,12 +22,12 @@ $test;
 </head>
 <body>
 <a href="/Prove03.php">Continue Shopping</a>
-<a href="/cart.php">Cart</a>	
+<a href="/cart.php">Cart</a>
+	<img src=$img style="margin:0px auto;display:block" alt="World"> 
 <?php
-//$_SESSION["item"] = $_POST["name"];
-//if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$_SESSION["item"] = $_POST["item"];
-	$_SESSION["num"] = $_POST["num"];
+
+	
+	//$_SESSION["num"] = $_POST["num"];
 
  echo $_SESSION["item"];
  echo $_SESSION["num"];
