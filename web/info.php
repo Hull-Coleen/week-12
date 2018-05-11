@@ -1,5 +1,6 @@
 <?php
 session_start();
+$test;
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +10,7 @@ session_start();
 <body>
     
 <script>
-var myElement = document.getElementById("myVar").value;
+$test = document.getElementById("myVar").value;
 </script>	
 <?php
  echo $_SESSION["item"] = myElement;
