@@ -18,6 +18,9 @@ $_SESSION["num"];
 <!-- jQuery library -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <style>
+img {
+	max-height: 240px;
+}
 </style>
 </head>
 <body>  
@@ -47,44 +50,53 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
      <input type="radio" name="item" value="Red Small">RS<br /> 
    </div>
    <div>
+   <img src="RedF.jpg" alt="World">
      <input type="radio" name="item" value="Red Medium">RM<br />
    </div>
    <div>
+   <img src="RedF.jpg" alt="World">
      <input type="radio" name="item" value="Red Large">RL<br />
    </div>
  </div>
  
    <div>
+   <img src="BlueF.jpg" alt="World">
   <input type="radio" name="item" value="Blue Small">BS<br />
   </div>
    <div>
-   <img src="/world.jpg" alt="World"> 
-  <input type="radio" name="item" value="Red Small">BM<br />
+   <img src="BlueF.jpg" alt="World"> 
+  <input type="radio" name="item" value="Blue Medium">BM<br />
   
   </div>
   <div>
-  <input type="radio" name="item" value="Red Medium">BL<br />
+  <img src="BlueF.jpg" alt="World">
+  <input type="radio" name="item" value="Blue Large">BL<br />
   <
   </div>
   <div>
-  <input type="radio" name="item" value="Red Large">YS<br />
+  <img src="RedF.jpg" alt="World">
+  <input type="radio" name="item" value="Yellow Small">YS<br />
   </div>
   <div>
-  <input type="radio" name="item" value="Blue Small">YM<br />
+  <img src="RedF.jpg" alt="World">
+  <input type="radio" name="item" value="Yellow Medium">YM<br />
   </div>
    <div>
-   <img src="/world.jpg" alt="World"> 
-  <input type="radio" name="item" value="Red Small">YL<br />
+   <img src="RedF.jpg" alt="World"> 
+  <input type="radio" name="item" value="Yellow Large">YL<br />
   
   </div>
   <div>
-  <input type="radio" name="item" value="Red Medium">PS<br />
+  <img src="RedF.jpg" alt="World">
+  <input type="radio" name="item" value="Purple Small">PS<br />
   </div>
   <div>
-  <input type="radio" name="item" value="Red Large">PM<br />
+  <img src="RedF.jpg" alt="World">
+  <input type="radio" name="item" value="Purple Medium">PM<br />
   </div>
   <div>
-  <input type="radio" name="item" value="Blue Small">PL<br />
+  <img src="RedF.jpg" alt="World">
+  <input type="radio" name="item" value="Purple Large">PL<br />
   </div>
 	<input type="submit" name="submit" value="Submit">  		
 			
