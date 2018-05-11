@@ -2,6 +2,9 @@
 session_start();
 //array_push($_SESSION["cart"], $_SESSION["item"]);
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
+if (!empty($_POST["item"]) {
+	array_push($_SESSION["cart"], $_POST["item"]);
+}
 ?>
 
 <!DOCTYPE html>

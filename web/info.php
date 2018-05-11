@@ -92,7 +92,7 @@ p {
 	 <p> <?php echo htmlspecialchars($f);
 	           echo "<br>";
 			   echo $d; ?> <br>
-			<button type="submit" name="add" value="RUN">Add to Cart</button>   
+			<input type="submit" name="submit" value="Add to Cart">  
 			   </p>
 	</form>		   
 	 <?php
