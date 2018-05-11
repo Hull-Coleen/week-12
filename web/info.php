@@ -57,10 +57,10 @@ else {
 	 echo "session " . htmlspecialchars($fl);
  }
  
- 
+ echo "<br><br>" . count($_SESSION["cart"]);
  
   //$_SESSION["cart"][$f] = "1";
-  //echo "<br><br>" . count($_SESSION["cart"]);
+  //
  //array_push($a, $f -> "1");
  //$_SESSION["cart"][$t] = '1';
   //$_SESSION["cart"] = $a;
