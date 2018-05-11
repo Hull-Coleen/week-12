@@ -78,7 +78,7 @@ p {
 </style>
 </head>
 <body>
-<a href="/Prove03.php">Continue Shopping</a>
+<a href="/Prove03.php">Continue Shopping</a><br>
 <a href="/cart.php">Cart</a>
 	<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 <?php
@@ -92,7 +92,9 @@ p {
 	 ?>
 	 <p> <?php echo htmlspecialchars($fl);
 	           echo "<br>";
-			   echo $d; ?> </p>
+			   echo $d; ?> <br>
+			<button type="button" onclick="">Add to Cart</button>   
+			   </p>
 	 <?php
  }
  
