@@ -31,37 +31,28 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 
 <br><br>
   <?php
-   // foreach($flowers as $key => $value){
-?>  
-<form method="POST">
-     <div>
-	  <div>
-	  <a href="info.php">
-          <img src="Ashley.jpg" alt="HTML tutorial" class="c"  style="width:42px;height:42px;border:0;">
-      </a>
-	  <input type="hidden" name="name" value="a" />
-	  <p><var id="myVar">Red Small</var></p>
-	  
-	  </div>
-	  </form><form method="POST">
-	  <div>
-	  <a href="info.php">
-          <img src="Katelynn3.jpg" alt="HTML tutorial" class="c" style="width:42px;height:42px;border:0;">
-      </a>
-	  <p><var id="myVar">Red Medium</var></p>
-	  <input type="hidden" name="name" value="b" />
+   foreach($flowers as $key => $value){
+	   $pl = htmlspecialchars($key => $value);
+	   echo "<input type='checkbox' name='flower[]' value=$key>$value<br>";
 	
-	  </div><form method="POST">
-	  <div>
-	  <a href="info.php">
-          <img src="Krsitne.jpg" alt="HTML tutorial" class="c" style="width:42px;height:42px;border:0;">
-      </a>
-	  <p><var id="myVar">Red Large</var></p>
-	  </div>
-	  
-	  </div>
-	  </form>
-  
+?> 
+ <form method="POST" action="info.php">
+   <div>
+  <input type="radio" name="item" value="Red Small">RS<br />
+  </div>
+  <div>
+  <input type="radio" name="item" value="Red Medium">RM<br />
+  </div>
+  <div>
+  <input type="radio" name="item" value="Red Large">RL<br />
+  </div>
+  <div>
+  <input type="radio" name="item" value="Blue Small">BS<br />
+  </div>
+	<input type="submit" name="submit" value="Submit">  		
+			
+</form>
+
   
   <br><br>
 
