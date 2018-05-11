@@ -41,6 +41,8 @@ else {
 	 //echo $value;
 	 
  //}
+ $a = array($f);
+ array_push($_SESSION["cart"], $a);
  array_push($_SESSION["cart"], $f);
  //array_push($_SESSION["cart"], $_SESSION["item"]);
  foreach ($_SESSION["cart"] as $fl) {
