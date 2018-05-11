@@ -3,9 +3,6 @@ session_start();
 ?>
 
 <?php
-$flowers = $_POST["flower"];
-$_SESSION["cart"] = $_POST["flower"];
-$f = $_SESSION["cart"];
 
 ?>
 
