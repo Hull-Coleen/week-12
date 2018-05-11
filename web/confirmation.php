@@ -13,8 +13,8 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 </head>
 <body>
     <p> <?php echo "Thank you for your purchase: " . $_SESSION["name"] ?></p>
-	<p>Your address is: <?php echo $_SESSION["address"] ?></p>
-	<p>Your email is: <?php echo $_SESSION["email"] ?></p>
+	<p>Your purchase will be shippped to: <?php echo $_SESSION["address"] ?></p>
+	<p>We will email you a confirmation number at: <?php echo $_SESSION["email"] ?></p>
 	
 <?php
 	foreach ($_SESSION["cart"] as $fl)
