@@ -53,6 +53,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
           <img src="Katelynn3.jpg" alt="HTML tutorial" class="c" style="width:42px;height:42px;border:0;">
       </a>
 	  <p><var id="myVar">Red Medium</var></p>
+	  <input type="hidden" name="name" value="<?php $_SESSION["item"] = "b" ?> />
 	  <?php
 	   // $_SESSION["item"] = "Red Medium";
 	//}
