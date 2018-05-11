@@ -1,6 +1,10 @@
 <?php
 session_start();
-$_SESSION["cart"] = array();
+if(!isset($_SESSION["cart"])){
+    //If it doesn't, create an empty array.
+    $_SESSION["cart"] = array();
+}
+//$_SESSION["cart"] = array();
 $_SESSION["name"];
 $_SESSION["address"];
 $_SESSION["email"];
