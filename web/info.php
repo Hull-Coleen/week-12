@@ -23,7 +23,7 @@ else {
 <body>
 <a href="/Prove03.php">Continue Shopping</a>
 <a href="/cart.php">Cart</a>
-	<img src="$img" style="margin:0px auto;display:block" alt="World"> 
+	<img src= s"<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 <?php
 
 	
