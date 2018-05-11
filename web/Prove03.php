@@ -21,6 +21,12 @@ $_SESSION["num"];
 img {
 	max-height: 240px;
 }
+div#row {
+	width: 40%;
+	padding: 20px;
+	display: inline-block;
+}
+
 </style>
 </head>
 <body>  
@@ -58,7 +64,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
      <input type="radio" name="item" value="Red Large">RL<br />
    </div>
  </div>
- 
+ <div  id="row">
    <div>
    <img src="BlueF.jpg" alt="World">
   <input type="radio" name="item" value="Blue Small">BS<br />
@@ -71,31 +77,31 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
   <div>
   <img src="BlueF.jpg" alt="World">
   <input type="radio" name="item" value="Blue Large">BL<br />
-  <
+  </div>
   </div>
   <div>
-  <img src="RedF.jpg" alt="World">
+  <img src="YellowF.jpg" alt="World">
   <input type="radio" name="item" value="Yellow Small">YS<br />
   </div>
   <div>
-  <img src="RedF.jpg" alt="World">
+  <img src="YellowF.jpg" alt="World">
   <input type="radio" name="item" value="Yellow Medium">YM<br />
   </div>
    <div>
-   <img src="RedF.jpg" alt="World"> 
+   <img src="YellowF.jpg" alt="World"> 
   <input type="radio" name="item" value="Yellow Large">YL<br />
   
   </div>
   <div>
-  <img src="RedF.jpg" alt="World">
+  <img src="PurpleF.jpg" alt="World">
   <input type="radio" name="item" value="Purple Small">PS<br />
   </div>
   <div>
-  <img src="RedF.jpg" alt="World">
+  <img src="PurpleF.jpg" alt="World">
   <input type="radio" name="item" value="Purple Medium">PM<br />
   </div>
   <div>
-  <img src="RedF.jpg" alt="World">
+  <img src="PurpleF.jpg" alt="World">
   <input type="radio" name="item" value="Purple Large">PL<br />
   </div>
 	<input type="submit" name="submit" value="Submit">  		
