@@ -31,7 +31,7 @@ else {
 	//$_SESSION["num"] = $_POST["num"];
 
  echo $_SESSION["item"];
- echo "t" . $t . "f" . $f . "<br>"; 
+ //echo "t" . $t . "f" . $f . "<br>"; 
  //echo $_SESSION["num"];
  $t = $_SESSION["item"];
  //$test = array($_SESSION["item"] => $_SESSION["num"]);
