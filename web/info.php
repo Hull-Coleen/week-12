@@ -26,7 +26,7 @@ else {
 <a href="/cart.php">Cart</a>
 	<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 <?php
-$a = $_SESSION["cart"];
+//$a = $_SESSION["cart"];
 
 	
 	//$_SESSION["num"] = $_POST["num"];
