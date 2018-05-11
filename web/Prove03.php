@@ -12,6 +12,8 @@ $_SESSION["num"];
 <!DOCTYPE HTML>   
 <html>
 <head>
+<!-- jQuery library -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <style>
 </style>
 </head>
