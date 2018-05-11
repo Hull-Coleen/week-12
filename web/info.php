@@ -3,7 +3,7 @@ session_start();
 $test;
 $_SESSION["item"] = $_POST["item"];
 $f = $_SESSION["item"];
-$a = $_SESSION["cart"];
+
 if($f == "Red Small") {
 	$img = "Ashley.jpg";
 	
