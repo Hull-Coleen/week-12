@@ -41,8 +41,8 @@ else {
 	 //echo $value;
 	 
  //}
- $a = array($f);
- array_push($_SESSION["cart"], $a);
+ //$a = array($f);
+ //array_push($_SESSION["cart"], $a);
  array_push($_SESSION["cart"], $f);
  //array_push($_SESSION["cart"], $_SESSION["item"]);
  foreach ($_SESSION["cart"] as $fl) {
@@ -51,7 +51,8 @@ else {
  
  echo "<br><br>" . count($_SESSION["cart"]);
  
- //$a[$f] = $_SESSION['num'];
+  $_SESSION["cart"][$f] = "1";
+  echo "<br><br>" . count($_SESSION["cart"]);
  //array_push($a, $f -> "1");
  //$_SESSION["cart"][$t] = '1';
 //$_SESSION["cart"] = $a;
