@@ -11,7 +11,7 @@ session_start();
 <?php
 //$_SESSION["item"] = $_POST["name"];
 //if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$_SESSION["item"] = $_POST["name"];
+	//$_SESSION["item"] = $_POST["name"];
 
  echo $_SESSION["item"];
 
