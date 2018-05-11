@@ -23,7 +23,7 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
     echo htmlspecialchars($value);
 	
 } 
-echo count($_SESSION["cart]);
+echo count($_SESSION["cart"]);
 
 ?>
 <?php
