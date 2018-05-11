@@ -18,6 +18,7 @@ $test;
 
  echo $_SESSION["item"];
  echo $_SESSION["num"];
+ $t =$_SESSION["item"];
  $test = array($_SESSION["item"] => $_SESSION["num"]);
  $result = array_merge($test, $_SESSION["cart"]);
  foreach ($test as $key => $value) {
@@ -26,7 +27,7 @@ $test;
 	 
  }
  echo count($result);
- $_SESSION["cart"] = $result;
+ $_SESSION[$t] = $_SESSION["num"];
  //$_SESSION["cart"] = array_push_assoc($_SESSION["cart"], $_SESSION["item"] , $_SESSION["num"]);
  //$_SESSION["cart"]_push($$_SESSION["item"], $_SESSION["num"]);
  //array_push($data,$question);
