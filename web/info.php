@@ -28,11 +28,11 @@ else {
 <?php
 
 	
-	//$_SESSION["num"] = $_POST["num"];
+	$_SESSION["num"] = $_POST["num"];
 
  echo $_SESSION["item"];
  echo $_SESSION["num"];
- $t =$_SESSION["item"];
+ //$t =$_SESSION["item"];
  $test = array($_SESSION["item"] => $_SESSION["num"]);
  $result = array_merge($test, $_SESSION["cart"]);
  foreach ($test as $key => $value) {
@@ -40,9 +40,12 @@ else {
 	 echo $value;
 	 
  }
- echo count($result);
- $a['$f'] = $_SESSION['num'];
+ 
+ 
+ //$a['$f'] = '$_SESSION['num']';
+ array_push($a, $f => "1");
 //$_SESSION["cart"] = $result;
+$a = $_SESSION["cart"];
 echo count($_SESSION["cart"]);
 	foreach ($_SESSION["cart"] as $fl => $value)
 {
@@ -50,7 +53,8 @@ echo count($_SESSION["cart"]);
 	echo "<br>";
     echo htmlspecialchars($value);
 	
-}
+}echo count($result);
+echo count($a);
  //$_SESSION["cart"] = array_push_assoc($_SESSION["cart"], $_SESSION["item"] , $_SESSION["num"]);
  //$_SESSION["cart"]_push($$_SESSION["item"], $_SESSION["num"]);
  //array_push($data,$question);
