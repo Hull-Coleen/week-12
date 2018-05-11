@@ -48,13 +48,14 @@ else {
 //$_SESSION["cart"] = $a;
 array_push($_SESSION["cart"], $f -> $_SESSION["num"]);
 echo "session" . count($_SESSION["cart"]);
-	foreach ($_SESSION["cart"] as $fl => $value)
-{
-	echo htmlspecialchars($fl);
-	echo "<br>";
-    echo htmlspecialchars($value);
+	//foreach ($_SESSION["cart"] as $fl => $value)
+//{
+	//echo htmlspecialchars($fl);
+	//echo "<br>";
+    //echo htmlspecialchars($value);
 	
-}echo count($result);
+//}
+echo count($result);
 echo count($a);
  //$_SESSION["cart"] = array_push_assoc($_SESSION["cart"], $_SESSION["item"] , $_SESSION["num"]);
  //$_SESSION["cart"]_push($$_SESSION["item"], $_SESSION["num"]);
