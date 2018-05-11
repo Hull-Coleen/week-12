@@ -3,7 +3,7 @@ session_start();
 $test;
 $_SESSION["item"] = $_POST["item"];
 $f = $_SESSION["item"];
-
+$a = $_SESSION["cart"];
 if($f == "Red Small") {
 	$img = "Ashley.jpg";
 	
@@ -26,6 +26,7 @@ else {
 <a href="/cart.php">Cart</a>
 	<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 <?php
+$a = $_SESSION["cart"];
 
 	
 	//$_SESSION["num"] = $_POST["num"];
@@ -41,8 +42,11 @@ else {
 	 //echo $value;
 	 
  //}
- //$a = array($f);
- //array_push($_SESSION["cart"], $a);
+ push_array($a, $f);
+ $_SESSION["cart"] = $a;
+ 
+ 
+ //array_push(echo "<br><br>" . count($_SESSION["cart"]);, $a);
  //array_push($_SESSION["cart"], $f);
  //array_push($_SESSION["cart"], $_SESSION["item"]);
  foreach ($_SESSION["cart"] as $fl) {
@@ -55,7 +59,7 @@ else {
   //echo "<br><br>" . count($_SESSION["cart"]);
  //array_push($a, $f -> "1");
  //$_SESSION["cart"][$t] = '1';
-  $_SESSION["cart"] = $a;
+  //$_SESSION["cart"] = $a;
 //array_push($_SESSION["cart"], $f -> $_SESSION["num"]);
 ////array_push($_SESSION["cart"], $test);
 //echo "session" . count($_SESSION["cart"]);
@@ -66,7 +70,7 @@ else {
     //echo htmlspecialchars($value);
 	
 //}
-echo "<br><br>" . count($_SESSION["cart"]);
+//echo "<br><br>" . count($_SESSION["cart"]);
 //echo count($result);
 //echo count($a);
  
