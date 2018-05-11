@@ -42,7 +42,7 @@ else {
 	 //echo $value;
 	 
  //}
- push_array($a, $f);
+ array_push($a, $f);
  $_SESSION["cart"] = $a;
  
  foreach ($a as $fl) {
