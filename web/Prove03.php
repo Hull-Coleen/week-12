@@ -39,13 +39,9 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	  <a href="info.php">
           <img src="Ashley.jpg" alt="HTML tutorial" class="c"  style="width:42px;height:42px;border:0;">
       </a>
-	  <input type="hidden" name="name" value="<?php $_SESSION["item"] = "a" ?> />
+	  <input type="hidden" name="name" value="a" />
 	  <p><var id="myVar">Red Small</var></p>
-	  <?php
-	  //$_SESSION["item"] = "Red Small";
-	//}
-	//$_SESSION["cart"] = $_POST["flower"];
-      ?>
+	  
 	  </div>
 	  </form><form method="POST">
 	  <div>
@@ -53,12 +49,8 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
           <img src="Katelynn3.jpg" alt="HTML tutorial" class="c" style="width:42px;height:42px;border:0;">
       </a>
 	  <p><var id="myVar">Red Medium</var></p>
-	  <input type="hidden" name="name" value="<?php $_SESSION["item"] = "b" ?> />
-	  <?php
-	   // $_SESSION["item"] = "Red Medium";
-	//}
-	//$_SESSION["cart"] = $_POST["flower"];
-  ?>
+	  <input type="hidden" name="name" value="b" />
+	
 	  </div><form method="POST">
 	  <div>
 	  <a href="info.php">
@@ -69,19 +61,6 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	  
 	  </div>
 	  </form>
-	  <script>
-	 // $(document).ready(function() {
-
-    //$( ".c" ).click(function() {
-      //$( "#info.php" ).submit();
-    //});
-     //}); </script>
-    
-	<?php
-	//$_SESSION["item"] = myVar;
-	//}
-	//$_SESSION["cart"] = $_POST["flower"];
-  ?>
   
   
   <br><br>
