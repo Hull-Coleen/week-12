@@ -19,7 +19,7 @@ $test;
  echo $_SESSION["item"];
  echo $_SESSION["num"];
  $test = array($_SESSION["item"] => $_SESSION["num"]);
- foreach ($test as $key => $ value) {
+ foreach ($test as $key => $value) {
 	 echo $key;
 	 echo $value;
 	 
