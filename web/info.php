@@ -40,7 +40,7 @@ else {
 	 //echo $value;
 	 
  //}
- array_push($_SESSION["cart"], $t);
+ array_push($_SESSION["cart"], $f);
  foreach ($_SESSION["cart"] as $fl) {
 	 echo htmlspecialchars($fl);
  }
