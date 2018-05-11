@@ -30,6 +30,13 @@ $test;
  $_SESSION["cart"]['$t'] = $_SESSION['num'];
 $_SESSION["cart"] = $result;
 echo count($_SESSION["cart"]);
+	foreach ($_SESSION["cart"] as $fl => $value)
+{
+	echo htmlspecialchars($fl);
+	echo "<br>";
+    echo htmlspecialchars($value);
+	
+}
  //$_SESSION["cart"] = array_push_assoc($_SESSION["cart"], $_SESSION["item"] , $_SESSION["num"]);
  //$_SESSION["cart"]_push($$_SESSION["item"], $_SESSION["num"]);
  //array_push($data,$question);
