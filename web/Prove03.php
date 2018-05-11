@@ -37,7 +37,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
      <div>
 	  <div>
 	  <a href="info.php">
-          <img src="Ashley.jpg" alt="HTML tutorial" class="c" style="width:42px;height:42px;border:0;">
+          <img src="Ashley.jpg" alt="HTML tutorial" class="c" name="a" style="width:42px;height:42px;border:0;">
       </a>
 	  <p><var id="myVar">Red Small</var></p>
 	  <?php
