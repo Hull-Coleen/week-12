@@ -46,7 +46,7 @@ p {
  foreach ($_SESSION["cart"] as $fl) {
 	 ?>
 	 <p> <?php echo htmlspecialchars($fl);
-	           echo "<br>"
+	           echo "<br>";
 			   echo $d; ?> </p>
 	 <?php
  }
