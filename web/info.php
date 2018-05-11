@@ -15,7 +15,7 @@ $test;
 </script>	
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$_SESSION["item"] = $_POST["name"];
+	$_SESSION["item"] = $_POST[$name];
 }
  echo $_SESSION["item"];
 
