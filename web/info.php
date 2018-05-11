@@ -44,22 +44,20 @@ else {
  
  //$a[$f] = $_SESSION['num'];
  //array_push($a, $f -> "1");
-//$_SESSION["cart"][$t] = '1';
+ $_SESSION["cart"][$t] = '1';
 //$_SESSION["cart"] = $a;
-array_push($_SESSION["cart"], $f -> $_SESSION["num"]);
+//array_push($_SESSION["cart"], $f -> $_SESSION["num"]);
 echo "session" . count($_SESSION["cart"]);
-	//foreach ($_SESSION["cart"] as $fl => $value)
-//{
-	//echo htmlspecialchars($fl);
-	//echo "<br>";
-    //echo htmlspecialchars($value);
+foreach ($_SESSION["cart"] as $fl => $value)
+{
+	echo htmlspecialchars($fl);
+	echo "<br>";
+    echo htmlspecialchars($value);
 	
-//}
+}
 echo count($result);
 echo count($a);
- //$_SESSION["cart"] = array_push_assoc($_SESSION["cart"], $_SESSION["item"] , $_SESSION["num"]);
- //$_SESSION["cart"]_push($$_SESSION["item"], $_SESSION["num"]);
- //array_push($data,$question);
+ 
 
 ?>
 
