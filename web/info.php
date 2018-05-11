@@ -3,12 +3,12 @@ session_start();
 $test;
 $_SESSION["item"] = $_POST["item"];
 $f = $_SESSION["item"];
-$a $_SESSION["cart"];
-if($f = "Red Small") {
+$a = $_SESSION["cart"];
+if($f == "Red Small") {
 	$img = "Ashley.jpg";
 	
 }
-else if ($f = "Blue Small") {
+else if ($f == "Blue Small") {
 	$img = "Kristine.jpg";
 }
 else {
