@@ -8,9 +8,11 @@ session_start();
 </head>
 <body>
     
-	
+<script>
+var myElement = document.getElementById("myVar").value;
+</script>	
 <?php
- echo $_SESSION["item"];
+ echo $_SESSION["item"] = myElement;
 
 ?>
 
