@@ -40,11 +40,12 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
  <form method="POST" action="info.php">
    <div>
   <input type="radio" name="item" value="Red Small">RS<br />
-  <?php $_SESSION["num"] = 1; ?>
+  <input type="hidden" name="num" value="1" />
+  
   </div>
   <div>
   <input type="radio" name="item" value="Red Medium">RM<br />
-  <?php $_SESSION["num"] = 2; ?>
+  <input type="hidden" name="num" value="1" />
   </div>
   <div>
   <input type="radio" name="item" value="Red Large">RL<br />
