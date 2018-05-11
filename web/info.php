@@ -44,7 +44,7 @@ else {
  //array_push($_SESSION["cart"], $f);
  array_push($_SESSION["cart"], $_SESSION["item"]);
  foreach ($_SESSION["cart"] as $fl) {
-	 echo htmlspecialchars($fl);
+	 echo "session " . htmlspecialchars($fl);
  }
  
  echo "<br><br>" . count($_SESSION["cart"]);
