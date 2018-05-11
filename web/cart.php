@@ -6,6 +6,7 @@ session_start();
 $flowers = $_POST["flower"];
 $_SESSION["cart"] = $_POST["flower"];
 $f = $_SESSION["cart"];
+
 ?>
 
 <!DOCTYPE html>

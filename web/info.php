@@ -1,7 +1,7 @@
 <?php
 session_start();
 $test;
-$_SESSION["item"] = $_POST["name"];
+
 
 ?>
 <!DOCTYPE html>
@@ -15,6 +15,7 @@ $_SESSION["item"] = $_POST["name"];
 //$test = document.getElementById("myVar").value;
 </script>	
 <?php
+$_SESSION["item"] = $_POST["name"];
 //if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION["item"] = $_POST[$name];
 }
