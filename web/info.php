@@ -42,7 +42,7 @@ else {
  }
  
  
- $a['$f'] = '$_SESSION['num']';
+ $a['$f'] = $_SESSION['num'];
  //array_push($a, $f -> "1");
 //$_SESSION["cart"] = $result;
 $_SESSION["cart"] = $a;
