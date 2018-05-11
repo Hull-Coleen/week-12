@@ -17,7 +17,7 @@ $f = $_SESSION["cart"];
 <body>
 <a href="/Prove03.php">Continue Shopping</a>
 <a href="/checkout.php">Checkout</a>
-<?
+
 <?php
 	foreach ($_SESSION["cart"] as $fl => $value)
 {
@@ -28,7 +28,8 @@ $f = $_SESSION["cart"];
 } 
 echo count($_SESSION["cart"]);
 
-?>
+?> 
+<?php
 foreach ($_SESSION["cart"] as $fl)
 {
 	$flower_c = htmlspecialchars($fl);
