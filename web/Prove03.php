@@ -4,7 +4,6 @@ if(!isset($_SESSION["cart"])){
     //If it doesn't, create an empty array.
     $_SESSION["cart"] = array();
 }
-//$_SESSION["cart"] = array();
 $_SESSION["name"];
 $_SESSION["address"];
 $_SESSION["email"];
@@ -42,21 +41,50 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	
 ?> 
  <form method="POST" action="info.php">
+ <div>
+   <div>
+     <img src="/world.jpg" alt="World"> 
+     <input type="radio" name="item" value="Red Small">RS<br /> 
+   </div>
+   <div>
+     <input type="radio" name="item" value="Red Medium">RM<br />
+   </div>
+   <div>
+     <input type="radio" name="item" value="Red Large">RL<br />
+   </div>
+ </div>
+ 
+   <div>
+  <input type="radio" name="item" value="Blue Small">BS<br />
+  </div>
    <div>
    <img src="/world.jpg" alt="World"> 
-  <input type="radio" name="item" value="Red Small">RS<br />
-  <input type="hidden" name="num" value="1" />
+  <input type="radio" name="item" value="Red Small">BM<br />
   
   </div>
   <div>
-  <input type="radio" name="item" value="Red Medium">RM<br />
-  <input type="hidden" name="num" value="2" />
+  <input type="radio" name="item" value="Red Medium">BL<br />
+  <
   </div>
   <div>
-  <input type="radio" name="item" value="Red Large">RL<br />
+  <input type="radio" name="item" value="Red Large">YS<br />
   </div>
   <div>
-  <input type="radio" name="item" value="Blue Small">BS<br />
+  <input type="radio" name="item" value="Blue Small">YM<br />
+  </div>
+   <div>
+   <img src="/world.jpg" alt="World"> 
+  <input type="radio" name="item" value="Red Small">YL<br />
+  
+  </div>
+  <div>
+  <input type="radio" name="item" value="Red Medium">PS<br />
+  </div>
+  <div>
+  <input type="radio" name="item" value="Red Large">PM<br />
+  </div>
+  <div>
+  <input type="radio" name="item" value="Blue Small">PL<br />
   </div>
 	<input type="submit" name="submit" value="Submit">  		
 			

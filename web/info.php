@@ -9,12 +9,57 @@ if($f == "Red Small") {
 	$d = "Small Bouquet of Red Roses";
 	
 }
+else if($f == "Red Medium") {
+	$img = "Ashley.jpg";
+	$d = "Small Bouquet of Red Roses";
+	
+}
+else if ($f == "Red Small") {
+	$img = "Kristine.jpg";
+	$d = "Small Bouquet of Blue Flowers";
+}
 else if ($f == "Blue Small") {
+	$img = "Kristine.jpg";
+	$d = "Small Bouquet of Blue Flowers";
+}
+else if($f == "Blue Medium") {
+	$img = "Ashley.jpg";
+	$d = "Small Bouquet of Red Roses";
+	
+}
+else if ($f == "Blue Large") {
+	$img = "Kristine.jpg";
+	$d = "Small Bouquet of Blue Flowers";
+}
+else if($f == "Yellow Small") {
+	$img = "Ashley.jpg";
+	$d = "Small Bouquet of Red Roses";
+	
+}
+else if ($f == "Yellow Medium") {
+	$img = "Kristine.jpg";
+	$d = "Small Bouquet of Blue Flowers";
+}
+else if ($f == "Yellow Large") {
+	$img = "Kristine.jpg";
+	$d = "Small Bouquet of Blue Flowers";
+}
+else if($f == "Purple Small") {
+	$img = "Ashley.jpg";
+	$d = "Small Bouquet of Red Roses";
+	
+}
+else if ($f == "Purple Medium") {
+	$img = "Kristine.jpg";
+	$d = "Small Bouquet of Blue Flowers";
+}
+else if ($f == "Purple Large") {
 	$img = "Kristine.jpg";
 	$d = "Small Bouquet of Blue Flowers";
 }
 else {
 	$img = "world.jpg";
+	$d = "";
 }
 	
 ?>
