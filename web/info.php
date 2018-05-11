@@ -27,7 +27,7 @@ $test;
 	 
  }
  echo count($result);
- $_SESSION[$t] = $_SESSION["num"];
+ $_SESSION["cart"][$t] = $_SESSION["num"];
  //$_SESSION["cart"] = array_push_assoc($_SESSION["cart"], $_SESSION["item"] , $_SESSION["num"]);
  //$_SESSION["cart"]_push($$_SESSION["item"], $_SESSION["num"]);
  //array_push($data,$question);
