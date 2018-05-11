@@ -40,6 +40,7 @@ else {
 	 //echo $value;
 	 
  //}
+ array_push($_SESSION["cart"], $t);
  array_push($_SESSION["cart"], $_SESSION["item"]);
  foreach ($_SESSION["cart"] as $fl) {
 	 echo htmlspecialchars($fl);
@@ -51,7 +52,7 @@ else {
  //array_push($a, $f -> "1");
  //$_SESSION["cart"][$t] = '1';
 //$_SESSION["cart"] = $a;
-//array_push($_SESSION["cart"], $f -> $_SESSION["num"]);
+array_push($_SESSION["cart"], $f -> $_SESSION["num"]);
 ////array_push($_SESSION["cart"], $test);
 //echo "session" . count($_SESSION["cart"]);
 //foreach ($_SESSION["cart"] as $fl => $value)
