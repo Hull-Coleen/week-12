@@ -41,9 +41,9 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
 	
 ?> 
  <form method="POST" action="info.php">
- <div>
+ <div  id="row">
    <div>
-     <img src="/world.jpg" alt="World"> 
+     <img src="RedF.jpg" alt="World"> 
      <input type="radio" name="item" value="Red Small">RS<br /> 
    </div>
    <div>
