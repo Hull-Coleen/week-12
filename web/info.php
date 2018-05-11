@@ -81,6 +81,7 @@ p {
 <body>
 <a href="/Prove03.php">Continue Shopping</a><br>
 <a href="/cart.php">Cart</a>
+<h1>Product Information</h1>
 	<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 <?php
 

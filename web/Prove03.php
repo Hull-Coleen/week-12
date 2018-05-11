@@ -21,16 +21,7 @@ $_SESSION["num"];
 img {
 	max-height: 240px;
 }
-div#row {
-	width: 40%;
-	padding: 20px;
-	display: inline-block;
-}
-div#row2 {
-	width: 40%;
-	padding: 20px;
-	display: inline-block;
-}
+
 
 </style>
 <link rel="stylesheet" type="text/css" href="Prove03style.css">

@@ -12,7 +12,7 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 <link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>
-    <p> <?php echo $_SESSION["name"] ?></p>
+    <p> <?php echo "Thank you for your purchase: " . $_SESSION["name"] ?></p>
 	<p>Your address is: <?php echo $_SESSION["address"] ?></p>
 	<p>Your email is: <?php echo $_SESSION["email"] ?></p>
 	
