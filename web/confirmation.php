@@ -9,6 +9,7 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 <html>
 <head>
 <title>Confirmation Page</title>
+<link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>
     <p> <?php echo $_SESSION["name"] ?></p>

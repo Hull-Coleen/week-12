@@ -75,6 +75,7 @@ img {
 p {
 	text-align: center;
 }
+<link rel="stylesheet" type="text/css" href="Prove03style.css">
 </style>
 </head>
 <body>

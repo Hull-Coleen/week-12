@@ -11,10 +11,12 @@ if (!empty($_POST["item"])) {
 <html>
 <head>
 <title></title>
+<link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>
 <a href="/Prove03.php">Continue Shopping</a>
 <a href="/checkout.php">Checkout</a>
+<h1>Shopping Cart</h1>
 
 <?php
 echo $_SESSION["item"];

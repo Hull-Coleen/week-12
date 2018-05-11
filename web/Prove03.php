@@ -33,6 +33,7 @@ div#row2 {
 }
 
 </style>
+<link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>  
 
