@@ -33,7 +33,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
   <?php
    // foreach($flowers as $key => $value){
 ?>  
-<form method="post">
+<form method="POST">
      <div>
 	  <div>
 	  <a href="info.php">
