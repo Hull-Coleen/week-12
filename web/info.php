@@ -87,11 +87,14 @@ p {
 
  //foreach ($_SESSION["cart"] as $fl) {
 	 ?>
+	 <form method="POST" action="cart.php">
+	 <input type="hidden" id="address" name="item" value="<?php echo htmlspecialchars($f); ?>">
 	 <p> <?php echo htmlspecialchars($f);
 	           echo "<br>";
 			   echo $d; ?> <br>
-			<button type="button" onclick="add()">Add to Cart</button>   
+			<button type="submit" formmethod="POST">Add to Cart</button>   
 			   </p>
+	</form>		   
 	 <?php
 // }
  
