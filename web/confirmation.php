@@ -16,11 +16,11 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 	<p>Your email is: <?php echo $_SESSION["email"] ?></p>
 	
 <?php
-	foreach ($_SESSION["cart"] as $fl => $value)
+	foreach ($_SESSION["cart"] as $fl)
 {
 	echo htmlspecialchars($fl);
-	echo "<br>";
-    echo htmlspecialchars($value);
+	//echo "<br>";
+    //echo htmlspecialchars($value);
 	
 } 
 echo count($_SESSION["cart"]);
