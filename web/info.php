@@ -82,9 +82,7 @@ p {
 <a href="/cart.php">Cart</a>
 	<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 <?php
-<script>
- 
-</script>
+
 // array_push($_SESSION["cart"], $f);
 
  //foreach ($_SESSION["cart"] as $fl) {
