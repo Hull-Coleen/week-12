@@ -26,6 +26,11 @@ div#row {
 	padding: 20px;
 	display: inline-block;
 }
+div#row2 {
+	width: 40%;
+	padding: 20px;
+	display: inline-block;
+}
 
 </style>
 </head>
@@ -79,6 +84,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
   <input type="radio" name="item" value="Blue Large">BL<br />
   </div>
   </div>
+  <div  id="row2">
   <div>
   <img src="YellowF.jpg" alt="World">
   <input type="radio" name="item" value="Yellow Small">YS<br />
@@ -90,8 +96,10 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
    <div>
    <img src="YellowF.jpg" alt="World"> 
   <input type="radio" name="item" value="Yellow Large">YL<br />
-  
   </div>
+  </div>
+  <div  id="row2">
+  
   <div>
   <img src="PurpleF.jpg" alt="World">
   <input type="radio" name="item" value="Purple Small">PS<br />
@@ -103,6 +111,7 @@ $flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red 
   <div>
   <img src="PurpleF.jpg" alt="World">
   <input type="radio" name="item" value="Purple Large">PL<br />
+  </div>
   </div>
 	<input type="submit" name="submit" value="Submit">  		
 			
