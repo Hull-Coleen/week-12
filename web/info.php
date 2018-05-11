@@ -3,6 +3,7 @@ session_start();
 $test;
 $_SESSION["item"] = $_POST["item"];
 $f = $_SESSION["item"];
+$a $_SESSION["cart"];
 if($f = "Red Small") {
 	$img = "Ashley.jpg";
 	
@@ -40,8 +41,8 @@ else {
 	 
  }
  echo count($result);
- $_SESSION["cart"]['$t'] = $_SESSION['num'];
-$_SESSION["cart"] = $result;
+ $a['$f'] = $_SESSION['num'];
+//$_SESSION["cart"] = $result;
 echo count($_SESSION["cart"]);
 	foreach ($_SESSION["cart"] as $fl => $value)
 {
