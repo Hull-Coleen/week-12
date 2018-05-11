@@ -21,6 +21,12 @@ else {
 <html>
 <head>
 <title>Info Page</title>
+<style>
+img {
+	max-height: 340px;
+	
+}
+</style>
 </head>
 <body>
 <a href="/Prove03.php">Continue Shopping</a>
