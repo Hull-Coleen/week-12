@@ -32,7 +32,7 @@ else {
 
  echo $_SESSION["item"];
  echo $_SESSION["num"];
- //$t =$_SESSION["item"];
+ $t =$_SESSION["item"];
  $test = array($_SESSION["item"] => $_SESSION["num"]);
  $result = array_merge($test, $_SESSION["cart"]);
  foreach ($test as $key => $value) {
