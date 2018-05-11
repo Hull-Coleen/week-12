@@ -42,10 +42,10 @@ else {
  }
  
  
- $a[$f] = $_SESSION['num'];
+ //$a[$f] = $_SESSION['num'];
  //array_push($a, $f -> "1");
-//$_SESSION["cart"] = $result;
-$_SESSION["cart"] = $a;
+$_SESSION["cart"] = $result;
+//$_SESSION["cart"] = $a;
 echo count($_SESSION["cart"]);
 	foreach ($_SESSION["cart"] as $fl => $value)
 {
