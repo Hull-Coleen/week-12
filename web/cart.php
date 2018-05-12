@@ -6,6 +6,7 @@ if (!empty($_POST["item"])) {
 	array_push($_SESSION["cart"], $_POST["item"]);
 	
 }
+$t = ($_GET-'_delete'];
 if (!empty($_GET['_delete'])) {
 	unset($_SESSION["cart"][$_GET['delete']]);
 	
@@ -32,7 +33,7 @@ if (!empty($_GET['_delete'])) {
     //echo htmlspecialchars($value);
 	
 //} 
-echo count($_SESSION["cart"]);
+echo $t;
 
 ?> 
 <?php
