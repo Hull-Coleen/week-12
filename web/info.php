@@ -1,14 +1,16 @@
 <?php
 session_start();
 $_SESSION["item"] = $_POST["item"];
-$d;
+//$d;
 $f = $_SESSION["item"];
-$_SESSION["image"] = $img;
-$_SESSION["d"] = $d;
+$img = $_SESSION["image"];
+$d = $_SESSION["d"] = $d;
 if($f == "Red Small") {
-	$img = "RedF.jpg";
+	$_SESSION["image"] = "RedF.jpg";
+	//$img = "RedF.jpg";
 	//$i = "RedF.jpg";
-	$d = "Small Bouquet of Red Roses";
+	//$d = "Small Bouquet of Red Roses";
+	$d = $_SESSION["d"] = "Small Bouquet of Red Roses";
 	
 }
 else if($f == "Red Medium") {
