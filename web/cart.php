@@ -7,7 +7,7 @@ if (!empty($_POST["item"])) {
 	
 }
 if (!empty($_GET[$i])) {
-	unset($_SESSION["cart"]($i));
+	unset($_SESSION["cart"][$_GET[$i]]);
 	
 }
 ?>
