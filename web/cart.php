@@ -6,8 +6,8 @@ if (!empty($_POST["item"])) {
 	array_push($_SESSION["cart"], $_POST["item"]);
 	
 }
-if (!empty($_GET[$i])) {
-	unset($_SESSION["cart"][$_GET[$i]]);
+if (!empty($_GET['delete'])) {
+	unset($_SESSION["cart"][$_GET['delete']]);
 	
 }
 ?>
@@ -36,9 +36,9 @@ echo count($_SESSION["cart"]);
 
 ?> 
 <?php
-for ($i = 0; $i < count($_SESSION["cart"]); $i++)
-{
-echo "<p><a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>$_SESSION["cart"][$i]</a></p>";
+for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
+echo $_SESSION["cart"][$i];
+echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>Delete</a>";
 }
 foreach ($_SESSION["cart"] as $fl)
 {
