@@ -19,7 +19,9 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 <?php
 	foreach ($_SESSION["cart"] as $fl)
 {
-	echo "<p id="confirm">htmlspecialchars($fl)</p>";
+	?>
+	<p> <?php echo htmlspecialchars($fl); ?> </p>
+	<?php
 	//echo "<br>";
     //echo htmlspecialchars($value);
 	
