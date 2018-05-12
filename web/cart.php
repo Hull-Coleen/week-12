@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-$_SESSION["item"] = htmlspecialchars($_POST["item"]);
-if (!empty($_POST["item"])) {
-	array_push($_SESSION["cart"], $_POST["item"]);
-	
-}
 $t = $_GET['_delete'];
 if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
