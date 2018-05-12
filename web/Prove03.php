@@ -27,64 +27,64 @@ $_SESSION["num"];
 <a href="/cart.php">Cart</a>
 
 <br><br>
-
+<h1>Welcome to our Website</h1><br>
  <form method="POST" action="info.php">
  <div  id="row">
-   <div>
+   <div><p>
      <img src="RedF.jpg" alt="World"> 
-     <input type="radio" name="item" value="Red Small">RS<br /> 
+     <input type="radio" name="item" value="Red Small">RS<br /></P> 
    </div>
-   <div>
+   <div><p>
    <img src="RedF.jpg" alt="World">
-     <input type="radio" name="item" value="Red Medium">RM<br />
+     <input type="radio" name="item" value="Red Medium">RM<br /></P> 
    </div>
-   <div>
+   <div><p>
    <img src="RedF.jpg" alt="World">
-     <input type="radio" name="item" value="Red Large">RL<br />
+     <input type="radio" name="item" value="Red Large">RL<br /></P> 
    </div>
  </div>
  <div  id="row">
    <div>
    <img src="BlueF.jpg" alt="World">
-  <input type="radio" name="item" value="Blue Small">BS<br />
+  <input type="radio" name="item" value="Blue Small">BS<br /></P> 
   </div>
-   <div>
+   <div><p>
    <img src="BlueF.jpg" alt="World"> 
-  <input type="radio" name="item" value="Blue Medium">BM<br />
+  <input type="radio" name="item" value="Blue Medium">BM<br /></P> 
   
   </div>
-  <div>
+  <div><p>
   <img src="BlueF.jpg" alt="World">
-  <input type="radio" name="item" value="Blue Large">BL<br />
+  <input type="radio" name="item" value="Blue Large">BL<br /></P> 
   </div>
   </div>
   <div  id="row2">
-  <div>
+  <div><p>
   <img src="YellowF.jpg" alt="World">
-  <input type="radio" name="item" value="Yellow Small">YS<br />
+  <input type="radio" name="item" value="Yellow Small">YS<br /></P> 
   </div>
-  <div>
+  <div><p>
   <img src="YellowF.jpg" alt="World">
-  <input type="radio" name="item" value="Yellow Medium">YM<br />
+  <input type="radio" name="item" value="Yellow Medium">YM<br /></P> 
   </div>
-   <div>
+   <div><p>
    <img src="YellowF.jpg" alt="World"> 
-  <input type="radio" name="item" value="Yellow Large">YL<br />
+  <input type="radio" name="item" value="Yellow Large">YL<br /></P> 
   </div>
   </div>
   <div  id="row2">
   
-  <div>
+  <div><p>
   <img src="PurpleF.jpg" alt="World">
-  <input type="radio" name="item" value="Purple Small">PS<br />
+  <input type="radio" name="item" value="Purple Small">PS<br /></P> 
   </div>
-  <div>
+  <div><p>
   <img src="PurpleF.jpg" alt="World">
-  <input type="radio" name="item" value="Purple Medium">PM<br />
+  <input type="radio" name="item" value="Purple Medium">PM<br /></P> 
   </div>
-  <div>
+  <div><p>
   <img src="PurpleF.jpg" alt="World">
-  <input type="radio" name="item" value="Purple Large">PL<br />
+  <input type="radio" name="item" value="Purple Large">PL<br /></P> 
   </div>
   </div>
 	<input type="submit" name="submit" value="Submit">  		

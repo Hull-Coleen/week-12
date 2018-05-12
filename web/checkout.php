@@ -8,7 +8,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>
-<a href="/cart.php">Back to Cart</a>
+<a href="/cart.php">Back to Cart</a><br>
 <h1>Please Enter your Check out Information</h1>
 <form method="POST" action="confirmation.php">
 <p>

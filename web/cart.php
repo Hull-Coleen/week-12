@@ -19,7 +19,7 @@ if ($t > -1) {
 <link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>
-<a href="/Prove03.php">Continue Shopping</a>
+<a href="/Prove03.php">Continue Shopping</a><br>
 <a href="/checkout.php">Checkout</a>
 <h1>Shopping Cart</h1><br><br>
 
