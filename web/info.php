@@ -5,56 +5,56 @@ $d;
 $f = $_SESSION["item"];
 
 if($f == "Red Small") {
-	$img = "Ashley.jpg";
+	$img = "RedF.jpg";
 	$d = "Small Bouquet of Red Roses";
 	
 }
 else if($f == "Red Medium") {
-	$img = "Ashley.jpg";
+	$img = "RedF.jpg";
 	$d = "Small Bouquet of Red Roses";
 	
 }
-else if ($f == "Red Small") {
-	$img = "Kristine.jpg";
+else if ($f == "Red Large") {
+	$img = "RedF.jpg";
 	$d = "Small Bouquet of Blue Flowers";
 }
 else if ($f == "Blue Small") {
-	$img = "Kristine.jpg";
+	$img = "BlueF.jpg";
 	$d = "Small Bouquet of Blue Flowers";
 }
 else if($f == "Blue Medium") {
-	$img = "Ashley.jpg";
+	$img = "BlueF.jpg";
 	$d = "Small Bouquet of Red Roses";
 	
 }
 else if ($f == "Blue Large") {
-	$img = "Kristine.jpg";
+	$img = "BlueF.jpg";
 	$d = "Small Bouquet of Blue Flowers";
 }
 else if($f == "Yellow Small") {
-	$img = "Ashley.jpg";
+	$img = "YellowF.jpg";
 	$d = "Small Bouquet of Red Roses";
 	
 }
 else if ($f == "Yellow Medium") {
-	$img = "Kristine.jpg";
+	$img = "YellowF.jpg";
 	$d = "Small Bouquet of Blue Flowers";
 }
 else if ($f == "Yellow Large") {
-	$img = "Kristine.jpg";
+	$img = "YellowF.jpg";
 	$d = "Small Bouquet of Blue Flowers";
 }
 else if($f == "Purple Small") {
-	$img = "Ashley.jpg";
+	$img = "PurpleF.jpg";
 	$d = "Small Bouquet of Red Roses";
 	
 }
 else if ($f == "Purple Medium") {
-	$img = "Kristine.jpg";
+	$img = "PurpleF.jpg";
 	$d = "Small Bouquet of Blue Flowers";
 }
 else if ($f == "Purple Large") {
-	$img = "Kristine.jpg";
+	$img = "PurpleF.jpg";
 	$d = "Small Bouquet of Blue Flowers";
 }
 else {

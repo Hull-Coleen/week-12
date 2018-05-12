@@ -16,8 +16,9 @@ div#row2 {
 }
 p {
 	text-align: center;
+	font-family: Agency FB;
 }
 p#confirm {
 	font-size: 180%;
-	font-family: Agency FB;
+	
 }
