@@ -10,10 +10,6 @@ $t = $_GET['_delete'];
 if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
 }
-if (!empty($_GET['_delete'])) {
-	unset($_SESSION["cart"][$t]);
-	
-}
 ?>
 
 <!DOCTYPE html>
@@ -28,27 +24,12 @@ if (!empty($_GET['_delete'])) {
 <h1>Shopping Cart</h1>
 
 <?php
-//echo $_SESSION["item"];
-	//foreach ($_SESSION["cart"] as $fl => $value)
-//{
-	//echo htmlspecialchars($fl);
-	//echo "<br>";
-    //echo htmlspecialchars($value);
-	
-//} 
-echo $t;
-
-?> 
-<?php
 for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
-echo $_SESSION["cart"][$i];
-echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>Delete</a>";
+   echo "<p> $_SESSION["cart"][$i]</p>";
+   echo "<p><a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>Delete</a></p>";
 }
-foreach ($_SESSION["cart"] as $fl)
-{
-	$flower_c = htmlspecialchars($fl);
-	echo "<p>$flower_c</p>";//echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>Delete</a>";
-}
+
+
 
 ?>
 
