@@ -3,7 +3,8 @@ session_start();
 $_SESSION["item"] = $_POST["item"];
 $d;
 $f = $_SESSION["item"];
-
+$_SESSION["image"] = $img
+$_SESSION["d"] = $d
 if($f == "Red Small") {
 	$img = "RedF.jpg";
 	$d = "Small Bouquet of Red Roses";	
