@@ -8,7 +8,7 @@ if (!empty($_POST["item"])) {
 }
 $t = $_GET['_delete'];
 if (!empty($_GET['_delete'])) {
-	unset($_SESSION["cart"][$_GET['delete']]);
+	unset($_SESSION["cart"][$t]);
 	
 }
 ?>
