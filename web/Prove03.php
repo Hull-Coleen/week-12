@@ -4,6 +4,7 @@ if(!isset($_SESSION["cart"])){
     //If it doesn't, create an empty array.
     $_SESSION["cart"] = array();
 }
+
 $_SESSION["name"];
 $_SESSION["address"];
 $_SESSION["email"];
@@ -23,24 +24,10 @@ $_SESSION["num"];
 </head>
 <body>  
 
-<?php
-// define variables 
-$num = 0;
-
-$flowers = array("RS" => "Red Small    ", "RM" => "Red Med      ", "RL" => "Red Large    ", "BS" => "Blue Small   ", 
-                 "BM" => "Blue Med     ", "BL" => "Blue Large   ", "YS" => "Yellow Small ", "YM" => "Yellow Med   ", 
-				 "YL" => "Yellow Large ", "PS" => "Purple Small ", "PM" => "Purple Med    ", "PL" => "Purple Large ");
-?>
 <a href="/cart.php">Cart</a>
 
 <br><br>
-  <?php
-   foreach($flowers as $key => $value){
-	//   $pl = htmlspecialchars($key => $value);
-	  // echo "<input type='checkbox' name='flower[]' value=$key>$value<br>";
-   }
-	
-?> 
+
  <form method="POST" action="info.php">
  <div  id="row">
    <div>

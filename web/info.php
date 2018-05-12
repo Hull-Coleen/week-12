@@ -11,12 +11,12 @@ if($f == "Red Small") {
 }
 else if($f == "Red Medium") {
 	$img = "RedF.jpg";
-	$d = "Small Bouquet of Red Roses";
+	$d = "Medium Bouquet of Red Roses";
 	
 }
 else if ($f == "Red Large") {
 	$img = "RedF.jpg";
-	$d = "Small Bouquet of Blue Flowers";
+	$d = "Large Bouquet of Blue Flowers";
 }
 else if ($f == "Blue Small") {
 	$img = "BlueF.jpg";
@@ -24,38 +24,38 @@ else if ($f == "Blue Small") {
 }
 else if($f == "Blue Medium") {
 	$img = "BlueF.jpg";
-	$d = "Small Bouquet of Red Roses";
+	$d = "Medium Bouquet of Blue Flowers";
 	
 }
 else if ($f == "Blue Large") {
 	$img = "BlueF.jpg";
-	$d = "Small Bouquet of Blue Flowers";
+	$d = "Large Bouquet of Blue Flowers";
 }
 else if($f == "Yellow Small") {
 	$img = "YellowF.jpg";
-	$d = "Small Bouquet of Red Roses";
+	$d = "Small Bouquet of Yellow Roses";
 	
 }
 else if ($f == "Yellow Medium") {
 	$img = "YellowF.jpg";
-	$d = "Small Bouquet of Blue Flowers";
+	$d = "Medium Bouquet of Yellow Flowers";
 }
 else if ($f == "Yellow Large") {
 	$img = "YellowF.jpg";
-	$d = "Small Bouquet of Blue Flowers";
+	$d = "Large Bouquet of Yellow Flowers";
 }
 else if($f == "Purple Small") {
 	$img = "PurpleF.jpg";
-	$d = "Small Bouquet of Red Roses";
+	$d = "Small Bouquet of Purple Flowers";
 	
 }
 else if ($f == "Purple Medium") {
 	$img = "PurpleF.jpg";
-	$d = "Small Bouquet of Blue Flowers";
+	$d = "Mediuml Bouquet of Purple Flowers";
 }
 else if ($f == "Purple Large") {
 	$img = "PurpleF.jpg";
-	$d = "Small Bouquet of Blue Flowers";
+	$d = "Large Bouquet of Purple Flowers";
 }
 else {
 	$img = "world.jpg";
@@ -75,36 +75,17 @@ else {
 <body>
 <a href="/Prove03.php">Continue Shopping</a><br>
 <a href="/cart.php">Cart</a>
-<h1>Product Information</h1>
-	<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
-<?php
+<h1>Product Information</h1><br>
+<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 
-// 
-
- //foreach ($_SESSION["cart"] as $fl) {
-	 ?>
-	 <form method="POST" action="cart.php">
-	 <input type="hidden" id="address" name="item" value="<?php echo htmlspecialchars($f); ?>">
-	 <p> <?php echo htmlspecialchars($f);
-	           echo "<br>";
-			   echo $d; ?> <br>
-			<input type="submit" name="submit" value="Add to Cart">  
-			   </p>
-	</form>		   
-	 <?php
-	 function testfun()
-{
-   echo "Your test function on button click is working";
-   array_push($_SESSION["cart"], $f);
-}
-
-if(array_key_exists('add',$_POST)){
-   testfun();
-}
- 
- 
-
-?>
+<form method="POST" action="cart.php">
+  <input type="hidden" id="address" name="item" value="<?php echo htmlspecialchars($f); ?>">
+  <p> <?php echo htmlspecialchars($f);
+	        echo "<br>";
+			echo $d; ?> <br>
+    <input type="submit" name="submit" value="Add to Cart">  
+  </p>
+</form>		   
 
 </body>
 </html>
