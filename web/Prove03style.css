@@ -22,3 +22,6 @@ p#confirm {
 	font-size: 180%;
 	
 }
+img {
+	max-height: 340px;
+}

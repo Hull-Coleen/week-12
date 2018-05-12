@@ -18,11 +18,6 @@ $_SESSION["num"];
 <!-- jQuery library -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <style>
-img {
-	max-height: 240px;
-}
-
-
 </style>
 <link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>

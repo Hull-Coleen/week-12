@@ -68,13 +68,6 @@ else {
 <head>
 <title>Info Page</title>
 <style>
-img {
-	max-height: 340px;
-	
-}
-p {
-	text-align: center;
-}
 
 </style>
 <link rel="stylesheet" type="text/css" href="Prove03style.css">
