@@ -18,22 +18,16 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 	
 <?php
 	foreach ($_SESSION["cart"] as $fl)
-{
+    {
 	?>
-	<p> <?php echo htmlspecialchars($fl); ?> </p>
+	<p id="confirm"> <?php echo htmlspecialchars($fl); ?> </p>
 	<?php
-	//echo "<br>";
-    //echo htmlspecialchars($value);
-	
-} 
+	}
+    // remove all session variables
+    session_unset(); 
 
-?>
-<?php
-// remove all session variables
-session_unset(); 
-
-// destroy the session 
-session_destroy(); 
+    // destroy the session 
+    session_destroy(); 
 ?>
 </body>
 </html>
