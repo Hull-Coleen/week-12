@@ -7,61 +7,59 @@ $img = $_SESSION["image"];
 $d = $_SESSION["d"];
 if($f == "Red Small") {
 	$_SESSION["image"] = "RedF.jpg";
-	$_SESSION["d"]= "Small Bouquet of Red Roses";	
+	$_SESSION["d"] = "Small Bouquet of Red Roses";	
 }
 else if($f == "Red Medium") {
-	$img = "RedF.jpg";
-	$d = "Medium Bouquet of Red Roses";
+	$_SESSION["image"]= "RedF.jpg";
+	$_SESSION["d"] = "Medium Bouquet of Red Roses";
 	
 }
 else if ($f == "Red Large") {
-	$img = "RedF.jpg";
-	$d = "Large Bouquet of Blue Flowers";
+	$_SESSION["image"] = "RedF.jpg";
+	$_SESSION["d"] = "Large Bouquet of Blue Flowers";
 }
 else if ($f == "Blue Small") {
-	$img = "BlueF.jpg";
-	$d = "Small Bouquet of Blue Flowers";
+	$_SESSION["image"] = "BlueF.jpg";
+	$_SESSION["d"] = "Small Bouquet of Blue Flowers";
 }
 else if($f == "Blue Medium") {
-	$img = "BlueF.jpg";
-	$d = "Medium Bouquet of Blue Flowers";
+	$_SESSION["image"] = "BlueF.jpg";
+	$_SESSION["d"] = "Medium Bouquet of Blue Flowers";
 	
 }
 else if ($f == "Blue Large") {
-	$img = "BlueF.jpg";
-	$d = "Large Bouquet of Blue Flowers";
+	$_SESSION["image"] = "BlueF.jpg";
+	$_SESSION["d"] = "Large Bouquet of Blue Flowers";
 }
 else if($f == "Yellow Small") {
-	$img = "YellowF.jpg";
-	$d = "Small Bouquet of Yellow Roses";
+	$_SESSION["image"] = "YellowF.jpg";
+	$_SESSION["d"] = "Small Bouquet of Yellow Roses";
 	
 }
 else if ($f == "Yellow Medium") {
-	$img = "YellowF.jpg";
-	$d = "Medium Bouquet of Yellow Flowers";
+	$_SESSION["image"] = "YellowF.jpg";
+	$_SESSION["d"] = "Medium Bouquet of Yellow Flowers";
 }
 else if ($f == "Yellow Large") {
-	$img = "YellowF.jpg";
-	$d = "Large Bouquet of Yellow Flowers";
+	$_SESSION["image"] = "YellowF.jpg";
+	$_SESSION["d"] = "Large Bouquet of Yellow Flowers";
 }
 else if($f == "Purple Small") {
-	$img = "PurpleF.jpg";
-	$d = "Small Bouquet of Purple Flowers";
+	$_SESSION["image"] = "PurpleF.jpg";
+	$_SESSION["d"] = "Small Bouquet of Purple Flowers";
 	
 }
 else if ($f == "Purple Medium") {
-	$img = "PurpleF.jpg";
-	$d = "Mediuml Bouquet of Purple Flowers";
+	$_SESSION["image"] = "PurpleF.jpg";
+	$_SESSION["d"] = "Mediuml Bouquet of Purple Flowers";
 }
 else if ($f == "Purple Large") {
-	$img = "PurpleF.jpg";
-	$d = "Large Bouquet of Purple Flowers";
+	$_SESSION["image"] = "PurpleF.jpg";
+	$_SESSION["d"] = "Large Bouquet of Purple Flowers";
 }
 else {
 	$img;
     $d;
-	//$img = "world.jpg";
-	//$d = "";
 }
 	
 ?>
