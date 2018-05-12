@@ -76,7 +76,7 @@ else {
 <a href="/Prove03.php">Continue Shopping</a><br>
 <a href="/cart.php">Cart</a>
 <h1>Product Information</h1><br>
-<img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
+<img src="<?php echo $img; ?>"  alt="World"> 
 
 <form method="POST" action="">
   <input type="hidden" id="address" name="item" value="<?php echo htmlspecialchars($f); ?>">
