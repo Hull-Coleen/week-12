@@ -57,8 +57,8 @@ else if ($f == "Purple Large") {
 	$d = "Large Bouquet of Purple Flowers";
 }
 else {
-	$_SESSION["image"] $img;
-    $_SESSION["d"] = $d;
+	$img = $_SESSION["image"];
+    $d = $_SESSION["d"];
 	//$img = "world.jpg";
 	//$d = "";
 }
