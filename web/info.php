@@ -77,8 +77,14 @@ else {
 <a href="/cart.php">Cart</a>
 <h1>Product Information</h1><br>
 <img src="<?php echo $img; ?>"  alt="World"> 
-
-<form method="POST" action="">
+<?php 
+$_SESSION["item"] = htmlspecialchars($_POST["item"]);
+if (!empty($_POST["item"])) {
+	array_push($_SESSION["cart"], $_POST["item"]);
+	
+}
+?>
+<form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
   <input type="hidden" id="address" name="item" value="<?php echo htmlspecialchars($f); ?>">
   <p> <?php echo htmlspecialchars($f);
 	        echo "<br>";
