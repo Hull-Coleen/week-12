@@ -24,9 +24,15 @@ if ($t > -1) {
 <h1>Shopping Cart</h1>
 
 <?php
-for ($i = 0; $i < count($_SESSION["cart"]); $i++) {
-   echo "<p> $_SESSION["cart"][$i]</p>";
-   echo "<p><a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>Delete</a></p>";
+for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+	?>
+	<p> <?php
+   echo $_SESSION["cart"][$i];
+   echo "<br>";
+   echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>Delete</a>";
+   ?>
+   </p>
+   <?php
 }
 
 
