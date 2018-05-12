@@ -12,19 +12,18 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 <link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>
-    <p> <?php echo "Thank you for your purchase: " . $_SESSION["name"] ?></p>
-	<p>Your purchase will be shippped to: <?php echo $_SESSION["address"] ?></p>
-	<p>We will email you a confirmation number at: <?php echo $_SESSION["email"] ?></p>
+    <p id="confirm" > <?php echo "Thank you for your purchase: " . $_SESSION["name"] ?></p>
+	<p id="confirm" >Your purchase will be shippped to: <?php echo $_SESSION["address"] ?></p>
+	<p id="confirm" >We will email you a confirmation number at: <?php echo $_SESSION["email"] ?></p>
 	
 <?php
 	foreach ($_SESSION["cart"] as $fl)
 {
-	echo htmlspecialchars($fl);
+	echo "<p id="confirm">htmlspecialchars($fl)</p>";
 	//echo "<br>";
     //echo htmlspecialchars($value);
 	
 } 
-echo count($_SESSION["cart"]);
 
 ?>
 <?php

@@ -17,3 +17,7 @@ div#row2 {
 p {
 	text-align: center;
 }
+p#confirm {
+	text-size: 180%;
+	text_font: Agency FB;
+}
