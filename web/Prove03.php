@@ -44,7 +44,7 @@ $_SESSION["num"];
    </div>
  </div>
  <div  id="row">
-   <div>
+   <div><p>
    <img src="BlueF.jpg" alt="World">
   <input type="radio" name="item" value="Blue Small">BS<br /></P> 
   </div>
