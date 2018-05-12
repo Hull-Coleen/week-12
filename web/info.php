@@ -79,13 +79,13 @@ else {
 <img src="<?php echo $img; ?>"  alt="World"> 
 <?php 
 //$_SESSION["item"] = htmlspecialchars($_POST["item"]);
-if (!empty(htmlspecialchars($_POST["item"]))) {
-	array_push($_SESSION["cart"], $_POST["item"]);
+if (!empty(htmlspecialchars($_POST["item1"]))) {
+	array_push($_SESSION["cart"], $_POST["item1"]);
 	
 }
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-  <input type="hidden" id="address" name="item" value="<?php echo htmlspecialchars($f); ?>">
+  <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($f); ?>">
   <p> <?php echo htmlspecialchars($f);
 	        echo "<br>";
 			echo $d; ?> <br>
