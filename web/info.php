@@ -3,8 +3,8 @@ session_start();
 $_SESSION["item"] = $_POST["item"];
 $d;
 $f = $_SESSION["item"];
-$img = $_SESSION["image"];
-$d = $_SESSION["d"];
+$_SESSION["image"] = $img;
+$_SESSION["d"] = $d;
 if($f == "Red Small") {
 	$img = "RedF.jpg";
 	//$i = "RedF.jpg";
@@ -78,7 +78,7 @@ else {
 <a href="/Prove03.php">Continue Shopping</a><br>
 <a href="/cart.php">Cart</a>
 <h1>Product Information</h1><br>
-<img src="<?php echo $i; ?>"  alt="World"> 
+<img src="<?php echo $img; ?>"  alt="World"> 
 <?php 
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 
