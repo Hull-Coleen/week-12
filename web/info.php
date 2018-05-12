@@ -78,7 +78,7 @@ else {
 <a href="/Prove03.php">Continue Shopping</a><br>
 <a href="/cart.php">Cart</a>
 <h1>Product Information</h1><br>
-<img src="<?php echo $img; ?>"  alt="World"> 
+<img src="<?php echo $_SESSION["image"]; ?>"  alt="World"> 
 <?php 
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 
@@ -91,7 +91,7 @@ if (!empty(htmlspecialchars($_POST["item1"]))) {
   <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($f); ?>">
   <p> <?php echo htmlspecialchars($f);
 	        echo "<br>";
-			echo $d; ?> <br>
+			echo $_SESSION["d"]; ?> <br>
     <input type="submit" name="submit" value="Add to Cart">  
   </p>
 </form>		   
