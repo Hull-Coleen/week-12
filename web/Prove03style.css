@@ -18,6 +18,6 @@ p {
 	text-align: center;
 }
 p#confirm {
-	text-size: 280%;
-	text_font: Agency FB;
+	font-size: 180%;
+	font-family: Agency FB;
 }
