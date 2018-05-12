@@ -27,7 +27,8 @@ if ($t > -1) {
 for ($i = 0; $i < count($_SESSION['cart']); $i++) {
 	?>
 	<p> <?php
-   echo $_SESSION["cart"][$i];
+   echo $_SESSION["cart"][$i]; ?><input type="text" placeholder="1" id="num" name="num">
+   <?php
    echo "<br>";
    echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>Delete</a>";
    ?>
