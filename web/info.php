@@ -78,7 +78,7 @@ else {
 <h1>Product Information</h1><br>
 <img src="<?php echo $img; ?>"  alt="World"> 
 <?php 
-//$_SESSION["item"] = htmlspecialchars($_POST["item"]);
+$_SESSION["item"] = htmlspecialchars($_POST["item"]);
 if (!empty(htmlspecialchars($_POST["item1"]))) {
 	array_push($_SESSION["cart"], $_POST["item1"]);
 	
