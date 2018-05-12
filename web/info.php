@@ -78,7 +78,7 @@ else {
 <h1>Product Information</h1><br>
 <img src="<?php echo $img; ?>" style="margin:0px auto;display:block" alt="World"> 
 
-<form method="POST" action="cart.php">
+<form method="POST" action="">
   <input type="hidden" id="address" name="item" value="<?php echo htmlspecialchars($f); ?>">
   <p> <?php echo htmlspecialchars($f);
 	        echo "<br>";

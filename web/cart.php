@@ -21,7 +21,7 @@ if ($t > -1) {
 <body>
 <a href="/Prove03.php">Continue Shopping</a>
 <a href="/checkout.php">Checkout</a>
-<h1>Shopping Cart</h1>
+<h1>Shopping Cart</h1><br><br>
 
 <?php
 for ($i = 0; $i < count($_SESSION['cart']); $i++) {
@@ -38,9 +38,6 @@ for ($i = 0; $i < count($_SESSION['cart']); $i++) {
    </p>
    <?php
 }
-
-
-
 ?>
 
 </body>
