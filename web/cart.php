@@ -38,7 +38,7 @@ echo count($_SESSION["cart"]);
 <?php
 for ($i = 0; $i < count($_SESSION["cart"]); $i++)
 {
-echo "<p><a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>$_SESSION["cart"][$i}</a></p>";
+echo "<p><a href='{$_SERVER["PHP_SELF"]}?_delete={$i}'>$_SESSION["cart"][$i]</a></p>";
 }
 foreach ($_SESSION["cart"] as $fl)
 {
