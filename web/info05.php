@@ -6,9 +6,12 @@ $_SESSION["item"] = $_POST["item"];
 $description = $_SESSION["item"];
 $price;
 $image = "world.jpg";
-$statement = $db->prepare("SELECT flower_price FROM flower WHERE description = ?");
-$statement->execute([$description]);
-$price = $statement->fetchColumn();
+$scriptureQuery = $db->query("SELECT flower_price FROM flower WHERE description='{$description}';");
+  $scriptureQuery->execute();
+  $price = $scriptureQuery->fetch()['flower_price'];
+//$statement = $db->prepare("SELECT flower_price FROM flower WHERE description = ?");
+//$statement->execute([$description]);
+//$price = $statement->fetchColumn();
 //$price = $statement->fetch()['flower_price'];
 
 	//$price = $row['flower_price'];
