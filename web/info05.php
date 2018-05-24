@@ -5,7 +5,7 @@ include_once('dbConnect.php');
 $_SESSION["item"] = $_POST["item"];
 $description = $_SESSION["item"];
 $price;
-$image = "world.JPG";
+$image = "world.jpg";
 $statement = $db->prepare("SELECT flower_price, image FROM flower WHERE description = $description");
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
