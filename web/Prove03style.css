@@ -6,6 +6,9 @@ body {
 h1 {
 	text-align: center;
 }
+div {
+	float: right;
+}
 div#row {
 	width: 40%;
 	padding: 20px;
