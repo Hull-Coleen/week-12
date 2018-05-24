@@ -4,6 +4,7 @@
 	<title>Prove Week 5</title>
 	<script>
 	div {
+		width: 25%;
 		float: left;
 	}
 	</script>
