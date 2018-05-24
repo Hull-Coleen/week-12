@@ -13,7 +13,7 @@ $stmt->execute();
 <link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>
-<a href="/cart.php">Back to Cart</a><br>
+
 <h1>Please Enter your search criteria</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p>
