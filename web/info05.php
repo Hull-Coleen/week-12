@@ -24,6 +24,14 @@ $image = $statement->fetch()['image'];
 
 <h1>Product Information</h1><br>
 <img src="<?php echo $image; ?>"  alt="World"> 
+<form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
+  <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($description); ?>">
+  <p> <?php echo htmlspecialchars($description);
+	        echo "<br>";
+			echo $price; ?> <br>
+    <input type="submit" name="submit" value="Add to Cart">  
+  </p>
+</form>
 	   
 
 </body>
