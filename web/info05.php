@@ -20,7 +20,7 @@ $image = $statement->fetch()['image'];
 <link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 <body>
-<a href="/Prove05.php">Continue Shopping</a><br>
+<a href="/Week05.php">Continue Shopping</a><br>
 
 <h1>Product Information</h1><br>
 <img src="<?php echo $image; ?>"  alt="World"> 
