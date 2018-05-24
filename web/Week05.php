@@ -6,11 +6,8 @@ session_start();
 <head>
 	<title>Prove Week 5</title>
 	<script>
-	div {
-		width: 25%;
-		float: right;
-	}
 	</script>
+	<link rel="stylesheet" type="text/css" href="Prove03style.css">
 </head>
 
 <body>
@@ -18,7 +15,7 @@ session_start();
   include_once('./dbConnect.php');
  $statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
  $statement->execute();
- // Go through each result
+ 
  ?>
  <form method="POST" action="info05.php">
  <?php
@@ -26,7 +23,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	?>
 	<div><p>
-     <img src="<?php echo $row['image'] ?>" alt="Flower"> 
+     <img src="<?php echo $row['image'] ?>" alt="Flower"> <br>
      <input type="radio" name="item" value="<?php echo $row['description'] ?>">
 	 <?php echo $row['description'] ?><br /></P> 
    </div>

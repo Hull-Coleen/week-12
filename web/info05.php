@@ -2,29 +2,16 @@
 <?php
 session_start();
 include_once('dbConnect.php');
-$_SESSION["item"] = $_POST["item"];
+$_SESSION["item"] = htmlspecialchars($_POST["item"]);
 $description = $_SESSION["item"];
 $price;
-$image = "world.jpg"; 
-//$statement = $db->prepare("SELECT flower_price, image FROM flower");   
+$image = "world.jpg";    
 $stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = '{$description}');");
 $stmt->execute();
 $price = $stmt->fetch()['flower_price'];
-//$v = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//$scriptureQuery = $db->query("SELECT flower_price FROM flower WHERE description='{$description}';");
-  //$scriptureQuery->execute();
-  //$price = $scriptureQuery->fetch()['flower_price'];
-//$statement = $db->prepare("SELECT flower_price FROM flower WHERE description = ?");
-//$statement->execute([$description]);
-//$price = $statement->fetchColumn();
-//$price = $statement->fetch()['flower_price'];
-
-	//$price = $row['flower_price'];
-	//$image = $row['image'];
 	
 $stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = '{$description}');");
 $stmt2->execute();
-
 $image = $stmt2->fetch()['image'];
 ?>
 <!DOCTYPE html>
