@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('./dbconnect.php');
+include_once('./dbConnect.php');
 $_SESSION["item"] = $_POST["item"];
 $description;
 $price;
