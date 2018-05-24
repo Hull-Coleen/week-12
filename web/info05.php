@@ -6,9 +6,9 @@ $_SESSION["item"] = $_POST["item"];
 $description = $_SESSION["item"];
 $price;
 $image = "world.jpg";
-$statement = $db->query("SELECT flower_price FROM flower WHERE description = '{$description}';");
+$statement = $db->query("SELECT flower_price FROM flower WHERE description = '{$description}'");
 $statement->execute();
-$price = $statement->fetch()['flower_price'];
+//$price = $statement->fetch()['flower_price'];
 
 	//$price = $row['flower_price'];
 	//$image = $row['image'];
