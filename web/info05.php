@@ -9,6 +9,7 @@ $image = "world.jpg";
 //$statement = $db->prepare("SELECT flower_price, image FROM flower");   
 $stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = '{$description}');");
 $stmt->execute();
+$price = $stmt->fetch()['flower_price'];
 //$v = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //$scriptureQuery = $db->query("SELECT flower_price FROM flower WHERE description='{$description}';");
   //$scriptureQuery->execute();
@@ -21,9 +22,10 @@ $stmt->execute();
 	//$price = $row['flower_price'];
 	//$image = $row['image'];
 	
+$stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = '{$description}');");
+$stmt2->execute();
 
-$price = $stmt->fetch()['flower_price'];
-$image = $stmt->fetch()['image'];
+$image = $stmt2->fetch()['image'];
 ?>
 <!DOCTYPE html>
 <html>
