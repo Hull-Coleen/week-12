@@ -20,21 +20,10 @@ $image = $statement->fetch()['image'];
 </head>
 <body>
 <a href="/Prove05.php">Continue Shopping</a><br>
-<a href="/cart.php">Cart</a>
+
 <h1>Product Information</h1><br>
 <img src="<?php echo $image; ?>"  alt="World"> 
-<?php 
-
-$_SESSION["item"] = htmlspecialchars($_POST["item"]);
-
-//if (!empty(htmlspecialchars($_POST["item1"]))) {
-	//array_push($_SESSION["cart"], $_POST["item1"]);
-	
-}
-?>
-<form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
- 
-</form>		   
+	   
 
 </body>
 </html>
