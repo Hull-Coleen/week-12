@@ -18,12 +18,12 @@ $stmt->execute();
 //$price = $statement->fetchColumn();
 //$price = $statement->fetch()['flower_price'];
 
-	$price = $row['flower_price'];
-	$image = $row['image'];
+	//$price = $row['flower_price'];
+	//$image = $row['image'];
 	
 
-//$price = $statement->fetch()['flower_price'];
-//$image = $statement->fetch()['image'];
+$price = $stmt->fetch()['flower_price'];
+$image = $stmt->fetch()['image'];
 ?>
 <!DOCTYPE html>
 <html>
