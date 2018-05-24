@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +8,7 @@
 	<script>
 	div {
 		width: 25%;
-		float: left;
+		float: right;
 	}
 	</script>
 </head>
@@ -17,7 +20,7 @@
  $statement->execute();
  // Go through each result
  ?>
- <form method="POST" action="info.php">
+ <form method="POST" action="info05.php">
  <?php
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
