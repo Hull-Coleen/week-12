@@ -2,7 +2,7 @@
 session_start();
 include_once('dbConnect.php');
 $occasion = htmlspecialchars($_POST["occasion"]);
-$stmt = $db->prepare("SELECT flower_price, description, image FROM flower WHERE (description = '{$occasion}');");
+$stmt = $db->prepare("SELECT flower_price, description, image FROM flower WHERE (flower_type = '{$occasion}');");
 $stmt->execute();
 //$price = $stmt->fetch()['flower_price'];
 ?>
@@ -25,7 +25,7 @@ $stmt->execute();
 </p>
 </form>
 <?php
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	?>
 	<div id="flowers" ><p>
