@@ -26,7 +26,15 @@ $image = $stmt2->fetch()['image'];
 <a href="/Week05.php">Continue Shopping</a><br>
 
 <h1>Product Information</h1><br>
-<img src="<?php echo $image; ?>"  alt="World"> 
+<img src="<?php echo $image; ?>"  alt="World">
+ <?php 
+//$_SESSION["item"] = htmlspecialchars($_POST["item"]);
+
+//if (!empty(htmlspecialchars($_POST["item1"]))) {
+	//array_push($_SESSION["cart"], $_POST["item1"]);
+	
+//}
+?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
   <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($description); ?>">
   <p> <?php echo htmlspecialchars($description);
