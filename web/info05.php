@@ -7,7 +7,7 @@ $description = $_SESSION["item"];
 $price;
 $image = "world.jpg";
 $statement = $db->query("SELECT flower_price FROM flower WHERE description = ?");
-$statement->execute($description);
+$statement->execute([$description]);
 $price = $statement->fetch();
 //$price = $statement->fetch()['flower_price'];
 
