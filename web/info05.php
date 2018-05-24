@@ -1,12 +1,12 @@
 
 <?php
 session_start();
-include_once('dbConnect.php');
+include_once('/dbConnect.php');
 $_SESSION["item"] = $_POST["item"];
 $description = $_SESSION["item"];
 $price;
 $image = "world.jpg";
-$statement = $db->prepare("SELECT flower_price FROM flower WHERE description = $description)");
+$statement = $db->prepare("SELECT flower_price FROM flower WHERE description = '{$description}';");
 $statement->execute();
 $price = $statement->fetch()['flower_price'];
 
