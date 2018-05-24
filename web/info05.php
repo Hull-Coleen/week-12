@@ -6,7 +6,7 @@ $_SESSION["item"] = $_POST["item"];
 $description = $_SESSION["item"];
 $price;
 $image = "world.jpg";
-$stmt = $db->query("SELECT flower_price, image FROM flower WHERE (description = '{$description}');");
+$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = '{$description}');");
 $stmt->execute();
 $v = $stmt->fetchAll(PDO::FETCH_ASSOC);
 //$scriptureQuery = $db->query("SELECT flower_price FROM flower WHERE description='{$description}';");
