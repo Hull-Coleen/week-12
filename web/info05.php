@@ -5,7 +5,7 @@ $_SESSION["item"] = $_POST["item"];
 $description;
 $price;
 $image = world.jpg;
-$statement = $db->query("SELECT flower_price, image, FROM flower WHERE desription = $_SESSION['item']");
+$statement = $db->prepare("SELECT flower_price, image FROM flower WHERE desription = $_SESSION['item']");
 $statement->execute();
 $price = $statement->fetch()['flower_price'];
 $image = $statement->fetch()['image'];
