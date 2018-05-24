@@ -2,6 +2,11 @@
 <html>
 <head>
 	<title>Prove Week 5</title>
+	<script>
+	div {
+		float: left;
+	}
+	</script>
 </head>
 
 <body>
