@@ -10,7 +10,9 @@ div#flowers {
 	float: right;
 	padding: 20px;
 }
-
+div#sub {
+	float: bottom;
+}
 p {
 	text-align: center;
 	font-family: Agency FB;

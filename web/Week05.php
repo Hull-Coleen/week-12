@@ -31,7 +31,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
  
  ?>
- 	<div><input type="submit" name="submit" value="Submit"></div>  		
+ 	<div id="sub" ><input type="submit" name="submit" value="Submit"></div>  		
 			
 </form>
  </body>
