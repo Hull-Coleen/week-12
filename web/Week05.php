@@ -22,7 +22,7 @@ session_start();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	?>
-	<div><p>
+	<div id="flowers" ><p>
      <img src="<?php echo $row['image'] ?>" alt="Flower"> <br>
      <input type="radio" name="item" value="<?php echo $row['description'] ?>">
 	 <?php echo $row['description'] ?><br /></P> 
@@ -31,7 +31,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
  
  ?>
- 	<input type="submit" name="submit" value="Submit">  		
+ 	<div><input type="submit" name="submit" value="Submit"></div>  		
 			
 </form>
  </body>

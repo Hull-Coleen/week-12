@@ -6,20 +6,11 @@ body {
 h1 {
 	text-align: center;
 }
-div {
+div#flowers {
 	float: right;
 	padding: 20px;
 }
-div#row {
-	width: 40%;
-	padding: 20px;
-	display: inline-block;
-}
-div#row2 {
-	width: 40%;
-	padding: 20px;
-	display: inline-block;
-}
+
 p {
 	text-align: center;
 	font-family: Agency FB;
