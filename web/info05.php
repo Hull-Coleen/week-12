@@ -22,7 +22,7 @@ $image = $statement->fetch()['image'];
 <a href="/Prove05.php">Continue Shopping</a><br>
 <a href="/cart.php">Cart</a>
 <h1>Product Information</h1><br>
-<img src="<?php echo image; ?>"  alt="World"> 
+<img src="<?php echo $image; ?>"  alt="World"> 
 <?php 
 
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
@@ -33,7 +33,7 @@ $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 }
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-  <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($f); ?>">
+ <!-- <input type="hidden" id="address" name="item1" value=" --> <!--<?php echo htmlspecialchars($_SESSION['item']); ?>"> -->
   <p> <?php echo htmlspecialchars($_SESSION['item']);
 	        echo "<br>";
 			echo $price ?> <br>
