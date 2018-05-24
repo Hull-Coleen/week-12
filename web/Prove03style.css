@@ -11,7 +11,7 @@ div#flowers {
 	padding: 20px;
 }
 div#sub {
-	float: bottom;
+	clear: left;
 }
 p {
 	text-align: center;
