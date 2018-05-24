@@ -8,7 +8,7 @@ $price;
 $image = "world.jpg";
 $statement = $db->query("SELECT flower_price FROM flower WHERE description = ?");
 $statement->execute([$description]);
-$price = $statement->fetch();
+$price = $statement->fetchColumn();
 //$price = $statement->fetch()['flower_price'];
 
 	//$price = $row['flower_price'];
