@@ -33,12 +33,7 @@ $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 }
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
- <!-- <input type="hidden" id="address" name="item1" value=" --> <!--<?php echo htmlspecialchars($_SESSION['item']); ?>"> -->
-  <p> <?php echo htmlspecialchars($_SESSION['item']);
-	        echo "<br>";
-			echo $price ?> <br>
-    <input type="submit" name="submit" value="Add to Cart">  
-  </p>
+ 
 </form>		   
 
 </body>
