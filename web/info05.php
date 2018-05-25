@@ -31,7 +31,9 @@ $image = $stmt2->fetch()['image'];
  <?php 
  $num = 1;
  if (!empty(htmlspecialchars($_POST["item1"]))) {
-	array_push($_SESSION["cart"], $_POST["item1"] -> $num);
+	 
+    $_SESSION["cart"] += array($_POST["item1"] => 1);
+	//array_push($_SESSION["cart"], $_POST["item1"] -> $num);
  }
  echo  $_POST["item1"];
  //for ($i = 0; $i < count($_SESSION['cart']); $i++) {
