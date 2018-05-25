@@ -10,7 +10,7 @@ else if ($occasion == 'Birthday')
     $occ = 3;
 else 
 	$occ = 1;
-$stmt = $db->prepare("SELECT flower_price, description, image FROM flower WHERE (description = '{$occ}');");
+$stmt = $db->prepare("SELECT flower_price, description, image FROM flower WHERE (description = {$occ});");
 $stmt->execute();
 //$price = $stmt->fetch()['flower_price'];
 ?>
