@@ -32,6 +32,7 @@ $image = $stmt2->fetch()['image'];
  if (!empty(htmlspecialchars($_POST["item1"]))) {
     $_SESSION["cart"] += [$_POST["item1"] => 1];
  }
+ echo  $_POST["item1"];
  
 //$_SESSION["item"] = htmlspecialchars($_POST["item"]);
 
