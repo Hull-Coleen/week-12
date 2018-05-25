@@ -28,6 +28,10 @@ $image = $stmt2->fetch()['image'];
 <h1>Product Information</h1><br>
 <img src="<?php echo $image; ?>"  alt="World">
  <?php 
+ if (!empty(htmlspecialchars($_POST["item1"]))) {
+    $_SESSION["cart"] += [$_POST["item1"] => 1];
+ }
+ 
 //$_SESSION["item"] = htmlspecialchars($_POST["item"]);
 
 //if (!empty(htmlspecialchars($_POST["item1"]))) {
