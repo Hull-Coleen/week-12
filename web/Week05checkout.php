@@ -9,7 +9,21 @@ session_start();
 </head>
 <body>
 <a href="/cart05.php">Back to Cart</a><br>
-<h1>Please Enter your Check out Information</h1>
+
+<div id="row">
+<form method="POST" action="Week05confirm.php">
+</p>
+  <h1>If you have an account, Please sign in</h1>
+  <label for="username">User Name</label>
+  <input type="text" placeholder="Name" id="username" name="username">
+  <label for="passwprd">Password</label>
+  <input type="text" placeholder="Password" id="password" name="password">
+  <input type="submit" value="Complete Checkout">
+  </p>
+</form>
+</div>
+<div id="row2">
+  <h1>If you are a Guest, Please Enter your Check out Information</h1>
 <form method="POST" action="Week05confirm.php">
 <p>
   <label for="name">Name</label>
@@ -27,6 +41,7 @@ session_start();
   <input type="submit" value="Complete Checkout">
 </p>
 </form>
+</div>
 
 
 
