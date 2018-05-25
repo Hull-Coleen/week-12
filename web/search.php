@@ -2,7 +2,7 @@
 session_start();
 include_once('dbConnect.php');
 $occasion = htmlspecialchars($_POST["occasion"]);
-echo $occasion;
+
 if ($occasion == 'Mother Day')
 	$occ = 1;
 else if ($occasion == 'Anniversary')
@@ -11,10 +11,10 @@ else if ($occasion == 'Birthday')
     $occ = 3;
 else 
 	$occ = 1;
-echo $occ;
+
 $stmt = $db->prepare("SELECT flower_price, description, image FROM flower WHERE (flower_type = {$occ});");
 $stmt->execute();
-//$price = $stmt->fetch()['flower_price'];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,7 +38,7 @@ $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	?>
-	<div id="flowers" ><p>
+	<div><p>
      <img src="<?php echo $row['image'] ?>" alt="Flower"> <br>
      <input type="radio" name="item" value="<?php echo $row['description'] ?>">
 	 <?php echo $row['description'] ?><br />
