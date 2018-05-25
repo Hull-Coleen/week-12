@@ -30,7 +30,7 @@ $image = $stmt2->fetch()['image'];
 <img src="<?php echo $image; ?>"  alt="World">
  <?php 
  if (!empty(htmlspecialchars($_POST["item1"]))) {
-    $_SESSION["cart"] += [$_POST["item1"] => 1];
+    $_SESSION["cart"] += ['$_POST["item1"]' => 1];
  }
  echo  $_POST["item1"];
  
