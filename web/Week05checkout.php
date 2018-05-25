@@ -13,10 +13,10 @@ session_start();
 <div id="row">
 <h1>If you have an account, Please sign in</h1><br>
 <form method="POST" action="Week05confirm.php">
-</p>
+<p>
   
   <label for="username">User Name</label>
-  <input type="text" placeholder="Name" id="username" name="username"><br>
+  <input type="text" placeholder="Name" id="username" name="username"><br><br>
   <label for="passwprd">Password</label>
   <input type="text" placeholder="Password" id="password" name="password"><br><br>
   <input type="submit" value="Complete Checkout">
