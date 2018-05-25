@@ -19,11 +19,12 @@ if ($t > -1) {
 <h1>Shopping Cart</h1><br><br>
 
 <?php
-//for ($i = 0; $i < count($_SESSION['cart']); $i++) {
-foreach($_SESSION['cart'] as $x => $x_value) {	
+for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+//foreach($_SESSION['cart'] as $x => $x_value) {	
 	?>
 	<p> <?php
-   echo $x . "  " . $x_value; 
+  // echo $x . "  " . $x_value;
+   echo $_SESSION['cart'][$i] . ' ' . $array[$_SESSION['cart'][$i]] . "\n";   
    ?>
    <br>
    <input type="text" placeholder="1" maxlength="4" size="4" id="num" name="num">
