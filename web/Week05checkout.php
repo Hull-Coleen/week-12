@@ -15,9 +15,9 @@ session_start();
 </p>
   <h1>If you have an account, Please sign in</h1><br>
   <label for="username">User Name</label>
-  <input type="text" placeholder="Name" id="username" name="username">
-  <label for="passwprd">Password</label><br>
-  <input type="text" placeholder="Password" id="password" name="password">
+  <input type="text" placeholder="Name" id="username" name="username"><br>
+  <label for="passwprd">Password</label>
+  <input type="text" placeholder="Password" id="password" name="password"><br><br>
   <input type="submit" value="Complete Checkout">
   </p>
 </form>
