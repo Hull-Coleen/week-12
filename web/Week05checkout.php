@@ -11,9 +11,10 @@ session_start();
 <a href="/cart05.php">Back to Cart</a><br>
 
 <div id="row">
+<h1>If you have an account, Please sign in</h1><br>
 <form method="POST" action="Week05confirm.php">
 </p>
-  <h1>If you have an account, Please sign in</h1><br>
+  
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username" name="username"><br>
   <label for="passwprd">Password</label>
