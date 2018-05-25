@@ -33,21 +33,7 @@ $image = $stmt2->fetch()['image'];
  if (!empty(htmlspecialchars($_POST["item1"]))) {
 	 
     $_SESSION["cart"] += array($_POST["item1"] => 1);
-	//array_push($_SESSION["cart"], $_POST["item1"] -> $num);
  }
- echo  $_POST["item1"];
- //for ($i = 0; $i < count($_SESSION['cart']); $i++) {
-	foreach($_SESSION['cart'] as $x => $x_value) { 
-	//echo $_SESSION["cart"][$i];
-	echo $x . "  " . $x_value;
- }	
- 
-//$_SESSION["item"] = htmlspecialchars($_POST["item"]);
-
-//if (!empty(htmlspecialchars($_POST["item1"]))) {
-	//array_push($_SESSION["cart"], $_POST["item1"]);
-	
-//}
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
   <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($description); ?>">
