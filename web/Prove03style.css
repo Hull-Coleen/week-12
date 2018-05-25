@@ -12,6 +12,7 @@ div#flowers {
 }
 div#sub {
 	text-align: center;
+	top: 50%;
 }
 p {
 	text-align: center;
