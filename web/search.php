@@ -2,7 +2,13 @@
 session_start();
 include_once('dbConnect.php');
 $occasion = htmlspecialchars($_POST["occasion"]);
-$stmt = $db->prepare("SELECT flower_price, description, image FROM flower WHERE (description = '{$occasion}');");
+if ($occasion == 'Mother Day')
+	$occ = 1;
+else if ($occasion == 'Anniversary')
+	$occ = 2;
+else ($occasion == 'Birthday')
+    $occ = 3;
+$stmt = $db->prepare("SELECT flower_price, description, image FROM flower WHERE (description = '{$occ}');");
 $stmt->execute();
 //$price = $stmt->fetch()['flower_price'];
 ?>
