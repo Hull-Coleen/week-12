@@ -11,7 +11,7 @@ if ($t > -1) {
 <html>
 <head>
 <title></title>
-<link rel="stylesheet" type="text/css" href="Prove03style.css">
+<link rel="stylesheet" type="text/css" href="Prove05style.css">
 </head>
 <body>
 <a href="Week05.php">Continue Shopping</a><br>
@@ -27,7 +27,7 @@ foreach($_SESSION['cart'] as $x => $x_value) {
    //echo $_SESSION['cart'][$i] . ' ' . $array[$_SESSION['cart'][$i]] . "\n";   
    ?>
    <br>
-   <input type="text" placeholder="1" maxlength="4" size="4" id="num" name="num">
+   <input type="text" placeholder="1" maxlength="4" size="4" id="<?php echo $x ?>" name="num">
    <?php
    echo "<br>";
    echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$x}'>Delete</a>";

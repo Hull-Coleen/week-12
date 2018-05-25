@@ -9,7 +9,7 @@ $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 <html>
 <head>
 <title>Confirmation Page</title>
-<link rel="stylesheet" type="text/css" href="Prove03style.css">
+<link rel="stylesheet" type="text/css" href="Prove05style.css">
 </head>
 <body>
     <p id="confirm" > <?php echo "Thank you for your purchase: " . $_SESSION["name"] ?></p>

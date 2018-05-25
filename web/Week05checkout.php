@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 <title>Check Out</title>
-<link rel="stylesheet" type="text/css" href="Prove03style.css">
+<link rel="stylesheet" type="text/css" href="Prove05style.css">
 </head>
 <body>
 <a href="/cart05.php">Back to Cart</a><br>

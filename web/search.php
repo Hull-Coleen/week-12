@@ -13,7 +13,7 @@ $stmt->execute();
 <html>
 <head>
 <title>Search Page</title>
-<link rel="stylesheet" type="text/css" href="Prove03style.css">
+<link rel="stylesheet" type="text/css" href="Prove05style.css">
 </head>
 <body>
 <?php 
@@ -52,7 +52,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 <?php
 }
 ?>
-<br><br><br><div id="form" ><input type="submit" name="submit" value="Submit"></div> 
+<br><br><br><div id="form" ><p><input type="submit" name="submit" value="Submit"></p></div> 
 </form>
 
 
