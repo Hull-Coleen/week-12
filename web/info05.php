@@ -24,6 +24,7 @@ $image = $stmt2->fetch()['image'];
 </head>
 <body>
 <a href="/Week05.php">Continue Shopping</a><br>
+<a href="/cart05.php">Cart</a><br>
 
 <h1>Product Information</h1><br>
 <img src="<?php echo $image; ?>"  alt="World">
