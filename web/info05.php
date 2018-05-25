@@ -36,8 +36,10 @@ $image = $stmt2->fetch()['image'];
 	array_push($_SESSION["cart"], $_POST["item1"] -> $num);
  }
  echo  $_POST["item1"];
- for ($i = 0; $i < count($_SESSION['cart']); $i++) {
-	echo $_SESSION["cart"][$i];
+ //for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+	foreach($_SESSION['cart'] as $x => $x_value) { 
+	//echo $_SESSION["cart"][$i];
+	echo $x . "  " . $x_value;
  }	
  
 //$_SESSION["item"] = htmlspecialchars($_POST["item"]);
