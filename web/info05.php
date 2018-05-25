@@ -20,7 +20,7 @@ $image = $stmt2->fetch()['image'];
 <title>Info Page</title>
 <style>
 </style>
-<link rel="stylesheet" type="text/css" href="Prove05style.css">
+<link rel="stylesheet" type="text/css" href="Week05style.css">
 </head>
 <body>
 <a href="/Week05.php">Continue Shopping</a><br>

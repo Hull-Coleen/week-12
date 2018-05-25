@@ -11,7 +11,7 @@ if ($t > -1) {
 <html>
 <head>
 <title></title>
-<link rel="stylesheet" type="text/css" href="Prove05style.css">
+<link rel="stylesheet" type="text/css" href="Week05style.css">
 </head>
 <body>
 <a href="Week05.php">Continue Shopping</a><br>

@@ -13,7 +13,7 @@ $stmt->execute();
 <html>
 <head>
 <title>Search Page</title>
-<link rel="stylesheet" type="text/css" href="Prove05style.css">
+<link rel="stylesheet" type="text/css" href="Week05style.css">
 </head>
 <body>
 <?php 
