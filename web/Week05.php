@@ -17,13 +17,16 @@ if(!isset($_SESSION["cart"])){
 </head>
 
 <body>
+<a href="/search.php">Search Page</a><br>
 <?php
   include_once('./dbConnect.php');
  $statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
  $statement->execute();
  
  ?>
+
  <form method="POST" action="info05.php">
+ <div>
  <?php
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
@@ -37,6 +40,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
  
  ?>
+   </div>
  	<div id="sub" ><input type="submit" name="submit" value="Submit"></div>  		
 			
 </form>
