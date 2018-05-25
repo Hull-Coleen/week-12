@@ -29,13 +29,14 @@ img {
     margin-right: auto;
 	
 }
--div#row {
--	width: 40%;
--	padding: 20px;
--	display: inline-block;
--}
--div#row2 {
--	width: 40%;
--	padding: 20px;
--	display: inline-block;
--}
+div#row {
+	width: 40%;
+	padding: 20px;
+	display: inline-block;
+}
+
+div#row2 {
+	width: 40%;
+	padding: 20px;
+	display: inline-block;
+}
