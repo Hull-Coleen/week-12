@@ -25,7 +25,9 @@ $stmt->execute();
  
 ?>
 <a href="/cart05.php">Back to Cart</a><br>
+<a href="/Week05.php">Homepage</a><br>
 <h1>Please Enter your search criteria</h1>
+<p>Enter either Mother Day, Birthday, or Anniversary</p>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p>
   <label for="name">Occasion</label>
@@ -50,7 +52,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 <?php
 }
 ?>
-<br><br><br><div ><input type="submit" name="submit" value="Submit"></div> 
+<br><br><br><div id="form" ><input type="submit" name="submit" value="Submit"></div> 
 </form>
 
 
