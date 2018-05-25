@@ -35,7 +35,7 @@ $stmt->execute();
 </p>
 </form>
 <?php
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	?>
 	<div id="flowers" ><p>
