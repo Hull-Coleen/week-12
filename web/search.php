@@ -3,16 +3,18 @@ session_start();
 include_once('dbConnect.php');
 $occasion = htmlspecialchars($_POST["occasion"]);
 
-if ($occasion == 'Mother Day')
-	$occ = 1;
-else if ($occasion == 'Anniversary')
-	$occ = 2;
-else if ($occasion == 'Birthday')
+///if ($occasion == 'Mother Day')
+//	/$occ = 1;
+//else if ($occasion == 'Anniversary')
+	//$occ = 2;
+//else if ($occasion == 'Birthday')
     $occ = 3;
-else 
+//else 
 	$occ = 1;
 
-$stmt = $db->prepare("SELECT flower_price, description, image FROM flower WHERE (flower_type = {$occ});");
+$stmt = $db->prepare("SELECT f.flower_price, f.description, f.image FROM flower f, occasion o
+WHERE (o.occasion_type = '{$occasion}')
+AND f.flower_type = o.occasion_id;");
 $stmt->execute();
 
 ?>
