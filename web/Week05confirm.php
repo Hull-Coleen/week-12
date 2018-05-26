@@ -10,7 +10,7 @@ $stmt = $db->prepare("SELECT username FROM public.user WHERE (user_user_name = '
 AND password = '{$password}';");
 $stmt->execute();
 $userName = $stmt->fetch()['user_name'];
-if (empty(htmlspecialchars($_POST["name"]))  && !empty(htmlspecialchars($userName))) {
+if (htmlspecialchars($_POST["name"]) == "") {
 	$name1 = $userName;
 }
 else {
