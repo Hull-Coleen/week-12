@@ -5,14 +5,14 @@ include_once('dbConnect.php');
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 $description = $_SESSION["item"];
 $price;
-$image = "world.jpg";    
+$_SESSION['image'] = "world.jpg";    
 $stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = '{$description}');");
 $stmt->execute();
-$price = $stmt->fetch()['flower_price'];
+$_SESSION['price'] = $stmt->fetch()['flower_price'];
 	
 $stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = '{$description}');");
 $stmt2->execute();
-$image = $stmt2->fetch()['image'];
+$_SESSION['image'] = $stmt2->fetch()['image'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,7 @@ $image = $stmt2->fetch()['image'];
 <a href="/cart05.php">Cart</a><br>
 
 <h1>Product Information</h1><br>
-<img src="<?php echo $image; ?>"  alt="World">
+<img src="<?php echo $_SESSION['image']; ?>"  alt="World">
  <?php 
  $num = 1;
  if (!empty(htmlspecialchars($_POST["item1"]))) {
@@ -39,7 +39,7 @@ $image = $stmt2->fetch()['image'];
   <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($description); ?>">
   <p> <?php echo htmlspecialchars($description);
 	        echo "<br>";
-			echo $price; ?> <br>
+			echo $_SESSION['price']; ?> <br>
     <input type="submit" name="submit" value="Add to Cart">  
   </p>
 </form>
