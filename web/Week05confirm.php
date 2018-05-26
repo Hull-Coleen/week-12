@@ -6,6 +6,8 @@ $_SESSION["email"] = htmlspecialchars($_POST["email"]);
 $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 $name = htmlspecialchars($_POST["username"]);
 $password = htmlspecialchars($_POST["password"]);
+echo $name;
+echo $password;
 $stmt = $db->prepare("SELECT user_name FROM public.user WHERE (user_user_name = '{$name}')
 AND password = '{$password}';");
 $stmt->execute();
