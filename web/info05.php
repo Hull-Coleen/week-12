@@ -1,7 +1,8 @@
 
 <?php
 session_start();
-include_once('dbConnect.php');
+//include_once('dbConnect.php');
+require "dbConnect.php";
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 $description = $_SESSION["item"];
 $price;
