@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('dbConnect.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +18,7 @@ session_start();
   
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username" name="username"><br><br>
-  <label for="passwprd">Password</label>
+  <label for="password">Password</label>
   <input type="text" placeholder="Password" id="password" name="password"><br><br>
   <input type="submit" value="Complete Checkout">
   </p>

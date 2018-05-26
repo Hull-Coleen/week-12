@@ -3,25 +3,31 @@ body {
 	font-family: Agency FB;
 	font-size: 120%;
 }
+
 h1 {
 	text-align: center;
 }
+
 div#flowers {
 	float: right;
 	padding: 20px;
 }
+
 div#sub {
 	text-align: center;
 	padding: 275px 0px;
 }
+
 p {
 	text-align: center;
 	font-family: Agency FB;
 }
+
 p#confirm {
 	font-size: 180%;
 	
 }
+
 img {
 	max-height: 340px;
 	display: block;
@@ -29,22 +35,24 @@ img {
     margin-right: auto;
 	
 }
+
 div#row {
 	width: 40%;
 	padding: 20px;
 	display: inline-block;
 }
-//div#row2 {
-	//width: 40%;
-	//padding: 20px;
-	//display: inline-block;
-//}
 
+a {
+	width: 100%;
+}
 div#row2 {
 	width: 40%;
 	padding: 20px;
 	display: inline-block;
 }
-a {
-	width: 100%;
-}
+
+
+
+
+
+
