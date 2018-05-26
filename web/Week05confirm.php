@@ -11,7 +11,7 @@ AND password = '{$password}';");
 $stmt->execute();
 $userName = $stmt->fetch()['user_name'];
 if (empty(htmlspecialchars($_POST["name"]))  && !empty(htmlspecialchars($userName))) {
-	$name1 = u $userName;
+	$name1 = $userName;
 }
 else {
 	$name1 = $_SESSION["name"];
