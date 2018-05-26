@@ -26,7 +26,7 @@ else {
 <link rel="stylesheet" type="text/css" href="Week05style.css">
 </head>
 <body>
-    <p id="confirm" > <?php echo "Thank you for your purchase: " . $name1 ?></p>
+    <p id="confirm" > <?php echo "Thank you for your purchase: " . $name1 . " " . $userName ?></p>
 	<p id="confirm" >Your purchase will be shippped to: <?php echo $_SESSION["address"] ?></p>
 	<p id="confirm" >We will email you a confirmation number at: <?php echo $_SESSION["email"] ?></p>
 	
