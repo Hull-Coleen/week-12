@@ -9,7 +9,7 @@ $password = htmlspecialchars($_POST["password"]);
 echo $name;
 echo $password;
 $stmt = $db->prepare("SELECT user_name FROM public.user WHERE (user_user_name = '{$name}')
-AND password = '{$password}';");
+AND user_password = '{$password}';");
 $stmt->execute();
 $userName = $stmt->fetch()['user_name'];
 echo $userName;
