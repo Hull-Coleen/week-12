@@ -5,11 +5,12 @@ $_SESSION["name"] = htmlspecialchars($_POST["name"]);
 $_SESSION["email"] = htmlspecialchars($_POST["email"]);
 $_SESSION["address"] = htmlspecialchars($_POST["address"]);
 $name = htmlspecialchars($_POST["username"]);
-$password = htmlspecialchars($_POST["email"]);
+$password = htmlspecialchars($_POST["password"]);
 $stmt = $db->prepare("SELECT user_name FROM public.user WHERE (user_user_name = '{$name}')
 AND password = '{$password}';");
 $stmt->execute();
 $userName = $stmt->fetch()['user_name'];
+echo $userName;
 if (htmlspecialchars($_POST["name"]) == "") {
 	$name1 = $userName;
 }
