@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('dbConnect.php');
+//include_once('dbConnect.php');
 $_SESSION["name"] = htmlspecialchars($_POST["name"]);
 $_SESSION["email"] = htmlspecialchars($_POST["email"]);
 $_SESSION["address"] = htmlspecialchars($_POST["address"]);
