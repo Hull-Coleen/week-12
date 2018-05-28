@@ -35,6 +35,7 @@ p#confirm {
 }
 
 img#flower {
+	border: 1px solid brown;
 	height: 300px;
 	width: 260px;
 	display: block;
