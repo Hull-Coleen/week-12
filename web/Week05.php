@@ -20,26 +20,25 @@ if(!isset($_SESSION["cart"])){
 <a href="/search.php">Search Page</a><br>
 <?php
   include_once('./dbConnect.php');
- $statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
- $statement->execute();
+  $statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
+  $statement->execute();
  
- ?>
+?>
 
  <form method="POST" action="info05.php">
- <div>
- <?php
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-	?>
-	<div id="flowers" ><p>
-     <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
-     <input type="radio" name="item" value="<?php echo $row['description'] ?>">
-	 <?php echo $row['description'] ?><br /></P> 
-   </div>
-<?php
-}
- 
- ?>
+   <div>
+   <?php
+   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+   {
+   ?>
+	 <div id="flowers" ><p>
+       <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
+       <input type="radio" name="item" value="<?php echo $row['description'] ?>">
+	<?php echo $row['description'] ?><br /></P> 
+     </div>
+    <?php
+   }
+   ?>
    </div>
  	<br><br><br><div id="sub" ><input type="submit" name="submit" value="Submit"></div>  		
 			
