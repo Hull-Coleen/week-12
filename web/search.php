@@ -30,12 +30,12 @@ a {
  
 ?>
 
-<a id="link" href="cart05.php">
+<div><a id="link" href="cart05.php">
   <img class="link" src="cart.png" alt="Cart">
-</a>
-<a id="link" href="Week05.php">
+</a></div>
+<div><a id="link" href="Week05.php">
   <img class="link" src="flower.jpg" alt="Home" style="margin-left: 20px;width:42px;height:32px;">
-</a>
+</a></div>
 
 <h1>Please Enter your search criteria</h1>
 <p>Enter either Mother Day, Birthday, or Anniversary</p>
