@@ -35,6 +35,9 @@ img {
     margin-right: auto;
 	
 }
+img#link {
+	text-align:left;
+}
 
 div#row {
 	width: 40%;
@@ -42,9 +45,9 @@ div#row {
 	display: inline-block;
 }
 
-a {
-	width: 100%;
-}
+//a {
+	//width: 100%;
+//}
 div#row2 {
 	width: 40%;
 	padding: 20px;
