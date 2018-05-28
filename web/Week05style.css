@@ -15,8 +15,9 @@ div#flowers {
 
 div#sub {
 	text-align: center;
-	clear: right;
-	padding: 275px 0px;
+	margin-left: auto;
+    margin-right: auto;
+	//padding: 275px 0px;
 }
 
 p {
@@ -47,10 +48,9 @@ div#row {
 	display: inline-block;
 }
 
-//a {
-	//width: 100%;
-	//text-align: left;
-//}
+a {
+	padding: 15px;
+}
 div#row2 {
 	width: 40%;
 	padding: 20px;
