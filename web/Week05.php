@@ -31,7 +31,7 @@ if(!isset($_SESSION["cart"])){
    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
    {
    ?>
-	 <div id="flowers" ><p>
+	 <div id="flowers1" ><p>
        <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
        <input type="radio" name="item" value="<?php echo $row['description'] ?>">
 	   <?php echo $row['description'] ?><br /></P> 
