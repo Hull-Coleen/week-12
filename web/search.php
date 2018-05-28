@@ -25,7 +25,7 @@ $stmt->execute();
  
 ?>
 
-<a href="cart05.php">
+<a class="link" href="cart05.php">
   <img class="link" src="cart.png" alt="Cart">
 </a><br>
 <a href="/Week05.php">Homepage</a><br>
@@ -46,7 +46,7 @@ $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	?>
-	<div><p>
+	<div id="flowers" ><p>
      <img src="<?php echo $row['image'] ?>" alt="Flower"> <br>
      <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
 	 <?php echo $row['description'] ?><br />
