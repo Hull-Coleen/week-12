@@ -39,8 +39,8 @@ img#flower {
     margin-right: auto;
 	
 }
-.link {
-	border: 1px solid black;
+img.link {
+	border: 5px solid black;
 	margin-left: 20px;
 	padding: 15px;
 }
@@ -52,7 +52,7 @@ div#row {
 }
 
 a {
-	border: 1px solid black;
+	border: 5px solid black;
 	padding: 15px;
 }
 div#row2 {
