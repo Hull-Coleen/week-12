@@ -29,7 +29,7 @@ $stmt->execute();
   <img class="link" src="cart.png" alt="Cart">
 </a></div>
 <div><a id="link" href="Week05.php">
-  <img class="link" src="flower.jpg" alt="Home">
+  <img class="link" src="flower.jpg" alt="Home"><br>
   <span>Home</span>
 </a></div>
 
