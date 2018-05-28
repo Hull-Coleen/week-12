@@ -52,8 +52,10 @@ div#row {
 }
 
 a img.link {
-	border: 5px solid black;
+	margin-left: 20px;
+	border: 1px solid brown;
 	padding: 15px;
+	height: 32px;
 }
 div#row2 {
 	width: 40%;
