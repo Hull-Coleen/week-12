@@ -26,38 +26,36 @@ $stmt->execute();
 ?>
 
 <a class="link" href="cart05.php">
-  <img class="link" src="cart.png" alt="Cart" style="margin-left: 20px;width:42px;height:42px;>
+  <img class="link" src="cart.png" alt="Cart" style="margin-left: 20px;width:42px;height:32px;>
 </a><br>
 <a href="/Week05.php">Homepage</a><br>
 <h1>Please Enter your search criteria</h1>
 <p>Enter either Mother Day, Birthday, or Anniversary</p>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-<p>
-  <label for="name">Occasion</label>
-  <input type="text" placeholder="Occasion" id="occasion" name="occasion">
-			
-  <br /><br />
-  <input type="submit" value="ENTER">
-</p>
+  <p>
+    <label for="name">Occasion</label>
+    <input type="text" placeholder="Occasion" id="occasion" name="occasion">
+    <br /><br />
+    <input type="submit" value="ENTER">
+  </p>
 </form>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-<div>
-<?php
-
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-{
-	?>
+  <div>
+  <?php
+  while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+  {
+  ?>
 	<div id="flowers" ><p>
-     <img src="<?php echo $row['image'] ?>" alt="Flower"> <br>
-     <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
-	 <?php echo $row['description'] ?><br />
-	 <?php echo $row['flower_price'] ?></P> 
-   </div>
-<?php
-}
-?>
-</div>
-<br><br><br><div id="sub" ><p><input type="submit" name="submit" value="Submit"></p></div> 
+      <img src="<?php echo $row['image'] ?>" alt="Flower"> <br>
+      <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
+	  <?php echo $row['description'] ?><br />
+	  <?php echo $row['flower_price'] ?></P> 
+    </div>
+  <?php
+  }
+  ?>
+  </div>
+  <br><br><div id="sub" ><p><input type="submit" name="submit" value="Submit"></p></div> 
 </form>
 
 
