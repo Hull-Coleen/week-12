@@ -51,8 +51,8 @@ div#row {
 	display: inline-block;
 }
 
-a:hover {
-	border: 5px solid black;
+a:link {
+	
 	padding: 15px;
 }
 div#row2 {
