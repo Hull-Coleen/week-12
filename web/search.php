@@ -41,6 +41,7 @@ $stmt->execute();
 </p>
 </form>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
+<div>
 <?php
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
@@ -55,7 +56,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 <?php
 }
 ?>
-<br><br><br><div id="form" ><p><input type="submit" name="submit" value="Submit"></p></div> 
+</div>
+<br><br><br><div id="sub" ><p><input type="submit" name="submit" value="Submit"></p></div> 
 </form>
 
 
