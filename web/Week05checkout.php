@@ -12,7 +12,7 @@ include_once('dbConnect.php');
 <a href="/cart05.php">Back to Cart</a><br>
 
 <div id="row">
-<h1>If you have an account, Please sign in</h1><br>
+<h1>If you have an account,<br> Please sign in</h1><br>
 <form method="POST" action="Week05confirm.php">
 <p>
   
@@ -20,7 +20,7 @@ include_once('dbConnect.php');
   <input type="text" placeholder="Name" id="username" name="username"><br><br>
   <label for="password">Password</label>
   <input type="text" placeholder="Password" id="password" name="password"><br><br>
-  <br><br><br><br><br><br><br><input type="submit" value="Complete Checkout">
+  <br><br><br><br><br><br><input type="submit" value="Complete Checkout">
   </p>
 </form>
 </div>
