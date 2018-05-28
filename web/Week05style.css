@@ -12,6 +12,10 @@ div#flowers {
 	float: right;
 	padding: 20px;
 }
+div#flowers1 {
+	float: left;
+	padding: 20px;
+}
 
 div#sub {
 	text-align: center;
