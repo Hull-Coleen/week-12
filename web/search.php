@@ -59,6 +59,7 @@ $stmt->execute();
   }
   ?>
   </div>
+  <div id="after" ></div>
   <br><br><div><p><input type="submit" name="submit" value="Submit"></p></div> 
 </form>
 

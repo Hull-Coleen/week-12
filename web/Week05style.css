@@ -28,7 +28,9 @@ p {
 	text-align: center;
 	font-family: Agency FB;
 }
-
+div#after {
+	clear: both;
+}
 p#confirm {
 	font-size: 180%;
 	
