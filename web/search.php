@@ -50,7 +50,7 @@ $stmt->execute();
   {
   ?>
 	<div id="flowers" ><p>
-      <img src="<?php echo $row['image'] ?>" alt="Flower"> <br>
+      <img id="flowers" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
       <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
 	  <?php echo $row['description'] ?><br />
 	  <?php echo $row['flower_price'] ?></P> 
