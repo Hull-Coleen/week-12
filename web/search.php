@@ -13,6 +13,11 @@ $stmt->execute();
 <html>
 <head>
 <title>Search Page</title>
+<script>
+a {
+	margin-left: 20px;
+}
+</script>
 <link rel="stylesheet" type="text/css" href="Week05style.css">
 </head>
 <body>
@@ -26,10 +31,10 @@ $stmt->execute();
 ?>
 
 <a id="link" href="cart05.php">
-  <img class="link" src="cart.png" alt="Cart" style="margin-left: 20px;width:42px;height:32px;">
+  <img class="link" src="cart.png" alt="Cart">
 </a>
 <a id="link" href="Week05.php">
-  <img class="link" src="flower.jpg" alt="Cart" style="margin-left: 20px;width:42px;height:32px;">
+  <img class="link" src="flower.jpg" alt="Home" style="margin-left: 20px;width:42px;height:32px;">
 </a>
 
 <h1>Please Enter your search criteria</h1>
