@@ -26,7 +26,7 @@ $stmt->execute();
 ?>
 
 <a class="link" href="cart05.php">
-  <img class="link" src="cart.png" alt="Cart" style="left: 20px;width:42px;height:42px;>
+  <img class="link" src="cart.png" alt="Cart" style="margin-left: 20px;width:42px;height:42px;>
 </a><br>
 <a href="/Week05.php">Homepage</a><br>
 <h1>Please Enter your search criteria</h1>
