@@ -26,7 +26,7 @@ if(!isset($_SESSION["cart"])){
 ?>
 
  <form method="POST" action="info05.php">
-   <div>
+   
    <?php
    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
    {
@@ -39,7 +39,7 @@ if(!isset($_SESSION["cart"])){
     <?php
    }
    ?>
-   </div>
+   
  	<br><br><br><div id="sub" ><input type="submit" name="submit" value="Submit"></div>  		
 			
 </form>
