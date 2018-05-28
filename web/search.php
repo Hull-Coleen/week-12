@@ -25,10 +25,10 @@ $stmt->execute();
  
 ?>
 
-<a class="link" href="cart05.php">
+<a id="link" href="cart05.php">
   <img class="link" src="cart.png" alt="Cart" style="margin-left: 20px;width:42px;height:32px;">
 </a>
-<a class="link" href="Week05.php">
+<a id="link" href="Week05.php">
   <img class="link" src="flower.jpg" alt="Cart" style="margin-left: 20px;width:42px;height:32px;">
 </a>
 
