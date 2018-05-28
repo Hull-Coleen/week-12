@@ -35,8 +35,8 @@ img#flower {
     margin-right: auto;
 	
 }
-.link {
-	left: 20px;
+img.link {
+	margin-left: 20px;
 	max-height: 50px;
 }
 
@@ -46,10 +46,10 @@ div#row {
 	display: inline-block;
 }
 
-a {
-	width: 100%;
-	text-align: left;
-}
+//a {
+	//width: 100%;
+	//text-align: left;
+//}
 div#row2 {
 	width: 40%;
 	padding: 20px;
