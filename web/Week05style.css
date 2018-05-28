@@ -22,7 +22,7 @@ div#sub {
 }
 
 p {
-	border: 1px solid black;
+	
 	text-align: center;
 	font-family: Agency FB;
 }
@@ -51,6 +51,7 @@ div#row {
 }
 
 a {
+	border: 1px solid black;
 	padding: 15px;
 }
 div#row2 {
