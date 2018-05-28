@@ -60,7 +60,7 @@ $stmt->execute();
   ?>
   </div>
   <div id="after" ></div>
-  <br><br><div><p><input type="submit" name="submit" value="Submit"></p></div> 
+  <br><br><div><p><input type="submit" name="submit" value="Add to Cart"></p></div> 
 </form>
 
 
