@@ -34,13 +34,14 @@ if(!isset($_SESSION["cart"])){
 	 <div id="flowers" ><p>
        <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
        <input type="radio" name="item" value="<?php echo $row['description'] ?>">
-	<?php echo $row['description'] ?><br /></P> 
+	   <?php echo $row['description'] ?><br /></P> 
      </div>
-    <?php
+   <?php
    }
    ?>
    </div>
- 	<br><br><br><div id="sub" ><input type="submit" name="submit" value="Submit"></div>  		
+   <div id="after"></div>
+   <br><br><br><div id="sub" ><input type="submit" name="submit" value="Submit"></div>  		
 			
 </form>
  </body>
