@@ -31,7 +31,7 @@ $_SESSION['image'] = $image;
 <a href="/cart05.php">Cart</a><br>
 
 <h1>Product Information</h1><br>
-<img src="<?php echo $_SESSION['image']; ?>"  alt="World">
+<img id ="flower" src="<?php echo $_SESSION['image']; ?>"  alt="World">
  <?php 
  $num = 1;
  if (!empty(htmlspecialchars($_POST["item1"]))) {
