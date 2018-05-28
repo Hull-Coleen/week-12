@@ -30,6 +30,7 @@ $stmt->execute();
 </a></div>
 <div><a id="link" href="Week05.php">
   <img class="link" src="flower.jpg" alt="Home">
+  <span>Home</span>
 </a></div>
 
 <h1>Please Enter your search criteria</h1>

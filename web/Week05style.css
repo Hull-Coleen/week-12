@@ -54,8 +54,9 @@ div#row {
 a img.link {
 	margin-left: 20px;
 	border: 1px solid brown;
-	padding: 15px;
+	padding: 5px;
 	height: 32px;
+	width: 40px;
 }
 div#row2 {
 	width: 40%;
