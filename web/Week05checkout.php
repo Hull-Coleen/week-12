@@ -25,7 +25,7 @@ include_once('dbConnect.php');
 </form>
 </div>
 <div id="row2">
-  <h1>What to create an account, Please Enter your Check out Information</h1>
+  <h1>To create an account, Please Enter your Check out Information</h1>
 <form method="POST" action="Week05confirm.php">
 <p>
   <label for="name">Name</label>
