@@ -25,11 +25,17 @@ include_once('dbConnect.php');
 </form>
 </div>
 <div id="row2">
-  <h1>If you are a Guest, Please Enter your Check out Information</h1>
+  <h1>What to create an account, Please Enter your Check out Information</h1>
 <form method="POST" action="Week05confirm.php">
 <p>
   <label for="name">Name</label>
   <input type="text" placeholder="Name" id="name" name="name">
+  <br /><br />
+  <label for="username">User Name</label>
+  <input type="text" placeholder="user Name" id="username" name="username">
+  <br /><br />
+  <label for="password">Passwork</label>
+  <input type="text" placeholder="Password" id="password" name="password">
 			
   <br /><br />
 
