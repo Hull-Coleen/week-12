@@ -35,7 +35,8 @@ p#confirm {
 }
 
 img#flower {
-	max-height: 340px;
+	height: 300px;
+	width: 260px;
 	display: block;
     margin-left: auto;
     margin-right: auto;
