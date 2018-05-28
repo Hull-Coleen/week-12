@@ -32,7 +32,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	?>
 	<div id="flowers" ><p>
-     <img src="<?php echo $row['image'] ?>" alt="Flower"> <br>
+     <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
      <input type="radio" name="item" value="<?php echo $row['description'] ?>">
 	 <?php echo $row['description'] ?><br /></P> 
    </div>
