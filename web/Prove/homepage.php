@@ -18,20 +18,20 @@ $_SESSION["id"] = "test";
     }
 }*/
 /*
-echo "id " . $_SESSION["id"];
+echo "id " . $_SESSION["id"];*/
 function setUser ($name, $username, $password, $address, $email) {
 	global $db;
     try {
         $query = "INSERT INTO public.user (user_name, user_user_name, user_password, address, email)
             VALUES ('$name', '$username', '$password', '$email', '$address')";
         $db->exec($query);
-		$newId = $db->lastInsertId('public.user)id_seq');
+		$newId = $db->lastInsertId('public.user_id_seq');
         return $newId;
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
     }
-}*/
+}
 if (isset($_POST)) {
     $name = $_POST['name'];
     $username = $_POST['username'];
@@ -49,12 +49,14 @@ if (isset($_POST)) {
         $id = $stmt->fetch()[user_id];
         echo "id " . $id;
     }
-	/*else if (empty($name) ) {
-   
-		// $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
-		echo $_SESSION["id"];
-		echo "else";
-	}*/
+    if (empty($username1) {
+		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
+			echo "must enter all the fields";
+		}
+		else {
+			$id = setUser($name, $username, $password, $address, $email);
+		
+	}
 	$_SESSION["id"] = $id;
 
 
