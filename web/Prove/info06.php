@@ -31,8 +31,8 @@ function getId($flower_id) {
 function addCart($flower_id) {
 	global $db;
     try {
-        $query = "INSERT INTO cart (flower_id)
-            VALUES ($flower_id)";
+        $query = "INSERT INTO cart (user_id, flower_id)
+            VALUES ($_SESSION["id"], $flower_id)";
         $db->exec($query);
     } catch (PDOException $e) {
         $e->getMessage();
