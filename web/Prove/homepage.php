@@ -30,17 +30,6 @@ function setUser ($name, $username, $password, $address, $email) {
         echo $e;
     }
 }
-
-?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Sign In Page</title>
-<link rel="stylesheet" type="text/css" href="Week06style.css">
-</head>
-<body>
-<a href="Week06.php">Homepage</a><br>
-<?php
 if (isset($_POST)) {
     $name = $_POST['name'];
     $username = $_POST['username'];
@@ -59,7 +48,19 @@ if (isset($_POST)) {
 		 $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
 		echo $_SESSION["id"];
 	}
-} 
+}
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign In Page</title>
+<link rel="stylesheet" type="text/css" href="Week06style.css">
+</head>
+<body>
+<a href="Week06.php">Homepage</a><br>
+<?php
+ 
 ?>
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1>
