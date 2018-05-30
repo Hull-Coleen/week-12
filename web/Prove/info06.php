@@ -50,12 +50,12 @@ function addCart($flower_id) {
 <h1>Product Information</h1><br>
 <img id ="flower" src="<?php echo $_SESSION['image']; ?>"  alt="World">
  <?php 
- $num = 1;
+
  if (!empty(htmlspecialchars($_POST["item1"]))) {
+	 $_SESSION["cart"] += array($_POST["item1"] => 1);
+	 addCart($_POST["item1"]);
 	 
-	 //addCart($_POST["item1"]);
-	 
-    $_SESSION["cart"] += array($_POST["item1"] => 1);
+    
  }
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
