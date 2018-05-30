@@ -28,7 +28,7 @@ function getId($flower_id) {
 	return $id;
 	
 }
-function addCart($flower_id) {
+function addCart($_SESSION["id"], $flower_id) {
 	global $db;
     try {
         $query = "INSERT INTO cart (user_id, flower_id)
@@ -58,7 +58,7 @@ function addCart($flower_id) {
 
  if (!empty(htmlspecialchars($_POST["item1"]))) {
 	 $_SESSION["cart"] += array($_POST["item1"] => 1);
-	 $id = getId($_POST["item1"]);
+ $id = getId($_SESSION["id"], $_POST["item1"]);
 	 //echo "info page" . $id;
 	 addCart($id);
  
