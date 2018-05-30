@@ -101,7 +101,7 @@ if (isset($_POST)) {
   <br /><br />
   <input type="submit" value="Create Account">
   <?php
-  $cart = getUserId();
+  $cart = getUserId($username, $password);
 foreach($cart as $c) {
 echo "cart " . $c['user_id'];
 }
