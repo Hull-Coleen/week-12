@@ -9,7 +9,7 @@ include_once('dbConnect.php');
 <link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
-<a href="/cart06.php">Back to Cart</a><br>
+<a href="cart06.php">Back to Cart</a><br>
 
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1><br>

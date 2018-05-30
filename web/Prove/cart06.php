@@ -15,7 +15,7 @@ if ($t > -1) {
 </head>
 <body>
 <a href="Week06.php">Continue Shopping</a><br>
-<a href="/Week06checkout.php">Checkout</a>
+<a href="Week06checkout.php">Checkout</a>
 <h1>Shopping Cart</h1><br><br>
 
 <?php
