@@ -26,6 +26,7 @@ function setUser ($name, $username, $password, $address, $email) {
             VALUES ('$name', '$username', '$password', '$email', '$address')";
         $db->exec($query);
 		$newId = $db->lastInsertId('user_id_seq');
+		echo "function" . $newId;
         return $newId;
     } catch (PDOException $e) {
         $e->getMessage();
