@@ -55,6 +55,7 @@ if (isset($_POST)) {
 		echo $_SESSION["id"];
 		echo "else";
 	}*/
+	$_SESSION["id"] = $id;
 
 
 }
