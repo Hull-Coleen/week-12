@@ -18,7 +18,7 @@ if ($image != "") {
 $_SESSION['image'] = $image;
 }
 else {
-	$_SESSION['image'] = "Redf.jpg"; 
+	$_SESSION['image'] = "RedF.jpg"; 
 }
 ?>
 <!DOCTYPE html>
