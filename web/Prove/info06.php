@@ -6,7 +6,7 @@ require "dbConnect.php";
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 $description = $_SESSION["item"];
 $price;
-$_SESSION['image'] = "world.jpg";    
+   
 $stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = '{$description}');");
 $stmt->execute();
 $_SESSION['price'] = $stmt->fetch()['flower_price'];
@@ -14,9 +14,12 @@ $_SESSION['price'] = $stmt->fetch()['flower_price'];
 $stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = '{$description}');");
 $stmt2->execute();
 $image = $stmt2->fetch()['image'];
-
+if (!empty($image) {
 $_SESSION['image'] = $image;
-
+}
+else {
+	$_SESSION['image'] = "Redf.jpg"; 
+}
 ?>
 <!DOCTYPE html>
 <html>
