@@ -47,6 +47,8 @@ if (isset($_POST)) {
     $password = $_POST['password'];
     $address = $_POST['address'];
     $email = $_POST['email'];
+	echo $username;
+	echo password;
 
     if (empty($address) || empty($email) || empty($name)) {
 	    $_SESSION["id"] = getUserId($username, $password);
