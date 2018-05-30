@@ -25,7 +25,7 @@ function getId($flower_id) {
 	$stmt2 = $db->prepare("SELECT flower_id FROM flower WHERE (description = '{$flower_id}');");
     $stmt2->execute();
     $id = $stmt2->fetch()['flower_id'];
-	return $id
+	return $id;
 	
 }
 function addCart($flower_id) {
