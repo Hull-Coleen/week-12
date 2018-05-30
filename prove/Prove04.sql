@@ -33,8 +33,47 @@ CREATE TABLE flower
 
 CREATE TABLE cart
 ( cart_id            SERIAL             CONSTRAINT pk_cart_1 PRIMARY KEY        
-, user_id            INT                CONSTRAINT nn_cart_1 NOT NULL 
+, user_id            INT                CONSTRAINT nn_cart_1 NOT NULL blu
 , flower_id          INT                CONSTRAINT nn_cart_2 NOT NULL
 , CONSTRAINT fk_cart_1  FOREIGN KEY(user_id) REFERENCES public.user(user_id)
 , CONSTRAINT fk_cart_2  FOREIGN KEY(flower_id) REFERENCES flower(flower_id));
 
+
+INSERT INTO flower (flower_type, flower_size, flower_price, base_type, description, image)
+VALUES
+(1, 1, 2.00, 1, 'Small Blue', 'BlueF.jpg'),
+(2, 2, 3.00, 2, 'Medium Red', 'RedF.jpg'),
+(3, 3, 4.00 , 3, 'Large Yellow', 'YellowF.jpg'),
+(1, 2, 5.00 , 2, 'Large Purple', 'PurpleF.jpg');
+
+INSERT INTO vase (vase_size, vase_price, vase_type)
+VALUES
+(1, 2.00, 1),
+(2, 3.00, 2),
+(3, 4.00, 3),
+
+
+INSERT INTO item_size (size_type)
+VALUES
+('SM'),
+('MED'),
+('LG');
+
+INSERT INTO public.user (user_name, user_password, user_user_name) 
+VALUES
+	('Me', 'pass', 'Metoo'),
+	('You', 'password', 'Youtoo');
+	
+
+INSERT INTO occasion (occasion_type)
+VALUES
+	('Mother Day'),
+	('Anniversary'),
+	('Birthday');
+
+
+INSERT INTO public.user (user_name, user_password, user_user_name)
+VALUES
+('John', 'hello', 'coolguy'),
+('Jane', 'happy' , 'coolchick');
+	
