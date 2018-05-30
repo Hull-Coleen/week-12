@@ -40,7 +40,7 @@ if (isset($_POST)) {
 	echo $password . $name . $address . $email;
 	
 
-    if (adress == "") {
+    if (address == "") {
 	    $_SESSION["id"] = getUserId($username, $password);
 		echo $_SESSION["id"];
     }
