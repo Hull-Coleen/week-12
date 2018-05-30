@@ -4,7 +4,7 @@ session_start();
 //include_once('dbConnect.php');
 require "dbConnect.php";
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);\
-$userId = $_SESSION["id"];
+//$userId = $_SESSION["id"];
 
 $description = $_SESSION["item"];
 $price;
@@ -62,7 +62,7 @@ function addCart($user_id, $flower_id) {
 	 $_SESSION["cart"] += array($_POST["item1"] => 1);
     $id = getId($_POST["item1"]);
 	 //echo "info page" . $id;
-	 addCart($userId, $id);
+	 addCart($_SESSION["id"], $id);
  
  }
 ?>
