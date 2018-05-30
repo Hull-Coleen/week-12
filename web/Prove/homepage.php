@@ -51,8 +51,9 @@ if (isset($_POST)) {
 		echo $username1;
 	    echo $password1 . $name . $address . $email;
     }
-	else {
-		 $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
+	else if {empty($name) ) {
+   
+		// $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
 		echo $_SESSION["id"];
 		echo "else";
 	}
