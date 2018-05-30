@@ -13,11 +13,11 @@ if(!isset($_SESSION["cart"])){
 	<title>Prove Week 5</title>
 	<script>
 	</script>
-	<link rel="stylesheet" type="text/css" href="Week05style.css">
+	<link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 
 <body>
-<a href="/search06.php">Search Page</a><br>
+<a href="search06.php">Search Page</a><br>
 <?php
   include_once('./dbConnect.php');
   $statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
