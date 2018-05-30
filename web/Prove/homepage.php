@@ -41,14 +41,15 @@ if (isset($_POST)) {
     $password = $_POST['password'];
     $address = $_POST['address'];
     $email = $_POST['email'];
-	
+	$username1 = $_POST['username1'];
+    $password1 = $_POST['password1'];
 	
 
-    if (empty($address)) {
-	    $_SESSION["id"] = getUserId($username, $password);
+    if (!empty($username1) && !empty($password1)) {
+	    $_SESSION["id"] = getUserId($username1, $password1);
 		echo $_SESSION["id"];
-		echo $username;
-	    echo $password . $name . $address . $email;
+		echo $username1;
+	    echo $password1 . $name . $address . $email;
     }
 	else {
 		 $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
@@ -75,9 +76,9 @@ if (isset($_POST)) {
 <p>
   
   <label for="username">User Name</label>
-  <input type="text" placeholder="Name" id="username" name="username"><br><br>
+  <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
-  <input type="text" placeholder="Password" id="password" name="password"><br><br>
+  <input type="text" placeholder="Password" id="password1" name="password1"><br><br>
   <br><br><br><br><input type="submit" value="Sign In">
   </p>
 </form>
