@@ -4,8 +4,8 @@ include_once('dbConnect.php');
 $_SESSION["id"] = "test";
 function getUserId($username, $password) {
 	global $db;
-    $query = "SELECT user_id FROM public.user WHERE (user_user_name = '{$username}')
-          AND (user_password = '{$password}')";
+    $query = "SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
+          AND (user_password = '{$password1}')";
     try {
         $statement = $db->prepare($query);
         $statement->execute();
