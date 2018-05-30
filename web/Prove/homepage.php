@@ -25,7 +25,7 @@ function setUser ($name, $username, $password, $address, $email) {
         $query = "INSERT INTO public.user (user_name, user_user_name, user_password, address, email)
             VALUES ('$name', '$username', '$password', '$email', '$address')";
         $db->exec($query);
-		$newId = $db->lastInsertId('public.user_id_seq');
+		$newId = $db->lastInsertId('user_id_seq');
         return $newId;
     } catch (PDOException $e) {
         $e->getMessage();
