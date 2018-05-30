@@ -60,7 +60,7 @@ if (isset($_POST)) {
 <body>
 <a href="Week06.php">Homepage</a><br>
 <?php
- 
+   echo $_SESSION["id"];
 ?>
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1>
