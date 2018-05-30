@@ -9,7 +9,7 @@ function getUserId($username, $password) {
     try {
         $statement = $db->prepare($query);
         $statement->execute();
-        $result = $statement->fetch['user_id'];
+        $result = $statement->fetch[user_id];
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {
