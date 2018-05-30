@@ -20,6 +20,17 @@ $_SESSION['image'] = $image;
 else {
 	$_SESSION['image'] = "RedF.jpg"; 
 }
+function addCart($flower_id) {
+	global $db;
+    try {
+        $query = "INSERT INTO cart (flower_id)
+            VALUES ('$flower_id')";
+        $db->exec($query);
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,6 +49,7 @@ else {
  <?php 
  $num = 1;
  if (!empty(htmlspecialchars($_POST["item1"]))) {
+	 addCart($_POST["item1"]);
 	 
     $_SESSION["cart"] += array($_POST["item1"] => 1);
  }
