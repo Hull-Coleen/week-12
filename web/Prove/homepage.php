@@ -2,7 +2,7 @@
 session_start();
 include_once('dbConnect.php');
 $_SESSION["id"] = "test";
-/*function getUserId($username, $password) {
+function getUserId($username, $password) {
 	global $db;
     $query = "SELECT user_id FROM public.user WHERE (user_user_name = '{$username}')
           AND (user_password = '{$password}')";
@@ -17,7 +17,7 @@ $_SESSION["id"] = "test";
         echo $e;
     }
 }
-
+/*
 echo "id " . $_SESSION["id"];
 function setUser ($name, $username, $password, $address, $email) {
 	global $db;
@@ -42,24 +42,24 @@ if (isset($_POST)) {
     $password1 = $_POST['password1'];
 	
 
-   /* if (!empty($username1) && !empty($password1)) {
+    if (!empty($username1) && !empty($password1)) {
 	    $_SESSION["id"] = getUserId($username1, $password1);
 		echo $_SESSION["id"];
-		echo $username1 . $id;
-	    echo $password1 . $name . $address . $email;
+		echo $username1;
+	    echo $password1;
     }
-	else if (empty($name) ) {
+	/*else if (empty($name) ) {
    
 		// $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
 		echo $_SESSION["id"];
 		echo "else";
 	}*/
 
-$stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
-AND (user_password = '{$password1}');");
-$stmt->execute();
-$id = $stmt->fetch()[user_id];
-echo "id " . $id;
+//$stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
+//AND (user_password = '{$password1}');");
+//$stmt->execute();
+//$id = $stmt->fetch()[user_id];
+//echo "id " . $id;
 }
 ?>
 <!DOCTYPE html>
