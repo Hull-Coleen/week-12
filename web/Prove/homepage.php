@@ -17,6 +17,11 @@ function getUserId($username, $password) {
         echo $e;
     }
 }
+$stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username}')
+AND user_password = '{$password}';");
+$stmt->execute();
+$_SESSION["id"] = $stmt->fetch()['user_id'];
+echo "id " . $_SESSION["id"];
 function setUser ($name, $username, $password, $address, $email) {
 	global $db;
     try {
