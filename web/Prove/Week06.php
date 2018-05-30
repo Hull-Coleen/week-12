@@ -10,7 +10,7 @@ if(!isset($_SESSION["cart"])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prove Week 5</title>
+	<title>Prove Week 6</title>
 	<script>
 	</script>
 	<link rel="stylesheet" type="text/css" href="Week06style.css">
@@ -25,7 +25,7 @@ if(!isset($_SESSION["cart"])){
  
 ?>
 
- <form method="POST" action="info05.php">
+ <form method="POST" action="info06.php">
    <div>
    <?php
    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
