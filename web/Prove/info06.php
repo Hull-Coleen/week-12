@@ -25,7 +25,7 @@ function addCart($flower_id) {
     try {
 		$query1 = "SELECT flower_id FROM flower WHERE (description = '{$flower_id}')";
 		$query1->execute();
-		$id = &query1->fetch()['flower_id'];
+		$id = $query1->fetch()['flower_id'];
         $query = "INSERT INTO cart (flower_id)
             VALUES ('$id')";
         $db->exec($query);
