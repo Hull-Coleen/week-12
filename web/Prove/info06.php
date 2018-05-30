@@ -24,8 +24,10 @@ function addCart($flower_id) {
 	global $db;
     try {
 		$query1 = "SELECT flower_id FROM flower WHERE (description = '{$flower_id}')";
+		$query1->execute();
+		$id = &query1->fetch()['flower_id'];
         $query = "INSERT INTO cart (flower_id)
-            VALUES ('$query1')";
+            VALUES ('$id')";
         $db->exec($query);
     } catch (PDOException $e) {
         $e->getMessage();
@@ -50,6 +52,7 @@ function addCart($flower_id) {
  <?php 
  $num = 1;
  if (!empty(htmlspecialchars($_POST["item1"]))) {
+	 &id = 
 	 addCart($_POST["item1"]);
 	 
     $_SESSION["cart"] += array($_POST["item1"] => 1);
