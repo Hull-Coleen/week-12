@@ -36,17 +36,19 @@ if (isset($_POST)) {
     $password = $_POST['password'];
     $address = $_POST['address'];
     $email = $_POST['email'];
-	echo $username;
-	echo $password . $name . $address . $email;
+	
 	
 
     if (address == "") {
 	    $_SESSION["id"] = getUserId($username, $password);
 		echo $_SESSION["id"];
+		echo $username;
+	    echo $password . $name . $address . $email;
     }
 	else {
 		 $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
 		echo $_SESSION["id"];
+		echo "else";
 	}
 }
 
