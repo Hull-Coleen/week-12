@@ -3,7 +3,7 @@
 session_start();
 //include_once('dbConnect.php');
 require "dbConnect.php";
-$_SESSION["item"] = htmlspecialchars($_POST["item"]);\
+$_SESSION["item"] = htmlspecialchars($_POST["item"]);
 //$userId = $_SESSION["id"];
 
 $description = $_SESSION["item"];
