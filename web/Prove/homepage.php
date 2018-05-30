@@ -2,7 +2,7 @@
 session_start();
 include_once('dbConnect.php');
 $_SESSION["id"] = "test";
-function getUserId($username, $password) {
+/*function getUserId($username, $password) {
 	global $db;
     $query = "SELECT user_id FROM public.user WHERE (user_user_name = '{$username}')
           AND (user_password = '{$password}')";
@@ -31,7 +31,7 @@ function setUser ($name, $username, $password, $address, $email) {
         $e->getMessage();
         echo $e;
     }
-}
+}*/
 if (isset($_POST)) {
     $name = $_POST['name'];
     $username = $_POST['username'];
@@ -55,8 +55,8 @@ if (isset($_POST)) {
 		echo "else";
 	}
 }
-$stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username}')
-AND (user_password = '{$password}');");
+$stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
+AND (user_password = '{$password1}');");
 $stmt->execute();
 $id = $stmt->fetch()[user_id];
 echo "id " . $id;
