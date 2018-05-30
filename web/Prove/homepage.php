@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('dbConnect.php');
-$_SESSION["id"];
+$_SESSION["id"] = "test";
 function getUserId($username, $password) {
 	global $db;
     $query = "SELECT user_id FROM public.user WHERE user_user_name = '{$username}'
