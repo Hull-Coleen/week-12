@@ -12,7 +12,7 @@ function getCart() {
     try {
         $statement = $db->prepare($query);
         $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_NAMED);
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {
