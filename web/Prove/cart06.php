@@ -53,7 +53,7 @@ foreach($_SESSION['cart'] as $x => $x_value) {
 }
 $cart = getCart();
 foreach($cart as $c => $value ) {
-	echo $c;
+	echo "cart" . $value;
 }
 ?>
 
