@@ -63,7 +63,10 @@ if (isset($_POST)) {
 		
 	}
 	$_SESSION["id"] = $id;
-	
+	if(isset($_POST['submit'])) {
+        // Insert Query Put here
+        header('Location: education.php');
+    }
 
 
 }
@@ -115,12 +118,13 @@ if (isset($_POST)) {
   <label for="email">Address</label>
   <input type="text" placeholder="Address" id="address" name="address">
   <br /><br />
-  <input type="submit" value="Create Account">
+  <input type="submit" name="submit" value="Create Account">
   
  
 </p>
 </form>
 </div>
+<?php
 
 </body>
 </html>
