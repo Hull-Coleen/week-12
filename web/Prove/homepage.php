@@ -30,7 +30,7 @@ function setUser ($name, $username, $password, $address, $email) {
         echo $e;
     }
 }
-}
+
 ?>
 <!DOCTYPE html>
 <html>
