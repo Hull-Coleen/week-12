@@ -14,7 +14,7 @@ $_SESSION['price'] = $stmt->fetch()['flower_price'];
 $stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = '{$description}');");
 $stmt2->execute();
 $image = $stmt2->fetch()['image'];
-if (!empty($image) {
+if ($image != "") {
 $_SESSION['image'] = $image;
 }
 else {
