@@ -6,14 +6,14 @@ include_once('dbConnect.php');
 <html>
 <head>
 <title>Check Out</title>
-<link rel="stylesheet" type="text/css" href="Week05style.css">
+<link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
-<a href="/cart05.php">Back to Cart</a><br>
+<a href="/cart06.php">Back to Cart</a><br>
 
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1><br>
-<form method="POST" action="Week05confirm.php">
+<form method="POST" action="Week06confirm.php">
 <p>
   
   <label for="username">User Name</label>

@@ -25,7 +25,7 @@ else {
 <html>
 <head>
 <title>Confirmation Page</title>
-<link rel="stylesheet" type="text/css" href="Week05style.css">
+<link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
     <p id="confirm" > <?php echo "Thank you for your purchase: " . $name1 ?></p>

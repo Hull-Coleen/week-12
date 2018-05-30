@@ -11,11 +11,11 @@ if ($t > -1) {
 <html>
 <head>
 <title></title>
-<link rel="stylesheet" type="text/css" href="Week05style.css">
+<link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
-<a href="Week05.php">Continue Shopping</a><br>
-<a href="/Week05checkout.php">Checkout</a>
+<a href="Week06.php">Continue Shopping</a><br>
+<a href="/Week06checkout.php">Checkout</a>
 <h1>Shopping Cart</h1><br><br>
 
 <?php

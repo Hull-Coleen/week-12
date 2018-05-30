@@ -24,11 +24,11 @@ $_SESSION['image'] = $image;
 <title>Info Page</title>
 <style>
 </style>
-<link rel="stylesheet" type="text/css" href="Week05style.css">
+<link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
-<a href="/Week05.php">Continue Shopping</a><br>
-<a href="/cart05.php">Cart</a><br>
+<a href="/Week06.php">Continue Shopping</a><br>
+<a href="/cart06.php">Cart</a><br>
 
 <h1>Product Information</h1><br>
 <img id ="flower" src="<?php echo $_SESSION['image']; ?>"  alt="World">

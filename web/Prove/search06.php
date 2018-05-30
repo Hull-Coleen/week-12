@@ -13,7 +13,7 @@ $stmt->execute();
 <html>
 <head>
 <title>Search Page</title>
-<link rel="stylesheet" type="text/css" href="Week05style.css">
+<link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
 <?php 
@@ -25,10 +25,10 @@ $stmt->execute();
  
 ?>
 
-<div><a id="link" href="cart05.php">
+<div><a id="link" href="cart06.php">
   <img class="link" src="cart.png" alt="Cart">
 </a></div>
-<div><a id="link" href="Week05.php">
+<div><a id="link" href="Week06.php">
   <img class="link" src="flower.jpg" alt="Home"><br>
   <span>Home</span>
 </a></div>
