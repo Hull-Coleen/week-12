@@ -17,10 +17,7 @@ function getUserId($username, $password) {
         echo $e;
     }
 }
-$stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username}')
-AND (user_password = '{$password}');");
-$stmt->execute();
-$id = $stmt->fetch()['user_id'];
+
 echo "id " . $_SESSION["id"];
 function setUser ($name, $username, $password, $address, $email) {
 	global $db;
@@ -43,7 +40,10 @@ if (isset($_POST)) {
     $email = $_POST['email'];
 	$username1 = $_POST['username1'];
     $password1 = $_POST['password1'];
-	
+	$stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username}')
+AND (user_password = '{$password}');");
+$stmt->execute();
+$id = $stmt->fetch()[user_id];
 
     if (!empty($username1) && !empty($password1)) {
 	    $_SESSION["id"] = getUserId($username1, $password1);
