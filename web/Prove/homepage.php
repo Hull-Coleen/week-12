@@ -49,7 +49,7 @@ if (isset($_POST)) {
         $id = $stmt->fetch()[user_id];
         echo "id " . $id;
     }
-    if (empty($username1) {
+    if (empty($username1)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			echo "must enter all the fields";
 		}
