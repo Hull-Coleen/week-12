@@ -100,6 +100,12 @@ if (isset($_POST)) {
   <input type="text" placeholder="Address" id="address" name="address">
   <br /><br />
   <input type="submit" value="Create Account">
+  <?php
+  $cart = getUserId();
+foreach($cart as $c) {
+echo "cart " . $c['user_id'];
+}
+  ?>
 </p>
 </form>
 </div>
