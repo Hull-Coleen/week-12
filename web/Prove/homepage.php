@@ -61,6 +61,7 @@ if (isset($_POST)) {
 		
 	}
 	$_SESSION["id"] = $id;
+	header('Location: Week06.php');
 
 
 }
@@ -113,6 +114,7 @@ if (isset($_POST)) {
   <input type="text" placeholder="Address" id="address" name="address">
   <br /><br />
   <input type="submit" value="Create Account">
+  
  
 </p>
 </form>
