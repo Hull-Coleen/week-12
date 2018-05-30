@@ -1,0 +1,78 @@
+body {
+	background-color: #ffffcc;
+	font-family: Agency FB;
+	font-size: 120%;
+}
+
+h1 {
+	text-align: center;
+}
+
+div#flowers {
+	float: right;
+	padding: 20px;
+}
+div#flowers1 {
+	float: left;
+	padding: 50px;
+}
+
+div#sub {
+	text-align: center;
+}
+
+p {
+	
+	text-align: center;
+	font-family: Agency FB;
+}
+div#after {
+	clear: both;
+}
+p#confirm {
+	font-size: 180%;
+	
+}
+
+img#flower {
+	border: 1px solid brown;
+	height: 300px;
+	width: 260px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	
+}
+img.link {
+//	border: 5px solid black;
+	//margin-left: 20px;
+	//padding: 15px;
+}
+
+div#row {
+	width: 40%;
+	padding: 20px;
+	display: inline-block;
+}
+
+a img.link {
+	margin-left: 20px;
+	border: 1px solid brown;
+	padding: 5px;
+	height: 32px;
+	width: 40px;
+}
+div#row2 {
+	width: 40%;
+	padding: 20px;
+	display: inline-block;
+}
+span {
+	margin-left: 20px;
+}
+
+
+
+
+
+
