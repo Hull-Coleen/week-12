@@ -59,9 +59,9 @@ function addCart($flower_id) {
  if (!empty(htmlspecialchars($_POST["item1"]))) {
 	 $_SESSION["cart"] += array($_POST["item1"] => 1);
 	 $id = getId($_POST["item1"]);
+	 echo $id;
 	 addCart($id);
-	 
-    
+ 
  }
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
@@ -72,7 +72,7 @@ function addCart($flower_id) {
     <input type="submit" name="submit" value="Add to Cart">  
   </p>
 </form>
-	   
+	  
 
 </body>
 </html>
