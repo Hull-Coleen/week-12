@@ -3,7 +3,9 @@
 session_start();
 //include_once('dbConnect.php');
 require "dbConnect.php";
-$_SESSION["item"] = htmlspecialchars($_POST["item"]);
+$_SESSION["item"] = htmlspecialchars($_POST["item"]);\
+$ userId = $_SESSION["id"];
+
 $description = $_SESSION["item"];
 $price;
    
@@ -28,11 +30,11 @@ function getId($flower_id) {
 	return $id;
 	
 }
-function addCart($_SESSION["id"], $flower_id) {
+function addCart($user_id, $flower_id) {
 	global $db;
     try {
         $query = "INSERT INTO cart (user_id, flower_id)
-            VALUES ($_SESSION["id"], $flower_id)";
+            VALUES ($user_id, $flower_id)";
         $db->exec($query);
     } catch (PDOException $e) {
         $e->getMessage();
@@ -60,7 +62,7 @@ function addCart($_SESSION["id"], $flower_id) {
 	 $_SESSION["cart"] += array($_POST["item1"] => 1);
     $id = getId($_POST["item1"]);
 	 //echo "info page" . $id;
-	 addCart($_SESSION["id"], $id);
+	 addCart($userId, $id);
  
  }
 ?>
