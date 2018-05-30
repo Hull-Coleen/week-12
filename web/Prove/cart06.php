@@ -35,10 +35,7 @@ function getCart() {
 <h1>Shopping Cart</h1><br><br>
 
 <?php
-$cart = getCart();
-//foreach($cart as $c => $value ) {
-	//echo $c;
-//}
+
 foreach($_SESSION['cart'] as $x => $x_value) {	
 	?>
 	<p> <?php
@@ -53,6 +50,10 @@ foreach($_SESSION['cart'] as $x => $x_value) {
    ?>
    </p>
    <?php
+}
+$cart = getCart();
+foreach($cart as $c => $value ) {
+	echo $c;
 }
 ?>
 
