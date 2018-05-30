@@ -73,7 +73,7 @@ if (isset($_POST)) {
 <a href="Week06.php">Homepage</a><br>
 <?php
    echo $_SESSION["id"] . "<br>";
-   echo $id;
+   echo "id" . $id;
 ?>
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1>
