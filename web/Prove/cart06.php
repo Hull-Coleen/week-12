@@ -6,13 +6,16 @@ if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
 	
 }
+$statement = $db->prepare("SELECT flower_price, description, image FROM flower f, cart c 
+             WHERE f.flower_id = c.caft_id");
+  $statement->execute();
 function getCart() {
     global $db;
     $query = 'SELECT f.description FROM flower f ,cart c WHERE f.flower_id = c.flower_id';
     try {
         $statement = $db->prepare($query);
         $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {
@@ -52,8 +55,8 @@ foreach($_SESSION['cart'] as $x => $x_value) {
    <?php
 }
 $cart = getCart();
-foreach($cart as $c => $value ) {
-	echo "cart " . $c ." " . $value;
+foreach($cart as $c) {
+echo "cart " . $c['description'];
 }
 ?>
 
