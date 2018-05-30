@@ -20,14 +20,19 @@ $_SESSION['image'] = $image;
 else {
 	$_SESSION['image'] = "RedF.jpg"; 
 }
+function getId($flower_id) {
+    global $db;
+	$stmt2 = $db->prepare("SELECT flower_id FROM flower WHERE (description = '{$flower_id}');");
+    $stmt2->execute();
+    $id = $stmt2->fetch()['flower_id'];
+	return $id
+	
+}
 function addCart($flower_id) {
 	global $db;
     try {
-		$query1 = "SELECT flower_id FROM flower WHERE (description = '{$flower_id}')";
-		$query1->execute();
-		$id = $query1->fetch()['flower_id'];
         $query = "INSERT INTO cart (flower_id)
-            VALUES ($id)";
+            VALUES ($flower_id)";
         $db->exec($query);
     } catch (PDOException $e) {
         $e->getMessage();
@@ -53,7 +58,8 @@ function addCart($flower_id) {
 
  if (!empty(htmlspecialchars($_POST["item1"]))) {
 	 $_SESSION["cart"] += array($_POST["item1"] => 1);
-	 addCart($_POST["item1"]);
+	 $id = getId($_POST["item1"]);
+	 addCart($id);
 	 
     
  }
