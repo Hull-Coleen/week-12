@@ -39,7 +39,7 @@ if (isset($_POST)) {
 	
 	
 
-    if (address == "") {
+    if ($address == "") {
 	    $_SESSION["id"] = getUserId($username, $password);
 		echo $_SESSION["id"];
 		echo $username;
