@@ -36,9 +36,7 @@ function getCart() {
 
 <?php
 $cart = getCart();
-foreach($cart as $c) {
-	echo $c;
-}
+var_dump($cart);
 foreach($_SESSION['cart'] as $x => $x_value) {	
 	?>
 	<p> <?php
