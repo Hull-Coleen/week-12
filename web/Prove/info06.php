@@ -53,7 +53,7 @@ function addCart($flower_id) {
  $num = 1;
  if (!empty(htmlspecialchars($_POST["item1"]))) {
 	 
-	 addCart($_POST["item1"]);
+	 //addCart($_POST["item1"]);
 	 
     $_SESSION["cart"] += array($_POST["item1"] => 1);
  }
