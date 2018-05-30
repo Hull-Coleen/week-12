@@ -5,7 +5,7 @@ $_SESSION["id"];
 function getUserId($username, $password) {
 	global $db;
     $query = "SELECT user_id FROM public.user WHERE user_user_name = '{$username}'
-          AND password = '{$password}'";
+          AND user_password = '{$password}'";
     try {
         $statement = $db->prepare($query);
         $statement->execute();
@@ -20,7 +20,7 @@ function getUserId($username, $password) {
 function setUser ($name, $username, $password, $address, $email) {
 	global $db;
     try {
-        $query = "INSERT INTO public.user (user_name, user_user_name, password, address, email)
+        $query = "INSERT INTO public.user (user_name, user_user_name, user_password, address, email)
             VALUES ('$name', '$username', '$password', '$email', '$address')";
         $db->exec($query);
 		$newId = $db->lastInsertId('public.user)id_seq');
