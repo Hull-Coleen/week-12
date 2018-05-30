@@ -27,7 +27,7 @@ function addCart($flower_id) {
 		$query1->execute();
 		$id = $query1->fetch()['flower_id'];
         $query = "INSERT INTO cart (flower_id)
-            VALUES ('$id')";
+            VALUES ($id)";
         $db->exec($query);
     } catch (PDOException $e) {
         $e->getMessage();
