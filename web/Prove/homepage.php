@@ -67,10 +67,7 @@ if (isset($_POST)) {
 
 
 }
-if(isset($_POST['submit'])) {
-        // Insert Query Put here
-        header('Location: education.php');
-}
+
 ?>
 <!DOCTYPE html>
 <html>
