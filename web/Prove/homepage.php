@@ -55,6 +55,7 @@ if (isset($_POST)) {
 		}
 		else {
 			$id = setUser($name, $username, $password, $address, $email);
+			echo "else" . $id;
 		}
 		
 	}
