@@ -42,7 +42,7 @@ if (isset($_POST)) {
     $password1 = $_POST['password1'];
 	
 
-    if (!empty($username1) && !empty($password1)) {
+   /* if (!empty($username1) && !empty($password1)) {
 	    $_SESSION["id"] = getUserId($username1, $password1);
 		echo $_SESSION["id"];
 		echo $username1 . $id;
@@ -53,13 +53,14 @@ if (isset($_POST)) {
 		// $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
 		echo $_SESSION["id"];
 		echo "else";
-	}
-}
+	}*/
+
 $stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
 AND (user_password = '{$password1}');");
 $stmt->execute();
 $id = $stmt->fetch()[user_id];
 echo "id " . $id;
+}
 ?>
 <!DOCTYPE html>
 <html>
