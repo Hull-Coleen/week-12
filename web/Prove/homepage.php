@@ -48,6 +48,7 @@ if (isset($_POST)) {
         AND (user_password = '{$password1}');");
         $stmt->execute();
         $id = $stmt->fetch()[user_id];
+		header('Location: nextpage.php');
         //echo "id " . $id;
     }
     if (empty($username1)) {
@@ -57,11 +58,12 @@ if (isset($_POST)) {
 		else {
 			$id = setUser($name, $username, $password, $address, $email);
 			echo "else" . $id;
+			header('Location: nextpage.php');
 		}
 		
 	}
 	$_SESSION["id"] = $id;
-	header('Location: Week06.php');
+	
 
 
 }
