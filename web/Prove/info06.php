@@ -23,8 +23,9 @@ else {
 function addCart($flower_id) {
 	global $db;
     try {
+		$query1 = "SELECT flower_id FROM flower WHERE (description = '{$flower_id}')";
         $query = "INSERT INTO cart (flower_id)
-            VALUES ('$flower_id')";
+            VALUES ('$query1')";
         $db->exec($query);
     } catch (PDOException $e) {
         $e->getMessage();
