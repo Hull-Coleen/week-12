@@ -1,10 +1,26 @@
 <?php
 session_start();
-
+include_once('dbConnect.php');
 $t = $_GET['_delete'];
 if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
+	
 }
+function getCart() {
+    global $db;
+    $query = 'SELECT f.description FROM flower f ,cart c WHERE f.flower_id = c.flower_id';
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_NAMED);
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +35,8 @@ if ($t > -1) {
 <h1>Shopping Cart</h1><br><br>
 
 <?php
-
+$cart = getCart();
+echo $cart;
 foreach($_SESSION['cart'] as $x => $x_value) {	
 	?>
 	<p> <?php
