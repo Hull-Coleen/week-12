@@ -1,32 +1,79 @@
 <?php
 session_start();
 include_once('dbConnect.php');
+$_SESSION["id"];
+function getUserId($username, $password) {
+	global $db;
+    $query = "SELECT user_id FROM public.user WHERE user_user_name = '{$username}'
+          AND password = '{$password}'";
+    try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetch['user_id'];
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+function setUser ($name, $username, $password, $address, $email) {
+	global $db;
+    try {
+        $query = "INSERT INTO public.user (user_name, user_user_name, password, address, email)
+            VALUES ('$name', '$username', '$password', '$email', '$address')";
+        $db->exec($query);
+		$newId = $db->lastInsertId('public.user)id_seq');
+        return $newId;
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Homepage</title>
+<title>Sign In Page</title>
 <link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
-<a href="Week06.php">Website</a><br>
+<a href="Week06.php">Homepage</a><br>
+<?php
+if (isset($_POST)) {
+    $name = $_POST['name'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $address = $_POST['address'];
+    $email = $_POST['email'];
 
+    if (empty($address) || empty($email) || empty($name)) {
+	    $_SESSION["id"] = getUserId($username, $password);
+		echo $_SESSION["id"];
+    }
+	else {
+		 $_SESSION["id"] = setUser($name, $username, $password, $address, $email);
+		echo $_SESSION["id"];
+	}
+} 
+?>
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1>
-<form method="POST" action="Week06php">
+<form method="POST" action="homepage.php">
 <p>
   
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username" name="username"><br><br>
   <label for="password">Password</label>
   <input type="text" placeholder="Password" id="password" name="password"><br><br>
-  <br><br><br><br><input type="submit" value="Complete Checkout">
+  <br><br><br><br><input type="submit" value="Sign In">
   </p>
 </form>
 </div>
 <div id="row2">
-  <h1>To create an account, Please Enter your Check out Information</h1>
-<form method="POST" action="Week05.php">
+  <h1>To create an account, Please Enter your Fill in the Textboxes Below/h1>
+<form method="POST" action="homepage.php">
 <p>
   <label for="name">Name</label>
   <input type="text" placeholder="Name" id="name" name="name">
@@ -46,7 +93,7 @@ include_once('dbConnect.php');
   <label for="email">Address</label>
   <input type="text" placeholder="Address" id="address" name="address">
   <br /><br />
-  <input type="submit" value="Complete Checkout">
+  <input type="submit" value="Create Account">
 </p>
 </form>
 </div>
