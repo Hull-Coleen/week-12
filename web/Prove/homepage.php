@@ -48,7 +48,7 @@ if (isset($_POST)) {
     $address = $_POST['address'];
     $email = $_POST['email'];
 	echo $username;
-	echo password;
+	echo $password;
 
     if (empty($address) || empty($email) || empty($name)) {
 	    $_SESSION["id"] = getUserId($username, $password);
@@ -74,7 +74,7 @@ if (isset($_POST)) {
 </form>
 </div>
 <div id="row2">
-  <h1>To create an account, Please Enter your Fill in the Textboxes Below/h1>
+  <h1>To create an account, Please Enter your Fill in the Textboxes Below</h1>
 <form method="POST" action="homepage.php">
 <p>
   <label for="name">Name</label>
