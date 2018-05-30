@@ -2,7 +2,7 @@
 session_start();
 include_once('dbConnect.php');
 $_SESSION["id"] = "test";
-/*function getUserId($username, $password) {
+/*function getUserId($username1, $password1) {
 	global $db;
     $query = "SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
           AND (user_password = '{$password1}')";
@@ -48,7 +48,7 @@ if (isset($_POST)) {
         AND (user_password = '{$password1}');");
         $stmt->execute();
         $id = $stmt->fetch()[user_id];
-        echo "id " . $id;
+        //echo "id " . $id;
     }
     if (empty($username1)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
@@ -75,7 +75,7 @@ if (isset($_POST)) {
 <a href="Week06.php">Homepage</a><br>
 <?php
    echo $_SESSION["id"] . "<br>";
-   echo "id" . $id;
+   //echo "id" . $id;
 ?>
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1>
@@ -117,13 +117,6 @@ if (isset($_POST)) {
 </p>
 </form>
 </div>
- <?php
-  $cart = getUserId($username, $password);
-foreach($cart as $c) {
-echo "cart " . $c['user_id'];
-}
-  ?>
-
 
 </body>
 </html>
