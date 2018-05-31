@@ -80,7 +80,7 @@ foreach ($db->query("SELECT f.description, f.flower_price, f.image
   echo '<br/>';
 }
 $cart = getCart();
-for each($cart as $c) {
+foreach($cart as $c) {
 	echo "cart " . $c['description'] . "<br>";
 	echo $c['flower_price'];
 }
