@@ -2,7 +2,7 @@
 session_start();
 include_once('dbConnect.php');
 echo $_SESSION['id'];
-$id = $_SESSION["cart"];
+$id = $_SESSION["id"];
 $t = $_GET['_delete'];
 
 if (!empty($t)) {
