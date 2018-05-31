@@ -42,7 +42,7 @@ while($rows = $stmt->fetch(PDO::FETCH_ASSOC)) {
       <img id="cart" src="<?php echo $rows['image'] ?>" alt="Flower"><br>
       <?php echo $rows['description'] ?><br />
 	  <?php echo $rows['flower_price']  ?><br />
-	  <?php echo "<a href='htmlentities({$_SERVER["PHP_SELF"]})?_delete={$rows['flower_id']}'>Delete</a>"; ?>
+	  <?php echo "<a href='{htmlentities($_SERVER["PHP_SELF"])}?_delete={$rows['flower_id']}'>Delete</a>"; ?>
 	  </p> 
     </div>
   <?php
