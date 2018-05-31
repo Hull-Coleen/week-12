@@ -6,7 +6,6 @@ $id = $_SESSION["id"];
 $t = $_GET['_delete'];
 
 if (!empty($t)) {
-	echo "not empty";
 	unset($_SESSION["cart"][$t]);
     $query = "DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id";
 	$statement = $db->prepare($query);
@@ -21,7 +20,25 @@ $stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image
 					 WHERE c.user_id = :user_id');
 $stmt->bindValue(':user_id', $id);
 $stmt->execute();				 
+function getCart() {
+	global $db;
+    $query = 'SELECT f.flower_id, f.description, f.flower_price, f.image 
+                     FROM flower f
+					 INNER JOIN cart c ON f.flower_id = c.flower_id
+					 WHERE c.user_id = :user_id';
+    try {
+        $statement = $db->prepare($query);
+		$statement->bindValue(':user_id', $id);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
 
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,26 +49,10 @@ $stmt->execute();
 </head>
 <body>
 <a href="Week06.php">Continue Shopping</a><br>
-<a href="Week06checkout.php">Checkout</a>
+
 <h1>Shopping Cart</h1><br><br>
 
 <?php
-
-foreach($_SESSION['cart'] as $x => $x_value) {	
-	?>
-	<p> <?php
-   echo $x;
-   
-   ?>
-   <br>
-   <input type="text" placeholder="1" maxlength="4" size="4" id="<?php echo $x ?>" name="num">
-   <?php
-   echo "<br>";
-   echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$x}'>Delete</a>";
-   ?>
-   </p>
-   <?php
-}
 
 while($rows = $stmt->fetch(PDO::FETCH_ASSOC)) {
   ?>
@@ -64,8 +65,10 @@ while($rows = $stmt->fetch(PDO::FETCH_ASSOC)) {
     </div>
   <?php
   }
+  $cart = getCart();
+  echo var_dump($cart);
   ?>
-
+<a href="Week06confirm.php">Confirm Checkout</a><br>
 
 </body>
 </html>
