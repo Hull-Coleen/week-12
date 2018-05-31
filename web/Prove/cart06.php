@@ -8,15 +8,6 @@ if ($t > -1) {
 }
 echo $_SESSION['id'];
 $id = 5;
-//$stmt = $db->prepare("SELECT f.description, f.flower_price, f.image 
-//FROM flower f, cart c 
-//WHERE c.flower_id = f.flower_id");
-//$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
-//$stmt->execute();
-
-$stmt = $db->prepare("SELECT user_id, flower_id FROM cart");
-//$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
-$stmt->execute();
 function getCart() {
 	global $db;
 	$query = "SELECT f.description, f.flower_price, f.image 
@@ -96,7 +87,8 @@ $cart = getCart();
 foreach($cart as $c) {
 	echo "cart " . $c['description'] . "<br>";
 	echo $c['flower_price'];
-}
+     echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['description']}'>Delete</a>";
+	 }
 while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
  
   {
