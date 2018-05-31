@@ -7,9 +7,10 @@ if ($t > -1) {
 	
 }
 echo $_SESSION['id'];
+$id = 5;
 $stmt = $db->prepare("SELECT f.description, f.flower_price, f.image 
 FROM flower f, cart c 
-WHERE c.flower_id = f.flower_id AND c.user_id = {$_SESSION['id']}");
+WHERE c.flower_id = f.flower_id AND c.user_id = '{$id}'");
 //$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
 $stmt->execute();
 
