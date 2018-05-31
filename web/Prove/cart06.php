@@ -43,7 +43,7 @@ foreach($_SESSION['cart'] as $x => $x_value) {
    <?php
 }
 //$cart = getCart();
-<?php
+
  while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC) 
  
   {
