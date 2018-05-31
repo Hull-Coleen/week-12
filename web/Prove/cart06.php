@@ -8,8 +8,10 @@ $t = $_GET['_delete'];
 if (!empty($t)) {
 	echo "not empty";
 	unset($_SESSION["cart"][$t]);
-    $query = "DELETE FROM cart WHERE user_id = {$id} AND flower_id = {$t}";
+    $query = "DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id";
 	$statement = $db->prepare($query);
+	$statement->bindValue(':user_id', $id);
+	$statement->bindValue(':flower_id', $t);
     $statement->execute();
 }
 echo $t;
@@ -99,6 +101,7 @@ foreach ($db->query("SELECT f.flower_id, f.description, f.flower_price, f.image
 
 }
 $cart = getCart();
+echo var_dump($cart);
 foreach($cart as $c) {
 	echo "cart " . $c['description'] . "<br>";
 	echo $c['flower_price'];
