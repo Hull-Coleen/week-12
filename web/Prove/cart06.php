@@ -52,9 +52,9 @@ while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC))
   ?>
 	<div ><p>
       <!-- <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower">  --><br>
-
+      <?php echo $row['image'] ?><br />
 	  <?php echo $row['description'] ?><br />
-	  <?php echo $row['flower_price'] ?></P> 
+	  <?php echo $row['flower_price'] ?></p> 
     </div>
   <?php
   }
