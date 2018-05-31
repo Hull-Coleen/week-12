@@ -55,7 +55,7 @@ foreach($_SESSION['cart'] as $x => $x_value) {
 }
 $cart = getCart();
 foreach($cart as $c) {
-echo "cart " . $c['description'] /*. " " . $c['image'] . " " . $['price']*/;
+echo "cart " . $c['description'] . " " . $c['image'] . " " . $['price'];
 }
 ?>
 
