@@ -114,9 +114,9 @@ while($rows1 = $stmt->fetchAll(PDO::FETCH_ASSOC));
   {
   ?>
 	<div ><p>
-      <!-- <img id="flower" src="<?php echo $rows['image'] ?>" alt="Flower">  --><br>
-      <?php echo "rows " . $rows['user_id'] ?><br />
-	  <?php echo /*$row['description']*/$rows['flower_id']  ?><br />
+      <!-- <img id="flower" src="<?php echo $rows1['image'] ?>" alt="Flower">  --><br>
+      <?php echo "rows " . $rows1['user_id'] ?><br />
+	  <?php echo /*$row['description']*/$rows1['flower_id']  ?><br />
 	  <?php /*echo $row['flower_price'] */?></p> 
     </div>
   <?php
