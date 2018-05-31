@@ -17,6 +17,23 @@ $id = 5;
 $stmt = $db->prepare("SELECT user_id, flower_id FROM cart");
 //$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
 $stmt->execute();
+founction getCart() {
+	global $db;
+	$query = "SELECT f.description, f.flower_price, f.image 
+                     FROM flower f INNER JOIN cart c ON f.flower_id = c.flower_id
+					 WHERE c.user_id = {$id}";
+	 try {
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}				 
+}
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +79,11 @@ foreach ($db->query("SELECT f.description, f.flower_price, f.image
   echo ' password: ' . $row['flower_price'];
   echo '<br/>';
 }
-
+$cart = getCart();
+for each($cart as $c) {
+	echo "cart " . $c['description'] . "<br>";
+	echo $c['flower_price'];
+}
 while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
  
   {
