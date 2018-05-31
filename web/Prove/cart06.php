@@ -13,6 +13,13 @@ if (!empty($t)) {
     $statement->execute();
 }
 echo $t;
+$stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image 
+                     FROM flower f
+					 INNER JOIN cart c ON f.flower_id = c.flower_id
+					 WHERE c.user_id = :$id');
+$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+$stmt->execute();
+$rows1 = $stmt->fetchAll(PDO::FETCH_ASSOC);					 
 
 function getCart() {
 	global $db;
@@ -96,7 +103,12 @@ foreach($cart as $c) {
 	echo "cart " . $c['description'] . "<br>";
 	echo $c['flower_price'];
      echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['description']}'>Delete</a>";
-	 }
+}
+foreach($row1 as $c) {
+	echo "cart " . $c['description'] . "<br>";
+	echo $c['flower_price'];
+     echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['description']}'>Delete</a>";
+}
 while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
  
   {
