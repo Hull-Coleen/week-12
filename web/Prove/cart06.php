@@ -19,7 +19,7 @@ $stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image
 					 WHERE c.user_id = :user_id');
 $stmt->bindValue(':user_id', $id);
 $stmt->execute();
-$rows1 = $stmt->fetchAll(PDO::FETCH_ASSOC);					 
+//$rows1 = $stmt->fetchAll(PDO::FETCH_ASSOC);					 
 
 function getCart() {
 	global $db;
@@ -109,9 +109,7 @@ foreach($row1 as $c) {
 	echo $c['flower_price'];
      echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['description']}'>Delete</a>";
 }
-while($rows1 = $stmt->fetch(PDO::FETCH_ASSOC))
- 
-  {
+while($rows1 = $stmt->fetch(PDO::FETCH_ASSOC)) {
   ?>
 	<div ><p>
       <!-- <img id="flower" src="<?php echo $rows1['image'] ?>" alt="Flower">  --><br>
