@@ -17,7 +17,7 @@ $id = 5;
 $stmt = $db->prepare("SELECT user_id, flower_id FROM cart");
 //$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
 $stmt->execute();
-founction getCart() {
+function getCart() {
 	global $db;
 	$query = "SELECT f.description, f.flower_price, f.image 
                      FROM flower f INNER JOIN cart c ON f.flower_id = c.flower_id
@@ -32,7 +32,11 @@ founction getCart() {
         $e->getMessage();
         echo $e;
     }
-}				 
+}
+
+
+
+				 
 
 ?>
 
