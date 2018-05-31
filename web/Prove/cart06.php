@@ -112,8 +112,8 @@ foreach($row1 as $c) {
 while($rows1 = $stmt->fetch(PDO::FETCH_ASSOC)) {
   ?>
 	<div ><p>
-      <!-- <img id="flower" src="<?php echo $rows1['image'] ?>" alt="Flower">  --><br>
-      <?php echo "rows " . $rows1['description'] ?><br />
+      <img id="cart" src="<?php echo $rows1['image'] ?>" alt="Flower"><br>
+      <?php echo $rows1['description'] ?><br />
 	  <?php echo $rows1['flower_price']  ?><br />
 	  <?php /*echo $row['flower_price'] */?></p> 
     </div>

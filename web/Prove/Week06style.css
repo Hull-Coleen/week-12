@@ -43,6 +43,14 @@ img#flower {
     margin-right: auto;
 	
 }
+img#cart {
+	border: 1px solid brown;
+	height: 200px;
+	width: 160px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 img.link {
 //	border: 5px solid black;
 	//margin-left: 20px;
