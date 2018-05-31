@@ -82,7 +82,7 @@ foreach ($db->query("SELECT f.description, f.flower_price, f.image
 {
   echo 'user: ' . $row['description'];
   echo ' password: ' . $row['flower_price'];
-  echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['description']}'>Delete</a>";
+  echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$row['description']}'>Delete</a>";
   echo '<br/>';
 }
 $cart = getCart();
