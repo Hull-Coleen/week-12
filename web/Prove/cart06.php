@@ -109,7 +109,7 @@ foreach($row1 as $c) {
 	echo $c['flower_price'];
      echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['description']}'>Delete</a>";
 }
-while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC))
+while($rows1 = $stmt->fetchAll(PDO::FETCH_ASSOC);)
  
   {
   ?>
