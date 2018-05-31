@@ -58,7 +58,7 @@ foreach ($db->query('SELECT f.description, f.flower_price, f.image
                      FROM flower f, cart c WHERE f.flower_id = c.flower_id') as $row)
 {
   echo 'user: ' . $row['description'];
-  echo ' password: ' . $row['fl0wer_price'];
+  echo ' password: ' . $row['flower_price'];
   echo '<br/>';
 }
 
