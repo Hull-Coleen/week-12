@@ -1,17 +1,20 @@
 <?php
 session_start();
 include_once('dbConnect.php');
+echo $_SESSION['id'];
+$id = 5;
 $t = $_GET['_delete'];
+
 if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
+    $query = "DELETE FROM cart WHERE user_id = [$id} AND flower_id = {$f}";
 	
 }
 echo $t;
-echo $_SESSION['id'];
-$id = 5;
+
 function getCart() {
 	global $db;
-	$query = "SELECT f.description, f.flower_price, f.image 
+	$query = "SELECT f.flower_id, f.description, f.flower_price, f.image 
                      FROM flower f INNER JOIN cart c ON f.flower_id = c.flower_id
 					 WHERE c.user_id = {$id}";
 	 try {
@@ -75,14 +78,14 @@ foreach ($db->query("SELECT f.description, f.flower_price, f.image
   echo ' password: ' . $row['flower_price'];
   echo '<br/>';
 }
-foreach ($db->query("SELECT f.description, f.flower_price, f.image 
+foreach ($db->query("SELECT f.flower_id, f.description, f.flower_price, f.image 
                      FROM flower f
 					 INNER JOIN cart c ON f.flower_id = c.flower_id
 					 WHERE c.user_id = {$id}") as $row)
 {
   echo 'user: ' . $row['description'];
   echo ' password: ' . $row['flower_price'];
-  echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$row['description']}'>Delete</a>";
+  echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$row['flower_id']}'>Delete</a>";
   echo '<br/>';
 }
 $cart = getCart();
