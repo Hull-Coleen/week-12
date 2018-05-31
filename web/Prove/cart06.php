@@ -109,14 +109,14 @@ foreach($row1 as $c) {
 	echo $c['flower_price'];
      echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['description']}'>Delete</a>";
 }
-while($rows1 = $stmt->fetchAll(PDO::FETCH_ASSOC));
+while($rows1 = $stmt->fetch(PDO::FETCH_ASSOC));
  
   {
   ?>
 	<div ><p>
       <!-- <img id="flower" src="<?php echo $rows1['image'] ?>" alt="Flower">  --><br>
       <?php echo "rows " . $rows1['description'] ?><br />
-	  <?php echo /*$row['description']*/$rows1['flower_price']  ?><br />
+	  <?php echo $rows1['flower_price']  ?><br />
 	  <?php /*echo $row['flower_price'] */?></p> 
     </div>
   <?php
