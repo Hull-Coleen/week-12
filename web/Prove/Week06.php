@@ -18,6 +18,7 @@ if(!isset($_SESSION["cart"])){
 
 <body>
 <a href="search06.php">Search Page</a><br>
+<a href="homepage.php">Sign In</a><br>
 <?php
   include_once('./dbConnect.php');
   $statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
