@@ -6,12 +6,10 @@ if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
 	
 }
-$statement = $db->prepare("SELECT flower_price, description, image FROM flower f, cart c 
-             WHERE f.flower_id = c.caft_id");
-  $statement->execute();
+
 function getCart() {
     global $db;
-    $query = 'SELECT f.description FROM flower f ,cart c WHERE f.flower_id = c.flower_id';
+    $query = 'SELECT f.description f.price, f.image FROM flower f ,cart c WHERE f.flower_id = c.flower_id';
     try {
         $statement = $db->prepare($query);
         $statement->execute();
@@ -56,7 +54,7 @@ foreach($_SESSION['cart'] as $x => $x_value) {
 }
 $cart = getCart();
 foreach($cart as $c) {
-echo "cart " . $c['description'];
+echo "cart " . $c['description'] . " " . $c['image'] . " " . $['price'];
 }
 ?>
 
