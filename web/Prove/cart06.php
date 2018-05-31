@@ -6,9 +6,11 @@ if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
 	
 }
-$stmt = $db->prepare("SELECT f.description, f.flower_price, f.image FROM flower f
-JOIN cart c WHERE c.flower_id = f.flower_id AND c.user_id = :id");
-$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
+echo $_SESSION['id'];
+$stmt = $db->prepare("SELECT f.description, f.flower_price, f.image 
+FROM flower f, cart c 
+WHERE c.flower_id = f.flower_id AND c.user_id = $_SESSION['id']");
+//$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
 $stmt->execute();
 
 
