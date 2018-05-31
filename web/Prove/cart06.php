@@ -115,7 +115,7 @@ while($rows1 = $stmt->fetch(PDO::FETCH_ASSOC)) {
       <img id="cart" src="<?php echo $rows1['image'] ?>" alt="Flower"><br>
       <?php echo $rows1['description'] ?><br />
 	  <?php echo $rows1['flower_price']  ?><br />
-	  <a href='{$_SERVER["PHP_SELF"]}?_delete={$row['flower_id']}'>Delete</a>
+	  <a href='{$_SERVER["PHP_SELF"]}?_delete={$rows1['flower_id']}'>Delete</a>
 	  <?php /*echo $row['flower_price'] */?></p> 
     </div>
   <?php
