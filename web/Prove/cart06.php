@@ -7,8 +7,9 @@ $t = $_GET['_delete'];
 
 if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
-    $query = "DELETE FROM cart WHERE user_id = [$id} AND flower_id = {$f}";
-	
+    $query = "DELETE FROM cart WHERE user_id = [$id} AND flower_id = {$t}";
+	$statement = $db->prepare($query);
+    $statement->execute();
 }
 echo $t;
 
