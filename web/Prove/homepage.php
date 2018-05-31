@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('dbConnect.php');
-$_SESSION["id"] = "test";
+$_SESSION["id"];
 /*function getUserId($username1, $password1) {
 	global $db;
     $query = "SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
@@ -63,13 +63,14 @@ if (isset($_POST)) {
 		
 	}
 	$_SESSION["id"] = $id;
-	if(isset($_POST['submit'])) {
-        // Insert Query Put here
-        header('Location: education.php');
-    }
+	
 
 
 }
+if(isset($_POST['submit'])) {
+        // Insert Query Put here
+        header('Location: Week06.php');
+    }
 
 ?>
 <!DOCTYPE html>
