@@ -9,7 +9,7 @@ if ($t > -1) {
 
 function getCart() {
     global $db;
-    $query = 'SELECT f.description f.flower_price, f.image FROM flower f ,cart c 
+    $query = 'SELECT f.description, f.flower_price, f.image FROM flower f ,cart c 
 	WHERE f.flower_id = c.flower_id';
     try {
         $statement = $db->prepare($query);
