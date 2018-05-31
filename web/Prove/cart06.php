@@ -8,13 +8,15 @@ if ($t > -1) {
 }
 echo $_SESSION['id'];
 $id = 5;
-$stmt = $db->prepare("SELECT f.description, f.flower_price, f.image 
-FROM flower f, cart c 
-WHERE c.flower_id = f.flower_id");
+//$stmt = $db->prepare("SELECT f.description, f.flower_price, f.image 
+//FROM flower f, cart c 
+//WHERE c.flower_id = f.flower_id");
+//$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
+//$stmt->execute();
+
+$stmt = $db->prepare("SELECT user_id, flower_id FROM cart");
 //$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
 $stmt->execute();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -53,9 +55,9 @@ while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC))
   ?>
 	<div ><p>
       <!-- <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower">  --><br>
-      <?php echo $row['image'] ?><br />
-	  <?php echo $row['description'] ?><br />
-	  <?php echo $row['flower_price'] ?></p> 
+      <?php echo /*$row['image']*/ $row['user_id'] ?><br />
+	  <?php echo /*$row['description']*/$row['flower_id']  ?><br />
+	  <?php /*echo $row['flower_price'] */?></p> 
     </div>
   <?php
   }
