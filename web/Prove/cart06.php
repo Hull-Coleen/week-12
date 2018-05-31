@@ -20,31 +20,7 @@ $stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image
 					 WHERE c.user_id = :user_id');
 $stmt->bindValue(':user_id', $id);
 $stmt->execute();				 
-function getCart() {
-	global $db;
-   // $query = 'SELECT f.flower_id, f.description, f.flower_price, f.image 
-     //                FROM flower f
-		//			 INNER JOIN cart c ON f.flower_id = c.flower_id
-			//		 WHERE c.user_id = :user_id';
-    try {
-		$stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image 
-                     FROM flower f
-					 INNER JOIN cart c ON f.flower_id = c.flower_id
-					 WHERE c.user_id = :user_id');
-        $stmt->bindValue(':user_id', $id);
-        $stmt->execute();
-        //$statement = $db->prepare($query);
-		//$statement->bindValue(':user_id', $id);
-        //$statement->execute();
-        $result = $stmt->fetchAll();
-        //$statement->closeCursor();
-        return $result;
-    } catch (PDOException $e) {
-        $e->getMessage();
-        echo $e;
-    }
 
-}
 ?>
 
 <!DOCTYPE html>
@@ -71,8 +47,6 @@ while($rows = $stmt->fetch(PDO::FETCH_ASSOC)) {
     </div>
   <?php
   }
-  $cart = getCart();
-  echo var_dump($cart);
   ?>
 <a href="Week06confirm.php">Confirm Checkout</a><br>
 
