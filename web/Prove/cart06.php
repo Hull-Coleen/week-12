@@ -53,10 +53,20 @@ foreach($_SESSION['cart'] as $x => $x_value) {
    </p>
    <?php
 }
-$cart = getCart();
-foreach($cart as $c) {
-echo "cart " . $c['description'] . " " . $c['image'] . " " . $['price'];
-}
+//$cart = getCart();
+<?php
+  while ($cart = getCart())
+  {
+  ?>
+	<div id="flowers1" ><p>
+      <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
+      <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
+	  <?php echo $row['description'] ?><br />
+	  <?php echo $row['flower_price'] ?></P> 
+    </div>
+  <?php
+  }
+  ?>
 ?>
 
 </body>
