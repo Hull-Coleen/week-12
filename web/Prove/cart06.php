@@ -6,22 +6,11 @@ if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
 	
 }
+$stmt = $db->prepare("SELECT f.description, f.flower_price, f.image FROM flower f
+JOIN cart c WHERE c.flower_id = f.flower_id AND c.user_id = :id");
+$stmt->bindValue(':id', $_SESSION["cart"], PDO::PARAM_INT);
+$stmt->execute();
 
-function getCart() {
-    global $db;
-    $query = 'SELECT f.description, f.flower_price, f.image FROM flower f ,cart c 
-	WHERE f.flower_id = c.flower_id';
-    try {
-        $statement = $db->prepare($query);
-        $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-        $statement->closeCursor();
-        return $result;
-    } catch (PDOException $e) {
-        $e->getMessage();
-        echo $e;
-    }
-}
 
 ?>
 
@@ -55,7 +44,8 @@ foreach($_SESSION['cart'] as $x => $x_value) {
 }
 //$cart = getCart();
 <?php
-  while ($cart = getCart())
+while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC) 
+ 
   {
   ?>
 	<div id="flowers1" ><p>
