@@ -44,7 +44,7 @@ foreach($_SESSION['cart'] as $x => $x_value) {
 }
 //$cart = getCart();
 
- while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC) 
+/* while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC) 
  
   {
   ?>
@@ -55,7 +55,7 @@ foreach($_SESSION['cart'] as $x => $x_value) {
 	  <?php echo $row['flower_price'] ?></P> 
     </div>
   <?php
-  }
+  }*/
   ?>
 
 
