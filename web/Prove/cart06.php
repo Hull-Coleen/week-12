@@ -85,12 +85,11 @@ foreach ($db->query("SELECT f.flower_id, f.description, f.flower_price, f.image
 					 INNER JOIN cart c ON f.flower_id = c.flower_id
 					 WHERE c.user_id = {$id}") as $row)
 {
-  echo 'user: ' . $row['description'] > "<br>";
+  echo 'user: ' . $row['description'] . "<br>";
   echo ' password: ' . $row['flower_price'] . "<br>";
   echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$row['flower_id']}'>Delete</a>";
   echo '<br/>';
-  echo " <input type='text' placeholder='1' maxlength='4' size='4' 
-  id='<?php echo $c['id']?>' name='$c['id']'>";
+
 }
 $cart = getCart();
 foreach($cart as $c) {
