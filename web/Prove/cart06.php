@@ -48,6 +48,12 @@ foreach($_SESSION['cart'] as $x => $x_value) {
    <?php
 }
 //$cart = getCart();
+foreach ($db->query('SELECT user_id, flower_id FROM cart') as $row)
+{
+  echo 'user: ' . $row['user_id'];
+  echo ' password: ' . $row['flower_id'];
+  echo '<br/>';
+}
 
 while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
  
