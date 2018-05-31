@@ -53,8 +53,8 @@ while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC)
       <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
 	  <?php echo $row['description'] ?><br />
 	  <?php echo $row['flower_price'] ?></P> 
-    </div>*/
-  <?php
+    </div>
+  <?php*/
   }
   ?>
 
