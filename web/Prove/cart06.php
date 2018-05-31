@@ -34,6 +34,7 @@ function getCart() {
         $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
+		echo var_dump($result);
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
