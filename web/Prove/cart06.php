@@ -44,18 +44,18 @@ foreach($_SESSION['cart'] as $x => $x_value) {
 }
 //$cart = getCart();
 
-/* while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC) 
+while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC) 
  
   {
-  ?>
+ /* ?>
 	<div id="flowers1" ><p>
       <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
       <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
 	  <?php echo $row['description'] ?><br />
 	  <?php echo $row['flower_price'] ?></P> 
-    </div>
+    </div>*/
   <?php
-  }*/
+  }
   ?>
 
 
