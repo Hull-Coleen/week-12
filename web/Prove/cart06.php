@@ -54,6 +54,13 @@ foreach ($db->query('SELECT user_id, flower_id FROM cart') as $row)
   echo ' password: ' . $row['flower_id'];
   echo '<br/>';
 }
+foreach ($db->query('SELECT f.description, f.flower_price, f.image 
+                     FROM flower f, cart c WHERE f.flower_id = c.flower_id') as $row)
+{
+  echo 'user: ' . $row['description'];
+  echo ' password: ' . $row['fl0wer_price'];
+  echo '<br/>';
+}
 
 while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
  
