@@ -6,6 +6,7 @@ if ($t > -1) {
 	unset($_SESSION["cart"][$t]);
 	
 }
+echo $t;
 echo $_SESSION['id'];
 $id = 5;
 function getCart() {
