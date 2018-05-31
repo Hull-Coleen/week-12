@@ -109,14 +109,14 @@ foreach($row1 as $c) {
 	echo $c['flower_price'];
      echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['description']}'>Delete</a>";
 }
-while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
+while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC))
  
   {
   ?>
 	<div ><p>
-      <!-- <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower">  --><br>
-      <?php echo /*$row['image']*/ $row['user_id'] ?><br />
-	  <?php echo /*$row['description']*/$row['flower_id']  ?><br />
+      <!-- <img id="flower" src="<?php echo $rows['image'] ?>" alt="Flower">  --><br>
+      <?php echo "rows " . $rows['user_id'] ?><br />
+	  <?php echo /*$row['description']*/$rows['flower_id']  ?><br />
 	  <?php /*echo $row['flower_price'] */?></p> 
     </div>
   <?php
