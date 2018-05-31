@@ -83,6 +83,15 @@ foreach ($db->query("SELECT f.description, f.flower_price, f.image
   echo ' password: ' . $row['flower_price'];
   echo '<br/>';
 }
+foreach ($db->query("SELECT f.description, f.flower_price, f.image 
+                     FROM flower f
+					 INNER JOIN cart c ON f.flower_id = c.flower_id
+					 WHERE c.user_id = {$id}") as $row)
+{
+  echo 'user: ' . $row['description'];
+  echo ' password: ' . $row['flower_price'];
+  echo '<br/>';
+}
 $cart = getCart();
 foreach($cart as $c) {
 	echo "cart " . $c['description'] . "<br>";
