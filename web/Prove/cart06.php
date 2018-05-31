@@ -15,7 +15,7 @@ function getCart() {
         $statement = $db->prepare($query);
         $statement->execute();
         $result = $statement->fetch(PDO::FETCH_ASSOC);
-        //$statement->closeCursor();
+        $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {
         $e->getMessage();
