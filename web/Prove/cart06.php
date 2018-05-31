@@ -5,7 +5,7 @@ echo $_SESSION['id'];
 $id = 5;
 $t = $_GET['_delete'];
 
-if ($t > -1) {
+if (!empty($t) {
 	unset($_SESSION["cart"][$t]);
     $query = "DELETE FROM cart WHERE user_id = [$id} AND flower_id = {$t}";
 	$statement = $db->prepare($query);
