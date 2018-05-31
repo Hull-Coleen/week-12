@@ -50,9 +50,9 @@ while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC))
  
   {
   ?>
-	<div id="flowers1" ><p>
-      <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
-      <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
+	<div ><p>
+      <!-- <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower">  --><br>
+
 	  <?php echo $row['description'] ?><br />
 	  <?php echo $row['flower_price'] ?></P> 
     </div>
