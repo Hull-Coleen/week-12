@@ -33,7 +33,7 @@ founction getCart() {
         echo $e;
     }
 }				 
-}
+
 ?>
 
 <!DOCTYPE html>
