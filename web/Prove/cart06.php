@@ -16,7 +16,7 @@ echo $t;
 $stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image 
                      FROM flower f
 					 INNER JOIN cart c ON f.flower_id = c.flower_id
-					 WHERE c.user_id = :$id');
+					 WHERE c.user_id = :id');
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $stmt->execute();
 $rows1 = $stmt->fetchAll(PDO::FETCH_ASSOC);					 
