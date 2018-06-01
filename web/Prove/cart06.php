@@ -21,7 +21,7 @@ $stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image
 $stmt->bindValue(':user_id', $id);
 $stmt->execute();				 
 
-function getCart () {
+function getCart ($id) {
 	global $db;
     try {
         $query = 'SELECT f.flower_id, f.description, f.flower_price, f.image 
@@ -39,6 +39,8 @@ function getCart () {
         echo $e;
     }
 }
+$cart= getCart($id);
+echo var_dump($cart);
 ?>
 
 <!DOCTYPE html>
