@@ -15,31 +15,85 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-/*$query = "DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id";
-	$statement = $db->prepare($query);
-	$statement->bindValue(':user_id', $id);
-	$statement->bindValue(':flower_id', $t);
-    $statement->execute();
-
-
-$stmt = $db->prepare("SELECT f.flower_price, f.description, f.image FROM flower f, occasion o
-WHERE (o.occasion_type = :occasion)
-AND f.flower_type = o.occasion_id;");
-$stmt->bindValue(':occasion', $occasion);
-$stmt->execute();
-
-$statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
-  $statement->execute();
-
-$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = :description);");
-$stmt->bindValue(':description', $description);
-$stmt->execute();
-$_SESSION['price'] = $stmt->fetch()['flower_price'];
-	
-$stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = :description);");
-$stmt2->bindValue(':description', $description);
-$stmt2->execute();
-$image = $stmt2->fetch()['image'];*/
+function deleteFromCart ($id, $flower_id) {
+	global $db;
+    $query = 'DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id';
+	try {
+	    $statement = $db->prepare($query);
+		$statement->bindValue(':user_id', $id);
+	    $statement->bindValue(':flower_id', $flower_id);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+		
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+function searchFlowers($occ) {
+	global $db;
+    $query = 'SELECT f.flower_price, f.description, f.image FROM flower f
+              INNER JOIN occasion o
+			  WHERE o.occasion_type = :occasion
+              AND f.flower_type = o.occasion_id;';
+	try {
+        
+	    $statement = $db->prepare($query);
+		$statement->bindValue(':occasion', $occ);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+		
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+function getFlowers() {
+	global $db;
+	$query = 'SELECT flower_type, flower_price, description, image FROM flower';
+	try {
+	    $statement = $db->prepare($query);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+		
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+function getPrice($desc) {
+	global $db;
+	$query = 'SELECT flower_price FROM flower WHERE description = :description';
+	try {
+	    $statement = $db->prepare($query);
+		$statement->bindValue(':description', $desc);
+        $statement->execute();
+        $result = $statement->fetchAll()['flower_price'];
+        return $result;
+		
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+function getImage($desc) {
+	global $db;
+	$query = 'SELECT image FROM flower WHERE description = :description';
+	try {
+	    $statement = $db->prepare($query);
+		$statement->bindValue(':description', $desc);
+        $statement->execute();
+        $result = $statement->fetchAll()['image'];
+        return $result;
+		
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
 function getUserInfo($id) {
 	global $db;
     try {

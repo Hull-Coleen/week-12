@@ -6,6 +6,7 @@ if(!isset($_SESSION["cart"])){
     $_SESSION["cart"] = array();
 }
 echo $_SESSION['id'];
+$items = getFlowers();
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +30,16 @@ echo $_SESSION['id'];
 
  <form method="POST" action="info06.php">
    <div>
+   <?php
+   foreach ($items as $item) { ?>
+	  <div id="flowers1" ><p>
+       <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
+       <input type="radio" name="item" value="<?php echo $row['description'] ?>">
+	   <?php echo $row['description'] ?><br /></P> 
+     </div>
+   <?php 
+   }
+   ?>
    <?php
    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
    {
