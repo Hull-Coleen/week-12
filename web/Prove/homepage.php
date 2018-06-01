@@ -2,12 +2,15 @@
 session_start();
 include_once('dbConnect.php');
 $_SESSION["id"];
-/*function getUserId($username1, $password1) {
+$id;
+function getUserId($username, , $password) {
 	global $db;
-    $query = "SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
-          AND (user_password = '{$password1}')";
+    $query = "SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)
+          AND (user_password = :password)";
     try {
         $statement = $db->prepare($query);
+		$stmt->bindValue(':user_user_name', $username);
+		$stmt->bindValue(':password', $password);
         $statement->execute();
         $result = $statement->fetch[user_id];
         $statement->closeCursor();
@@ -16,7 +19,7 @@ $_SESSION["id"];
         $e->getMessage();
         echo $e;
     }
-}*/
+}
 /*
 echo "id " . $_SESSION["id"];*/
 function setUser ($name, $username, $password, $address, $email) {
@@ -26,7 +29,7 @@ function setUser ($name, $username, $password, $address, $email) {
             VALUES ('$name', '$username', '$password', '$email', '$address')";
         $db->exec($query);
 		$newId = $db->lastInsertId('user_user_id_seq');
-		echo "function" . $newId;
+		//echo "function" . $newId;
         return $newId;
     } catch (PDOException $e) {
         $e->getMessage();
@@ -44,12 +47,14 @@ if (isset($_POST)) {
 	
 
     if (!empty($username1) && !empty($password1)) {
-	    $stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
-        AND (user_password = '{$password1}');");
-        $stmt->execute();
-        $id = $stmt->fetch()[user_id];
+	   // $stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
+        //AND (user_password = '{$password1}');");
+        //$stmt->execute();
+        //$id = $stmt->fetch()[user_id];
 		//header('Location: Week06.php');
         //echo "id " . $id;
+		$id = getUserId($username1, $password1);
+		echo $id;
     }
     if (empty($username1)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
