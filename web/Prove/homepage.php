@@ -3,7 +3,7 @@ session_start();
 include_once('dbConnect.php');
 $_SESSION["id"];
 $id;
-function getUserId($username, $password) {
+/*function getUserId($username, $password) {
 	global $db;
     $query = 'SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)
           AND user_password = :password';
@@ -19,7 +19,7 @@ function getUserId($username, $password) {
         $e->getMessage();
         echo $e;
     }
-}
+}*/
 
 /*function setUser ($name, $username, $password, $address, $email) {
 	global $db;
@@ -46,32 +46,22 @@ if (isset($_POST)) {
 	
 
     if (!empty($username1) && !empty($password1)) {
-	   // $stmt = $db->prepare("SELECT user_id FROM public.user WHERE (user_user_name = '{$username1}')
-        //AND (user_password = '{$password1}');");
-        //$stmt->execute();
-        //$id = $stmt->fetch()[user_id];
-		//header('Location: Week06.php');
-        //echo "id " . $id;
 		$id = getUserId($username1, $password1);
-		echo $id;
 		if (!empty($id)) {
-		//if(isset($_POST['submit'])) {
-        // Insert Query Put here
         header('Location: Week06.php');
         }
     }
-    if (empty($username1)) {
-		if (!empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
+    if (empty($username1 ) && !empty($name) {
+		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			echo "must enter all the fields";
 		}
 		else {
 			$id = setUser($name, $username, $password, $address, $email);
-			echo "else" . $id;
-			//header('Location: Week06.php');
 			if(isset($_POST['submit'])) {
-        // Insert Query Put here
-        header('Location: Week06.php');
-    }
+				if (!empty($id)) {
+                header('Location: Week06.php');
+                }
+			}
 		}
 		
 	}
