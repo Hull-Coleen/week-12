@@ -6,7 +6,7 @@ $id;
 function getUserId($username, $password) {
 	global $db;
     $query = "SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)
-          AND (user_password = :password)";
+          AND user_password = :password";
     try {
         $statement = $db->prepare($query);
 		$stmt->bindValue(':user_user_name', $username);
@@ -54,6 +54,10 @@ if (isset($_POST)) {
         //echo "id " . $id;
 		$id = getUserId($username1, $password1);
 		echo $id;
+		if(isset($_POST['submit'])) {
+        // Insert Query Put here
+        header('Location: Week06.php');
+    }
     }
     if (empty($username1)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
@@ -63,6 +67,10 @@ if (isset($_POST)) {
 			$id = setUser($name, $username, $password, $address, $email);
 			echo "else" . $id;
 			//header('Location: Week06.php');
+			if(isset($_POST['submit'])) {
+        // Insert Query Put here
+        header('Location: Week06.php');
+    }
 		}
 		
 	}
