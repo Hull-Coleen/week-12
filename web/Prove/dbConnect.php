@@ -71,7 +71,7 @@ function getPrice($desc) {
 	    $statement = $db->prepare($query);
 		$statement->bindValue(':description', $desc);
         $statement->execute();
-        $result = $statement->fetchAll()['flower_price'];
+        $result = $statement->fetch()['flower_price'];
         return $result;
 		
     } catch (PDOException $e) {
