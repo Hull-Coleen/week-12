@@ -3,7 +3,7 @@ session_start();
 include_once('dbConnect.php');
 $_SESSION["id"];
 $id;
-function getUserId($username, , $password) {
+function getUserId($username, $password) {
 	global $db;
     $query = "SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)
           AND (user_password = :password)";
@@ -20,8 +20,7 @@ function getUserId($username, , $password) {
         echo $e;
     }
 }
-/*
-echo "id " . $_SESSION["id"];*/
+
 function setUser ($name, $username, $password, $address, $email) {
 	global $db;
     try {
