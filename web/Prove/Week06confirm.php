@@ -31,9 +31,9 @@ $user = getUserInfo($_SESSION['id']);
 <body>
 <?php 
 foreach ($user as $u) { ?>
-    <p id="confirm" > <?php echo "Thank you for your purchase: " . $user['user_name'] ?></p>
-	<p id="confirm" >Your purchase will be shippped to: <?php echo $user['address'] ?></p>
-	<p id="confirm" >We will email you a confirmation number at: <?php echo $user['email'] ?></p>
+    <p id="confirm" > <?php echo "Thank you for your purchase: " . $u['user_name'] ?></p>
+	<p id="confirm" >Your purchase will be shippped to: <?php echo $u['address'] ?></p>
+	<p id="confirm" >We will email you a confirmation number at: <?php echo $u['email'] ?></p>
 <?php	
 	
 }
