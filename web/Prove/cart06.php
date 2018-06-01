@@ -55,12 +55,12 @@ $cart= getCart($id);
 <h1>Shopping Cart</h1><br><br>
 
 <?php
-foreach ($cart as %$c) { ?>
+foreach ($cart as $c) { ?>
 	<div ><p>
-      <img id="cart" src="<?php echo $rows['image'] ?>" alt="Flower">
-      <?php echo $rows['description'] ?><br />
-	  <?php echo $rows['flower_price']  ?><br />
-	  <?php echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$rows['flower_id']}'>Delete</a>"; ?>
+      <img id="cart" src="<?php echo $c['image'] ?>" alt="Flower">
+      <?php echo $c['description'] ?><br />
+	  <?php echo $c['flower_price']  ?><br />
+	  <?php echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['flower_id']}'>Delete</a>"; ?>
 	  </p> 
 	  
     </div>
