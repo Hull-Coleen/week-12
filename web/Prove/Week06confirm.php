@@ -18,6 +18,7 @@ if (htmlspecialchars($_POST["name"]) == "") {
 else {
 	$name1 = $_SESSION["name"];
 }
+$_SESSION['id'] = 5;
 $user = getUserInfo($_SESSION['id']);	
  
 ?>
@@ -28,11 +29,15 @@ $user = getUserInfo($_SESSION['id']);
 <link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
+<?php 
+foreach ($user as $u) { ?>
     <p id="confirm" > <?php echo "Thank you for your purchase: " . $user['user_name'] ?></p>
 	<p id="confirm" >Your purchase will be shippped to: <?php echo $user['address'] ?></p>
 	<p id="confirm" >We will email you a confirmation number at: <?php echo $user['email'] ?></p>
+<?php	
 	
-<?php
+}
+
 	foreach ($_SESSION["cart"] as $fl => $value)
     {
 	?>
