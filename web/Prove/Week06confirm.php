@@ -31,12 +31,13 @@ foreach ($cart as $c) { ?>
     </div>
 	<?php
 }
-<p><input type="submit" name="submit" value="Confirm Transaction"></p>
+
 // remove all session variables
     session_unset(); 
 
     // destroy the session 
     session_destroy(); 
 ?>
+<p><input type="submit" name="submit" value="Confirm Transaction"></p>
 </body>
 </html>
