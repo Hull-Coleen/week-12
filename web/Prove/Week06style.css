@@ -14,7 +14,7 @@ div#flowers {
 }
 div#flowers1 {
 	float: left;
-	padding: 50px;
+	padding: 45px;
 }
 
 div#sub {
@@ -59,7 +59,7 @@ img.link {
 
 div#row {
 	width: 40%;
-	padding: 20px;
+	padding: 10px;
 	display: inline-block;
 }
 body {
@@ -103,7 +103,7 @@ a img.link {
 }
 div#row2 {
 	width: 40%;
-	padding: 20px;
+	padding: 10px;
 	display: inline-block;
 }
 span {
