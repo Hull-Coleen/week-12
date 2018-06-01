@@ -51,7 +51,7 @@ if (isset($_POST)) {
         header('Location: Week06.php');
         }
     }
-    if (empty($username1 ) && !empty($name) {
+    if (empty($username1 ) && !empty($name)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			echo "must enter all the fields";
 		}
