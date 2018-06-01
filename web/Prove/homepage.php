@@ -34,13 +34,13 @@ function setUser ($name, $username, $password, $address, $email) {
     }
 }
 if (isset($_POST)) {
-    $name = $_POST['name'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $address = $_POST['address'];
-    $email = $_POST['email'];
-	$username1 = $_POST['username1'];
-    $password1 = $_POST['password1'];
+    $name = htmlspecialchars($_POST['name']);
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
+    $address = htmlspecialchars($_POST['address']);
+    $email = htmlspecialchars($_POST['email']);
+	$username1 = htmlspecialchars($_POST['username1']);
+    $password1 = htmlspecialchars($_POST['password1']);
 	
 
     if (!empty($username1) && !empty($password1)) {

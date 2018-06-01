@@ -4,16 +4,18 @@ session_start();
 //include_once('dbConnect.php');
 require "dbConnect.php";
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
-echo "info page id" . $_SESSION["id"];
+// "info page id" . $_SESSION["id"];
 
 $description = $_SESSION["item"];
 $price;
    
-$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = '{$description}');");
+$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = :description);");
+$stmt->bindValue(':description', $description);
 $stmt->execute();
 $_SESSION['price'] = $stmt->fetch()['flower_price'];
 	
-$stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = '{$description}');");
+$stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = :description);");
+$stmt2->bindValue(':description', $description);
 $stmt2->execute();
 $image = $stmt2->fetch()['image'];
 if ($image != "") {
@@ -24,7 +26,8 @@ else {
 }
 function getId($flower_id) {
     global $db;
-	$stmt2 = $db->prepare("SELECT flower_id FROM flower WHERE (description = '{$flower_id}');");
+	$stmt2 = $db->prepare("SELECT flower_id FROM flower WHERE (description = :description);");
+	$stmt2->bindValue(':description', $flower_id);
     $stmt2->execute();
     $id = $stmt2->fetch()['flower_id'];
 	return $id;
@@ -61,7 +64,7 @@ function addCart($user_id, $flower_id) {
  if (!empty(htmlspecialchars($_POST["item1"]))) {
 	 $_SESSION["cart"] += array($_POST["item1"] => 1);
     $id = getId($_POST["item1"]);
-	 echo "info page" . $_SESSION["id"];
+	 //echo "info page" . $_SESSION["id"];
 	 addCart($_SESSION["id"], $id);
  
  }

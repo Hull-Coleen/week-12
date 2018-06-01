@@ -4,7 +4,7 @@ include_once('dbConnect.php');
 
 $id = $_SESSION["id"];
 $t = $_GET['_delete'];
-$id = 5;
+
 if (!empty($t)) {
 	unset($_SESSION["cart"][$t]);
     $query = "DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id";
