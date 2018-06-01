@@ -48,7 +48,7 @@ if (isset($_POST)) {
 <a href="Week06.php">Homepage</a><br>
 
 <div id="row">
-<h1>If you have an account, Please sign in</h1>
+<h1 id="form" >If you have an account, Please sign in</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p id="form">
   

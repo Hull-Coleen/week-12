@@ -47,6 +47,10 @@ img#flower {
     margin-right: auto;
 	
 }
+h1#form {
+	text-align: left;
+	margin-left: 20px;
+}
 img#cart {
 	border: 1px solid brown;
 	height: 200px;
