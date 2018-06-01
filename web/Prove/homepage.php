@@ -56,7 +56,7 @@ if (isset($_POST)) {
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
   <input type="text" placeholder="Password" id="password1" name="password1"><br><br>
-  <br><br><br><br><br><br><br><br><input type="submit" name="submit" value="Sign In">
+  <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
 </div>
@@ -82,7 +82,7 @@ if (isset($_POST)) {
   <label for="email">Address</label>
   <input type="text" placeholder="Address" id="address" name="address">
   <br /><br />
-  <input type="submit" name="submit" value="Create Account">
+  </p><p><input type="submit" name="submit" value="Create Account">
   
  
 </p>
