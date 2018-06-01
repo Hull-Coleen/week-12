@@ -33,9 +33,9 @@ $items = getFlowers();
    <?php
    foreach ($items as $item) { ?>
 	  <div id="flowers1" ><p>
-       <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
-       <input type="radio" name="item" value="<?php echo $row['description'] ?>">
-	   <?php echo $row['description'] ?><br /></P> 
+       <img id="flower" src="<?php echo $item['image'] ?>" alt="Flower"> <br>
+       <input type="radio" name="item" value="<?php echo $item['description'] ?>">
+	   <?php echo $item['description'] ?><br /></P> 
      </div>
    <?php 
    }
