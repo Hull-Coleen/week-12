@@ -31,7 +31,7 @@ function getCart () {
         $statement = $db->prepare($query);
 		$statement->bindValue(':user_id', $id);
         $statement->execute();
-        $result = $statement->fetchAll();
+        $result = $statement->fetch(PDO::FETCH_NAMED);
         return $result;
 		
     } catch (PDOException $e) {
