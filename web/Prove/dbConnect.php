@@ -40,6 +40,23 @@ $stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = :descriptio
 $stmt2->bindValue(':description', $description);
 $stmt2->execute();
 $image = $stmt2->fetch()['image'];*/
+function getUserInfo($id) {
+	global $db;
+    try {
+        $query = 'SELECT user_name, user_user_name, address, email 
+                     FROM public.user
+					 WHERE c.user_id = :user_id';
+	    $statement = $db->prepare($query);
+		$statement->bindValue(':user_id', $id);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+		
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
 function getCart ($id) {
 	global $db;
     try {
