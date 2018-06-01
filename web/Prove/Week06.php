@@ -6,7 +6,7 @@ if(!isset($_SESSION["cart"])){
     $_SESSION["cart"] = array();
 }
 echo $_SESSION['id'];
-$items = getFlowers();
+//$items = getFlowers();
 ?>
 
 <!DOCTYPE html>
