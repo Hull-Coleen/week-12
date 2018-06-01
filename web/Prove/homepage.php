@@ -5,12 +5,12 @@ $_SESSION["id"];
 $id;
 function getUserId($username, $password) {
 	global $db;
-    $query = "SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)
-          AND user_password = :password";
+    $query = 'SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)
+          AND user_password = :password';
     try {
         $statement = $db->prepare($query);
-		$stmt->bindValue(':user_user_name', $username);
-		$stmt->bindValue(':password', $password);
+		$statement->bindValue(':user_user_name', $username);
+		$statement->bindValue(':password', $password);
         $statement->execute();
         $result = $statement->fetch[user_id];
         $statement->closeCursor();
@@ -21,7 +21,7 @@ function getUserId($username, $password) {
     }
 }
 
-function setUser ($name, $username, $password, $address, $email) {
+/*function setUser ($name, $username, $password, $address, $email) {
 	global $db;
     try {
         $query = "INSERT INTO public.user (user_name, user_user_name, user_password, address, email)
@@ -34,7 +34,7 @@ function setUser ($name, $username, $password, $address, $email) {
         $e->getMessage();
         echo $e;
     }
-}
+}*/
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
     $username = htmlspecialchars($_POST['username']);
@@ -57,10 +57,10 @@ if (isset($_POST)) {
 		if(isset($_POST['submit'])) {
         // Insert Query Put here
         header('Location: Week06.php');
-    }
+        }
     }
     if (empty($username1)) {
-		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
+		if (!empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			echo "must enter all the fields";
 		}
 		else {
@@ -75,9 +75,6 @@ if (isset($_POST)) {
 		
 	}
 	$_SESSION["id"] = $id;
-	
-
-
 }
 
 ?>

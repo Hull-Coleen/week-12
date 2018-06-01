@@ -35,4 +35,17 @@ function addCart($user_id, $flower_id) {
         echo $e;
     }
 }
+function setUser ($name, $username, $password, $address, $email) {
+	global $db;
+    try {
+        $query = "INSERT INTO public.user (user_name, user_user_name, user_password, address, email)
+            VALUES ('$name', '$username', '$password', '$email', '$address')";
+        $db->exec($query);
+		$newId = $db->lastInsertId('user_user_id_seq');
+        return $newId;
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
 ?>
