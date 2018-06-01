@@ -1,28 +1,24 @@
 
 <?php
 session_start();
-//include_once('dbConnect.php');
-require "dbConnect.php";
+include_once('dbConnect.php');
+//require "dbConnect.php";
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
-// "info page id" . $_SESSION["id"];
 
 $description = $_SESSION["item"];
-$price;
-   
-$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = :description);");
-$stmt->bindValue(':description', $description);
-$stmt->execute();
-$_SESSION['price'] = $stmt->fetch()['flower_price'];
+$price = getPrice($description);
+$image   
+//$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = :description);");
+//$stmt->bindValue(':description', $description);
+//$stmt->execute();
+//$_SESSION['price'] = $stmt->fetch()['flower_price'];
 	
 $stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = :description);");
 $stmt2->bindValue(':description', $description);
 $stmt2->execute();
 $image = $stmt2->fetch()['image'];
-if ($image != "") {
-$_SESSION['image'] = $image;
-}
-else {
-	$_SESSION['image'] = "RedF.jpg"; 
+if (empty($image)) {
+	$image = "RedF.jpg";
 }
 
 ?>
@@ -39,7 +35,7 @@ else {
 <a href="cart06.php">Cart</a><br>
 
 <h1>Product Information</h1><br>
-<img id ="flower" src="<?php echo $_SESSION['image']; ?>"  alt="World">
+<img id ="flower" src="<?php echo $image; ?>"  alt="World">
  <?php 
 
  if (!empty(htmlspecialchars($_POST["item1"]))) {
@@ -54,7 +50,7 @@ else {
   <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($description); ?>">
   <p> <?php echo htmlspecialchars($description);
 	        echo "<br>";
-			echo $_SESSION['price']; ?> <br>
+			echo $price; ?> <br>
     <input type="submit" name="submit" value="Add to Cart">  
   </p>
 </form>
