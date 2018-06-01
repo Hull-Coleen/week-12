@@ -30,9 +30,9 @@ function getId($flower_id) {
  if (!empty(htmlspecialchars($_POST["item2"]))) {
 	 
     $_SESSION["cart"] += array($_POST["item2"] => 1);
-	$id = getId($_POST["item2"]);
+	//$id = getId($_POST["item2"]);
 	 //echo "info page" . $_SESSION["id"];
-	 addCart($_SESSION["id"], $id);
+	// addCart($_SESSION["id"], $id);
  }
  
 ?>
