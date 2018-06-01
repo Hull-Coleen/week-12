@@ -30,7 +30,18 @@ $items = getFlowers();
 
  <form method="POST" action="info06.php">
    <div>
-   
+   <?php
+   foreach ($items as $item)
+   {
+   ?>
+	 <div id="flowers1" ><p>
+       <img id="flower" src="<?php echo $item['image'] ?>" alt="Flower"> <br>
+       <input type="radio" name="item" value="<?php echo $item['description'] ?>">
+	   <?php echo $item['description'] ?><br /></P> 
+     </div>
+   <?php
+   }
+   ?>
    <?php
    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
    {
