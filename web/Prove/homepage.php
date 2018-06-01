@@ -54,7 +54,7 @@ if (isset($_POST)) {
         //echo "id " . $id;
 		$id = getUserId($username1, $password1);
 		echo $id;
-		if (!empty($id) {
+		if (!empty($id)) {
 		//if(isset($_POST['submit'])) {
         // Insert Query Put here
         header('Location: Week06.php');
