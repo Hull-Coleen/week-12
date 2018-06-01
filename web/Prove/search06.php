@@ -17,6 +17,17 @@ function getId($flower_id) {
 	return $id;
 	
 }
+function addCart($user_id, $flower_id) {
+	global $db;
+    try {
+        $query = "INSERT INTO cart (user_id, flower_id)
+            VALUES ($user_id, $flower_id)";
+        $db->exec($query);
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,8 +42,8 @@ function getId($flower_id) {
 	 
     $_SESSION["cart"] += array($_POST["item2"] => 1);
 	$id = getId($_POST["item2"]);
-	echo "search page" . $id;
-	// addCart($_SESSION["id"], $id);
+	//echo "search page" . $id;
+	addCart($_SESSION["id"], $id);
  }
  
 ?>
