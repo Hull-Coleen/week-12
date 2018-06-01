@@ -3,14 +3,12 @@ session_start();
 include_once('dbConnect.php');
 $occasion = htmlspecialchars($_POST["occasion"]);
 
-$stmt = $db->prepare("SELECT f.flower_price, f.description, f.image FROM flower f, occasion o
-WHERE (o.occasion_type = :occasion)
-AND f.flower_type = o.occasion_id;");
-$stmt->bindValue(':occasion', $occasion);
-$stmt->execute();
-function getFlowerInfo() {
-}
-
+//$stmt = $db->prepare("SELECT f.flower_price, f.description, f.image FROM flower f, occasion o
+//WHERE (o.occasion_type = :occasion)
+//AND f.flower_type = o.occasion_id;");
+//$stmt->bindValue(':occasion', $occasion);
+//$stmt->execute();
+$items = searchFlowers($occasion);
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,19 +46,20 @@ function getFlowerInfo() {
 </form>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
   <div>
-  <?php
-  while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+   <?php
+  foreach ($items as $item)
   {
   ?>
 	<div id="flowers1" ><p>
-      <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
-      <input type="radio" name="item2" value="<?php echo $row['description'] ?>">
-	  <?php echo $row['description'] ?><br />
-	  <?php echo $row['flower_price'] ?></P> 
+      <img id="flower" src="<?php echo $item['image'] ?>" alt="Flower"> <br>
+      <input type="radio" name="item2" value="<?php echo $item['description'] ?>">
+	  <?php echo $item['description'] ?><br />
+	  <?php echo $item['flower_price'] ?></P> 
     </div>
   <?php
   }
   ?>
+ 
   </div>
   <div id="after" ></div>
   <br><br><div><p><input type="submit" name="submit" value="Add to Cart"></p></div> 
