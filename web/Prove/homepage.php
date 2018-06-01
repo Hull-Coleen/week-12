@@ -50,7 +50,7 @@ if (isset($_POST)) {
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-<p>
+<p id="form">
   
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
@@ -63,7 +63,7 @@ if (isset($_POST)) {
 <div id="row2">
   <h1>To create an account, Please Enter your Fill in the Textboxes Below</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-<p>
+<p id="form">
   <label for="name">Name</label>
   <input type="text" placeholder="Name" id="name" name="name">
   <br /><br />
