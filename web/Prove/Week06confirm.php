@@ -1,26 +1,9 @@
 <?php
 session_start();
 include_once('dbConnect.php');
-$_SESSION["name"] = htmlspecialchars($_POST["name"]);
-$_SESSION["email"] = htmlspecialchars($_POST["email"]);
-$_SESSION["address"] = htmlspecialchars($_POST["address"]);
-$name = htmlspecialchars($_POST["username"]);
-$password = htmlspecialchars($_POST["password"]);
-
-$stmt = $db->prepare("SELECT user_name FROM public.user WHERE (user_user_name = '{$name}')
-AND user_password = '{$password}';");
-$stmt->execute();
-$userName = $stmt->fetch()['user_name'];
-
-if (htmlspecialchars($_POST["name"]) == "") {
-	$name1 = $userName;
-}
-else {
-	$name1 = $_SESSION["name"];
-}
-$_SESSION['id'] = 5;
+$_SESSION['id'];
 $user = getUserInfo($_SESSION['id']);	
- 
+$cart= getCart($_SESSION['id']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,6 +32,18 @@ foreach ($user as $u) { ?>
 
     // destroy the session 
     session_destroy(); 
+?>
+<?php
+foreach ($cart as $c) { ?>
+	<div ><p>
+      <img id="cart" src="<?php echo $c['image'] ?>" alt="Flower">
+      <?php echo $c['description'] ?><br />
+	  <?php echo $c['flower_price']  ?><br />
+	  </p> 
+	  
+    </div>
+	<?php
+}
 ?>
 </body>
 </html>
