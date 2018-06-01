@@ -66,20 +66,8 @@ foreach ($cart as $c) { ?>
     </div>
 	<?php
 }
-while($rows = $stmt->fetch(PDO::FETCH_ASSOC)) {
-  ?>
-	<div ><p>
-      <img id="cart" src="<?php echo $rows['image'] ?>" alt="Flower">
-      <?php echo $rows['description'] ?><br />
-	  <?php echo $rows['flower_price']  ?><br />
-	  <?php echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$rows['flower_id']}'>Delete</a>"; ?>
-	  </p> 
-    </div>
-  <?php
-  }
- 
-  ?>
-<a href="Week06confirm.php">Complete Transaction</a><br>
+
+<p><a href="Week06confirm.php">Complete Transaction</a></p><br>
 
 </body>
 </html>
