@@ -48,7 +48,7 @@ if (isset($_POST)) {
 <a href="Week06.php">Homepage</a><br>
 
 <div id="row">
-<h1>If you have an account,<br> Please sign in</h1>
+<h1>If you have an account, Please sign in</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p id="form">
   
@@ -56,7 +56,7 @@ if (isset($_POST)) {
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
   <input type="text" placeholder="Password" id="password1" name="password1"><br><br>
-  <br><br><br><br><input type="submit" name="submit" value="Sign In">
+  <br><br><br><br><br><br><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
 </div>
