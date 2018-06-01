@@ -1,12 +1,12 @@
 <?php
 session_start();
-
+include_once('./dbConnect.php');
 if(!isset($_SESSION["cart"])){
     //If it doesn't, create an empty array.
     $_SESSION["cart"] = array();
 }
 echo $_SESSION['id'];
-//$items = getFlowers();
+$items = getFlowers();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ echo $_SESSION['id'];
 <a href="search06.php">Search Page</a><br>
 <a href="homepage.php">Sign In</a><br>
 <?php
-  include_once('./dbConnect.php');
+  
   $statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
   $statement->execute();
  
