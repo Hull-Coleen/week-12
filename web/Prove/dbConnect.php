@@ -49,7 +49,7 @@ function getUserInfo($id) {
 	    $statement = $db->prepare($query);
 		$statement->bindValue(':user_id', $id);
         $statement->execute();
-        $result = $statement->fetch();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
         return $result;
 		
     } catch (PDOException $e) {
