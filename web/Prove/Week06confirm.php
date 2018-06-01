@@ -20,7 +20,7 @@ foreach ($user as $u) { ?>
 <?php	
 	
 }
-echo "user " . $cart['user_name'];
+
 foreach ($cart as $c) { ?>
 	<div ><p>
       <img id="cart" src="<?php echo $c['image'] ?>" alt="Flower">

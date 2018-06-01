@@ -40,7 +40,7 @@ p#confirm {
 }
 
 img#flower {
-	border: 1px solid brown;
+	border: 1px solid #000080;
 	height: 300px;
 	width: 260px;
 	display: block;

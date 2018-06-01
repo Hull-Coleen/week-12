@@ -6,12 +6,6 @@ $id = $_SESSION["id"];
 $t = $_GET['_delete'];
 
 if (!empty($t)) {
-	unset($_SESSION["cart"][$t]);
-    //$query = "DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id";
-	//$statement = $db->prepare($query);
-	//$statement->bindValue(':user_id', $id);
-	//$statement->bindValue(':flower_id', $t);
-    //$statement->execute();
 	deleteFromCart($_SESSION["cart"], $t);
 }
 
