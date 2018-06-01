@@ -7,38 +7,14 @@ $t = $_GET['_delete'];
 
 if (!empty($t)) {
 	unset($_SESSION["cart"][$t]);
-    $query = "DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id";
-	$statement = $db->prepare($query);
-	$statement->bindValue(':user_id', $id);
-	$statement->bindValue(':flower_id', $t);
-    $statement->execute();
+    //$query = "DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id";
+	//$statement = $db->prepare($query);
+	//$statement->bindValue(':user_id', $id);
+	//$statement->bindValue(':flower_id', $t);
+    //$statement->execute();
+	deleteFromCart($_SESSION["cart"], $t);
 }
 
-//$stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image 
-  //                   FROM flower f
-	//				 INNER JOIN cart c ON f.flower_id = c.flower_id
-		//			 WHERE c.user_id = :user_id');
-//$stmt->bindValue(':user_id', $id);
-//$stmt->execute();				 
-
-/*function getCart ($id) {
-	global $db;
-    try {
-        $query = 'SELECT f.flower_id, f.description, f.flower_price, f.image 
-                     FROM flower f
-					 INNER JOIN cart c ON f.flower_id = c.flower_id
-					 WHERE c.user_id = :user_id';
-        $statement = $db->prepare($query);
-		$statement->bindValue(':user_id', $id);
-        $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
-		
-    } catch (PDOException $e) {
-        $e->getMessage();
-        echo $e;
-    }
-}*/
 $cart= getCart($id);
 
 ?>

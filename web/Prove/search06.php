@@ -2,12 +2,6 @@
 session_start();
 include_once('dbConnect.php');
 $occasion = htmlspecialchars($_POST["occasion"]);
-
-//$stmt = $db->prepare("SELECT f.flower_price, f.description, f.image FROM flower f, occasion o
-//WHERE (o.occasion_type = :occasion)
-//AND f.flower_type = o.occasion_id;");
-//$stmt->bindValue(':occasion', $occasion);
-//$stmt->execute();
 $items = searchFlowers($occasion);
 ?>
 <!DOCTYPE html>
