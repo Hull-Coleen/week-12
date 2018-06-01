@@ -7,7 +7,7 @@ $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 
 $description = $_SESSION["item"];
 $price = getPrice($description);
-$image   
+$image;  
 //$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = :description);");
 //$stmt->bindValue(':description', $description);
 //$stmt->execute();
