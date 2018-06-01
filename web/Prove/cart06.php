@@ -40,7 +40,7 @@ function getCart ($id) {
     }
 }
 $cart= getCart($id);
-echo var_dump($cart);
+//echo var_dump($cart);
 ?>
 
 <!DOCTYPE html>
@@ -55,11 +55,21 @@ echo var_dump($cart);
 <h1>Shopping Cart</h1><br><br>
 
 <?php
-
+foreach ($cart as %$c) { ?>
+	<div ><p>
+      <img id="cart" src="<?php echo $rows['image'] ?>" alt="Flower">
+      <?php echo $rows['description'] ?><br />
+	  <?php echo $rows['flower_price']  ?><br />
+	  <?php echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$rows['flower_id']}'>Delete</a>"; ?>
+	  </p> 
+	  
+    </div>
+	<?php
+}
 while($rows = $stmt->fetch(PDO::FETCH_ASSOC)) {
   ?>
 	<div ><p>
-      <img id="cart" src="<?php echo $rows['image'] ?>" alt="Flower"><br>
+      <img id="cart" src="<?php echo $rows['image'] ?>" alt="Flower">
       <?php echo $rows['description'] ?><br />
 	  <?php echo $rows['flower_price']  ?><br />
 	  <?php echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$rows['flower_id']}'>Delete</a>"; ?>
@@ -67,10 +77,9 @@ while($rows = $stmt->fetch(PDO::FETCH_ASSOC)) {
     </div>
   <?php
   }
-  $cart = getCart();
-  echo var_dump($cart);
+ 
   ?>
-<a href="Week06confirm.php">Confirm Checkout</a><br>
+<a href="Week06confirm.php">Complete Transaction</a><br>
 
 </body>
 </html>
