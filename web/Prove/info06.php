@@ -7,16 +7,16 @@ $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 
 $description = $_SESSION["item"];
 $price = getPrice($description);
-$image;  
+$image =getImage($description);  
 //$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = :description);");
 //$stmt->bindValue(':description', $description);
 //$stmt->execute();
 //$_SESSION['price'] = $stmt->fetch()['flower_price'];
 	
-$stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = :description);");
-$stmt2->bindValue(':description', $description);
-$stmt2->execute();
-$image = $stmt2->fetch()['image'];
+//$stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = :description);");
+//$stmt2->bindValue(':description', $description);
+//$stmt2->execute();
+//$image = $stmt2->fetch()['image'];
 if (empty($image)) {
 	$image = "RedF.jpg";
 }

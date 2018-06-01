@@ -86,7 +86,7 @@ function getImage($desc) {
 	    $statement = $db->prepare($query);
 		$statement->bindValue(':description', $desc);
         $statement->execute();
-        $result = $statement->fetchAll()['image'];
+        $result = $statement->fetch()['image'];
         return $result;
 		
     } catch (PDOException $e) {
