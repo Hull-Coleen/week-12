@@ -3,38 +3,7 @@ session_start();
 include_once('dbConnect.php');
 $_SESSION["id"];
 $id;
-/*function getUserId($username, $password) {
-	global $db;
-    $query = 'SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)
-          AND user_password = :password';
-    try {
-        $statement = $db->prepare($query);
-		$statement->bindValue(':user_user_name', $username);
-		$statement->bindValue(':password', $password);
-        $statement->execute();
-        $result = $statement->fetch()[user_id];
-        $statement->closeCursor();
-        return $result;
-    } catch (PDOException $e) {
-        $e->getMessage();
-        echo $e;
-    }
-}*/
 
-/*function setUser ($name, $username, $password, $address, $email) {
-	global $db;
-    try {
-        $query = "INSERT INTO public.user (user_name, user_user_name, user_password, address, email)
-            VALUES ('$name', '$username', '$password', '$email', '$address')";
-        $db->exec($query);
-		$newId = $db->lastInsertId('user_user_id_seq');
-		//echo "function" . $newId;
-        return $newId;
-    } catch (PDOException $e) {
-        $e->getMessage();
-        echo $e;
-    }
-}*/
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
     $username = htmlspecialchars($_POST['username']);
@@ -77,10 +46,7 @@ if (isset($_POST)) {
 </head>
 <body>
 <a href="Week06.php">Homepage</a><br>
-<?php
-   echo $_SESSION["id"] . "<br>";
-   //echo "id" . $id;
-?>
+
 <div id="row">
 <h1>If you have an account,<br> Please sign in</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">

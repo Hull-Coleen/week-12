@@ -8,6 +8,8 @@ WHERE (o.occasion_type = :occasion)
 AND f.flower_type = o.occasion_id;");
 $stmt->bindValue(':occasion', $occasion);
 $stmt->execute();
+function getFlowerInfo() {
+}
 
 ?>
 <!DOCTYPE html>
@@ -20,10 +22,7 @@ $stmt->execute();
 <?php 
  
  if (!empty(htmlspecialchars($_POST["item2"]))) {
-	 
-    $_SESSION["cart"] += array($_POST["item2"] => 1);
-	$id = getId($_POST["item2"]);
-	//echo "search page" . $id;
+	$id = getFlowerId($_POST["item2"]);
 	addCart($_SESSION["id"], $id);
  }
  

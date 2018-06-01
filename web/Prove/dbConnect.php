@@ -15,7 +15,50 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-function getId($flower_id) {
+/*$query = "DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id";
+	$statement = $db->prepare($query);
+	$statement->bindValue(':user_id', $id);
+	$statement->bindValue(':flower_id', $t);
+    $statement->execute();
+
+
+$stmt = $db->prepare("SELECT f.flower_price, f.description, f.image FROM flower f, occasion o
+WHERE (o.occasion_type = :occasion)
+AND f.flower_type = o.occasion_id;");
+$stmt->bindValue(':occasion', $occasion);
+$stmt->execute();
+
+$statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
+  $statement->execute();
+
+$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = :description);");
+$stmt->bindValue(':description', $description);
+$stmt->execute();
+$_SESSION['price'] = $stmt->fetch()['flower_price'];
+	
+$stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = :description);");
+$stmt2->bindValue(':description', $description);
+$stmt2->execute();
+$image = $stmt2->fetch()['image'];*/
+function getCart ($id) {
+	global $db;
+    try {
+        $query = 'SELECT f.flower_id, f.description, f.flower_price, f.image 
+                     FROM flower f
+					 INNER JOIN cart c ON f.flower_id = c.flower_id
+					 WHERE c.user_id = :user_id';
+        $statement = $db->prepare($query);
+		$statement->bindValue(':user_id', $id);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+		
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+function getFlowerId($flower_id) {
     global $db;
 	$stmt2 = $db->prepare("SELECT flower_id FROM flower WHERE (description = :description);");
 	$stmt2->bindValue(':description', $flower_id);

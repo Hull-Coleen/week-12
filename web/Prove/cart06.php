@@ -14,14 +14,14 @@ if (!empty($t)) {
     $statement->execute();
 }
 
-$stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image 
-                     FROM flower f
-					 INNER JOIN cart c ON f.flower_id = c.flower_id
-					 WHERE c.user_id = :user_id');
-$stmt->bindValue(':user_id', $id);
-$stmt->execute();				 
+//$stmt = $db->prepare('SELECT f.flower_id, f.description, f.flower_price, f.image 
+  //                   FROM flower f
+	//				 INNER JOIN cart c ON f.flower_id = c.flower_id
+		//			 WHERE c.user_id = :user_id');
+//$stmt->bindValue(':user_id', $id);
+//$stmt->execute();				 
 
-function getCart ($id) {
+/*function getCart ($id) {
 	global $db;
     try {
         $query = 'SELECT f.flower_id, f.description, f.flower_price, f.image 
@@ -38,9 +38,9 @@ function getCart ($id) {
         $e->getMessage();
         echo $e;
     }
-}
+}*/
 $cart= getCart($id);
-//echo var_dump($cart);
+
 ?>
 
 <!DOCTYPE html>
