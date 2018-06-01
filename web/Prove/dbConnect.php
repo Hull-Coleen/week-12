@@ -34,9 +34,8 @@ function deleteFromCart ($id, $flower_id) {
 function searchFlowers($occ) {
 	global $db;
     $query = 'SELECT f.flower_price, f.description, f.image FROM flower f
-              INNER JOIN occasion o
-			  WHERE o.occasion_type = :occasion
-              AND f.flower_type = o.occasion_id;';
+              INNER JOIN occasion o ON f.flower_type = o.occasion_id
+			  WHERE o.occasion_type = :occasion';
 	try {
         
 	    $statement = $db->prepare($query);
