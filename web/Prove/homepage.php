@@ -12,7 +12,7 @@ function getUserId($username, $password) {
 		$statement->bindValue(':user_user_name', $username);
 		$statement->bindValue(':password', $password);
         $statement->execute();
-        $result = $statement->fetch[user_id];
+        $result = $statement->fetch()[user_id];
         $statement->closeCursor();
         return $result;
     } catch (PDOException $e) {
