@@ -5,6 +5,7 @@ if(!isset($_SESSION["cart"])){
     //If it doesn't, create an empty array.
     $_SESSION["cart"] = array();
 }
+echo $_SESSION['id'];
 ?>
 
 <!DOCTYPE html>

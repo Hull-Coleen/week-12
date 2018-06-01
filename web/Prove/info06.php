@@ -24,26 +24,7 @@ $_SESSION['image'] = $image;
 else {
 	$_SESSION['image'] = "RedF.jpg"; 
 }
-/*function getId($flower_id) {
-    global $db;
-	$stmt2 = $db->prepare("SELECT flower_id FROM flower WHERE (description = :description);");
-	$stmt2->bindValue(':description', $flower_id);
-    $stmt2->execute();
-    $id = $stmt2->fetch()['flower_id'];
-	return $id;
-	
-}
-function addCart($user_id, $flower_id) {
-	global $db;
-    try {
-        $query = "INSERT INTO cart (user_id, flower_id)
-            VALUES ($user_id, $flower_id)";
-        $db->exec($query);
-    } catch (PDOException $e) {
-        $e->getMessage();
-        echo $e;
-    }
-}*/
+
 ?>
 <!DOCTYPE html>
 <html>
