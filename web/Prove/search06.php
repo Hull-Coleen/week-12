@@ -8,7 +8,7 @@ WHERE (o.occasion_type = :occasion)
 AND f.flower_type = o.occasion_id;");
 $stmt->bindValue(':occasion', $occasion);
 $stmt->execute();
-function getId($flower_id) {
+/*function getId($flower_id) {
     global $db;
 	$stmt2 = $db->prepare("SELECT flower_id FROM flower WHERE (description = :description);");
 	$stmt2->bindValue(':description', $flower_id);
@@ -27,7 +27,7 @@ function addCart($user_id, $flower_id) {
         $e->getMessage();
         echo $e;
     }
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html>
