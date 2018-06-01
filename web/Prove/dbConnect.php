@@ -45,7 +45,7 @@ function getUserInfo($id) {
     try {
         $query = 'SELECT user_name, user_user_name, address, email 
                      FROM public.user
-					 WHERE c.user_id = :user_id';
+					 WHERE user_id = :user_id';
 	    $statement = $db->prepare($query);
 		$statement->bindValue(':user_id', $id);
         $statement->execute();
