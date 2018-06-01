@@ -2,21 +2,13 @@
 <?php
 session_start();
 include_once('dbConnect.php');
-//require "dbConnect.php";
+
 $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 
 $description = $_SESSION["item"];
 $price = getPrice($description);
 $image =getImage($description);  
-//$stmt = $db->prepare("SELECT flower_price, image FROM flower WHERE (description = :description);");
-//$stmt->bindValue(':description', $description);
-//$stmt->execute();
-//$_SESSION['price'] = $stmt->fetch()['flower_price'];
-	
-//$stmt2 = $db->prepare("SELECT image FROM flower WHERE (description = :description);");
-//$stmt2->bindValue(':description', $description);
-//$stmt2->execute();
-//$image = $stmt2->fetch()['image'];
+
 if (empty($image)) {
 	$image = "RedF.jpg";
 }
@@ -39,9 +31,7 @@ if (empty($image)) {
  <?php 
 
  if (!empty(htmlspecialchars($_POST["item1"]))) {
-	 $_SESSION["cart"] += array($_POST["item1"] => 1);
-    $id = getFlowerId($_POST["item1"]);
-	 //echo "info page" . $_SESSION["id"];
+     $id = getFlowerId($_POST["item1"]);
 	 addCart($_SESSION["id"], $id);
  
  }
