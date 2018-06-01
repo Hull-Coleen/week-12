@@ -79,10 +79,6 @@ if (isset($_POST)) {
 
 
 }
-if(isset($_POST['submit'])) {
-        // Insert Query Put here
-        header('Location: Week06.php');
-    }
 
 ?>
 <!DOCTYPE html>
