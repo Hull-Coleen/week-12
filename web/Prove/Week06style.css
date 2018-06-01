@@ -28,6 +28,7 @@ p {
 }
 p#form {
 	text-align: left;
+	margin-left: 20px;
 }
 div#after {
 	clear: both;
@@ -61,7 +62,7 @@ img.link {
 }
 
 div#row {
-	width: 40%;
+	width: 50%;
 	padding: 10px;
 	display: inline-block;
 }
