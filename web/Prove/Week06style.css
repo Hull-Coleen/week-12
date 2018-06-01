@@ -14,7 +14,7 @@ div#flowers {
 }
 div#flowers1 {
 	float: left;
-	
+	padding: 40px;
 }
 
 div#sub {
@@ -22,11 +22,12 @@ div#sub {
 }
 
 p {
+	
+	text-align: center;
 	font-family: Agency FB;
 }
 p#form {
-	//text-align: left;
-	//margin-left: 20px;
+	text-align: left;
 }
 div#after {
 	clear: both;
@@ -53,21 +54,10 @@ img#cart {
     margin-left: auto;
     margin-right: auto;
 }
-
-a img.link {
-	margin-left: 20px;
-	border: 1px solid brown;
-	padding: 5px;
-	height: 32px;
-	width: 40px;
-}
-span {
-	margin-left: 20px;
-}
-div#row2 {
-	width: 40%;
-	padding: 10px;
-	display: inline-block;
+img.link {
+//	border: 5px solid black;
+	//margin-left: 20px;
+	//padding: 15px;
 }
 
 div#row {
@@ -107,6 +97,21 @@ body {
 		inset #bfecf7 0 0 0 23px;
 }
 
+a img.link {
+	margin-left: 20px;
+	border: 1px solid brown;
+	padding: 5px;
+	height: 32px;
+	width: 40px;
+}
+div#row2 {
+	width: 40%;
+	padding: 10px;
+	display: inline-block;
+}
+span {
+	margin-left: 20px;
+}
 
 
 
