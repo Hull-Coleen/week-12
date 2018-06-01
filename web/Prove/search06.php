@@ -4,10 +4,19 @@ include_once('dbConnect.php');
 $occasion = htmlspecialchars($_POST["occasion"]);
 
 $stmt = $db->prepare("SELECT f.flower_price, f.description, f.image FROM flower f, occasion o
-WHERE (o.occasion_type = '{$occasion}')
+WHERE (o.occasion_type = :occasion)
 AND f.flower_type = o.occasion_id;");
+$stmt->bindValue(':occasion', $occasion);
 $stmt->execute();
-
+function getId($flower_id) {
+    global $db;
+	$stmt2 = $db->prepare("SELECT flower_id FROM flower WHERE (description = :description);");
+	$stmt2->bindValue(':description', $flower_id);
+    $stmt2->execute();
+    $id = $stmt2->fetch()['flower_id'];
+	return $id;
+	
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,6 +30,9 @@ $stmt->execute();
  if (!empty(htmlspecialchars($_POST["item2"]))) {
 	 
     $_SESSION["cart"] += array($_POST["item2"] => 1);
+	$id = getId($_POST["item2"]);
+	 //echo "info page" . $_SESSION["id"];
+	 addCart($_SESSION["id"], $id);
  }
  
 ?>
