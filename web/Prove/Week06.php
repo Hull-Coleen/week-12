@@ -21,12 +21,6 @@ $items = getFlowers();
 <body>
 <a href="search06.php">Search Page</a><br>
 <a href="homepage.php">Sign In</a><br>
-<?php
-  
-  $statement = $db->prepare("SELECT flower_type, flower_size, flower_price, description, image FROM flower");
-  $statement->execute();
- 
-?>
 
  <form method="POST" action="info06.php">
    <div>
@@ -42,18 +36,7 @@ $items = getFlowers();
    <?php
    }
    ?>
-   <?php
-   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-   {
-   ?>
-	 <div id="flowers1" ><p>
-       <img id="flower" src="<?php echo $row['image'] ?>" alt="Flower"> <br>
-       <input type="radio" name="item" value="<?php echo $row['description'] ?>">
-	   <?php echo $row['description'] ?><br /></P> 
-     </div>
-   <?php
-   }
-   ?>
+  
    </div>
    <div id="after"></div>
    <br><br><br><div id="sub" ><input type="submit" name="submit" value="Submit"></div>  		
