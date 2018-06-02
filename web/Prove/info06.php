@@ -11,6 +11,12 @@ $image =getImage($description);
 if (!empty($image)) {
 $_SESSION['image'] = $image;
 }
+if (!empty($price)) {
+$_SESSION['price'] = $price;
+}
+if (!empty($image)) {
+$_SESSION['desc'] = $description;
+}
 if (empty($image)) {
 	$image = "RedF.jpg";
 }
@@ -39,10 +45,10 @@ if (empty($image)) {
  }
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-  <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($description); ?>">
-  <p> <?php echo htmlspecialchars($description);
+  <input type="hidden" id="address" name="item1" value="<?php echo htmlspecialchars($_SESSION['desc']); ?>">
+  <p> <?php echo htmlspecialchars($_SESSION['desc']);
 	        echo "<br>";
-			echo $price; ?> <br>
+			echo $_SESSION['price']; ?> <br>
     <input type="submit" name="submit" value="Add to Cart">  
   </p>
 </form>
