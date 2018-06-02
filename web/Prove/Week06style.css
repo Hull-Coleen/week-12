@@ -72,6 +72,12 @@ div#row {
 	display: inline-block;
 }
 body {
+    height: 100vh;
+}
+body {
+    min-height: 100vh;
+}
+body {
 	padding: 40px;
 	overflow-x: hidden; /* For Opera */
 	-webkit-box-shadow:
