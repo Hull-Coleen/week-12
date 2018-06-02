@@ -22,7 +22,6 @@ function deleteUserCart ($id) {
 	    $statement = $db->prepare($query);
 		$statement->bindValue(':user_id', $id);
         $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
 		
     } catch (PDOException $e) {
