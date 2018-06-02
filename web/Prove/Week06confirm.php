@@ -32,14 +32,15 @@ foreach ($cart as $c) { ?>
 }
 
  if(isset($_POST['submit'])) {
-    echo "Thanks for your purchase";
     deleteUserCart($_SESSION['id']);
+	echo "Thanks for your purchase";
+    
 	// remove all session variables
     session_unset(); 
 
     // destroy the session 
     session_destroy();	
-	echo $_SESSION['id'];
+	echo "session variable" . $_SESSION['id'];
                 
 }
 ?>
