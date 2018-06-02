@@ -6,7 +6,7 @@ $id = $_SESSION["id"];
 $t = $_GET['_delete'];
 
 if (!empty($t)) {
-	deleteFromCart($_SESSION["cart"], $t);
+	deleteFromCart($_SESSION["id"], $t);
 }
 
 $cart= getCart($id);
