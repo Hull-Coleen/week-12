@@ -15,6 +15,21 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
+function deleteUserCart ($id) {
+	global $db;
+    $query = 'DELETE FROM cart WHERE user_id =:user_id';
+	try {
+	    $statement = $db->prepare($query);
+		$statement->bindValue(':user_id', $id);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+		
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
 function deleteFromCart ($id, $flower_id) {
 	global $db;
     $query = 'DELETE FROM cart WHERE user_id =:user_id AND flower_id =:flower_id';

@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once('dbConnect.php');
-$_SESSION['id'] = 5;
 $user = getUserInfo($_SESSION['id']);	
 $cart= getCart($_SESSION['id']);
 ?>
@@ -20,7 +19,11 @@ foreach ($user as $u) { ?>
 <?php	
 	
 }
-
+if(isset($_POST['submit'])) {
+    echo "Thanks for your purchase";
+    deleteUserCart($_SESSION['id']);	
+                
+}
 foreach ($cart as $c) { ?>
 	<div ><p>
       <img id="cart" src="<?php echo $c['image'] ?>" alt="Flower">
@@ -38,6 +41,8 @@ foreach ($cart as $c) { ?>
     // destroy the session 
     session_destroy(); 
 ?>
+<form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p><input type="submit" name="submit" value="Confirm Transaction"></p>
+</form>
 </body>
 </html>
