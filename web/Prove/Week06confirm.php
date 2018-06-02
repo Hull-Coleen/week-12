@@ -21,7 +21,12 @@ foreach ($user as $u) { ?>
 }
 if(isset($_POST['submit'])) {
     echo "Thanks for your purchase";
-    deleteUserCart($_SESSION['id']);	
+    deleteUserCart($_SESSION['id']);
+	// remove all session variables
+    session_unset(); 
+
+    // destroy the session 
+    session_destroy();	
                 
 }
 foreach ($cart as $c) { ?>
@@ -35,11 +40,7 @@ foreach ($cart as $c) { ?>
 	<?php
 }
 
-// remove all session variables
-    session_unset(); 
-
-    // destroy the session 
-    session_destroy(); 
+ 
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p><input type="submit" name="submit" value="Confirm Transaction"></p>
