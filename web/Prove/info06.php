@@ -29,7 +29,7 @@ if (empty($image)) {
 <a href="cart06.php">Cart</a><br>
 
 <h1>Product Information</h1><br>
-<img id ="flower" src="<?php echo $image; ?>"  alt="World">
+<img id ="flower" src="<?php echo $_SESSION['image']; ?>"  alt="World">
  <?php 
 
  if (!empty(htmlspecialchars($_POST["item1"]))) {
