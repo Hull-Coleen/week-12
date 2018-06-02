@@ -7,8 +7,10 @@ $_SESSION["item"] = htmlspecialchars($_POST["item"]);
 
 $description = $_SESSION["item"];
 $price = getPrice($description);
-$image =getImage($description);  
-
+$image =getImage($description); 
+if (!empty($image)) {
+$_SESSION['image'] = $image
+}
 if (empty($image)) {
 	$image = "RedF.jpg";
 }
