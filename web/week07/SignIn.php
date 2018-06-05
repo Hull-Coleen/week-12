@@ -13,7 +13,7 @@ if (isset($_POST)) {
     $email = htmlspecialchars($_POST['email']);
 	$username1 = htmlspecialchars($_POST['username1']);
     $password1 = htmlspecialchars($_POST['password1']);
-	$_SESSION["a"] = $password1;;
+	$_SESSION["a"] = $password1;
 
     if (!empty($username1) && !empty($password1)) {
 		//echo "pass " . $password1;
@@ -33,7 +33,7 @@ if (isset($_POST)) {
     }
     if (empty($username1 ) && !empty($name)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
-			$error "you must fill in all the text fields";
+			$error = "you must fill in all the text fields";
 			echo "<script type='text/javascript'>alert(\"$error\");</script>";
 		}
 		else {
