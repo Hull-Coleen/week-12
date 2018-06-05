@@ -38,24 +38,27 @@ if (isset($_POST)) {
     if (empty($username1 ) && !empty($name)) {
 		if (strlen($password) < 7) {
 			$pass = "Password not long enough";
-		} else {
+			echo "first if";
+		} 
+		else {
 		   if (!preg_match("/^[0-9]*$/", $password)) {
 			   $pass = "Password needs at least one number";
+			   echo "second if";
 		   }
 		   else {
-		   if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
-			  $error = "you must fill in all the text fields";
-			   echo "<script type='text/javascript'>alert(\"$error\");</script>";
-		   }
-		   else {
-		      $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-			   $id = setUser($name, $username, $hashedPassword, $address, $email);
-			   if(isset($_POST['submit'])) {
+		      if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
+			     $error = "you must fill in all the text fields";
+			     echo "<script type='text/javascript'>alert(\"$error\");</script>";
+		      }
+		      else {
+		         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+			     $id = setUser($name, $username, $hashedPassword, $address, $email);
+			     if(isset($_POST['submit'])) {
 				   if (!empty($id)) {
                       header('Location: Week06.php');
-                } 
-			    }
-		    }
+                   } 
+			     }
+		      }
 		
 		    }
 		}
