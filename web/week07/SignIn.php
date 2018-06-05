@@ -7,6 +7,9 @@ $passError = "";
 $error = "";
 $pass = "";
 $pattern = '/^(?=\D*\d)[^ ]{6,}$/';
+
+//Tammy Dresen<input type="password" name="password" id="password" 
+//required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
     $username = htmlspecialchars($_POST['username']);
@@ -111,7 +114,7 @@ if (isset($_POST)) {
   <br /><br />
 
   <label for="email">Email</label>
-  <input type="text" placeholder="Email Address" id="email" name="email">
+  <input type="email" placeholder="Email Address" id="email" name="email">
   <br /><br />
   
   <label for="email">Address</label>
