@@ -14,25 +14,26 @@ if (isset($_POST)) {
 	$username1 = htmlspecialchars($_POST['username1']);
     $password1 = htmlspecialchars($_POST['password1']);
 	$password2 = htmlspecialchars($_POST['password2']);
-	if ($password1 == $password2) {
-	echo "working";
 	
-   }
-
-    if (!empty($username1) && !empty($password1)) {
+	 if (!empty($username1) && !empty($password1)) {
+		if ($password1 == $password2) {
 		
-		$pass = getUserPassword($username1);
+		   $pass = getUserPassword($username1);
 		
-		if (password_verify($password1, $pass)) {
+		   if (password_verify($password1, $pass)) {
 		
-		   $id = getUserId($username1, $pass);
-		   if (!empty($id)) {
-              header('Location: Week06.php');
-           }
-		} else {
-			echo "wrong password";
+		      $id = getUserId($username1, $pass);
+		      if (!empty($id)) {
+                 header('Location: Week06.php');
+              }
+		   } else {
+			   echo "wrong password";
+		   }
+        }
+		else {
+			$error = "Passwords don't match";
 		}
-    }
+	}
     if (empty($username1 ) && !empty($name)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			$error = "you must fill in all the text fields";
@@ -62,19 +63,17 @@ if (isset($_POST)) {
 </head>
 <body>
 <a href="Week06.php">Homepage</a><br>
-<?php 
-$pass;
-$pass2;
-if (preg_match($pass, $pass2)) {
-	echo "working";
-	
-}
-echo $pass;
-echo $pass2;
-?>
+
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
+<?php
+if(isset($error) && !empty($error)){
+    ?>
+    <span class="error"><?= $error; ?></span>
+    <?php
+}
+?>
 <p id="form">
   
   <label for="username">User Name</label>
