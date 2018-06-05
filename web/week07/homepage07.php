@@ -15,7 +15,52 @@ if (isset($_POST)) {
 	
 
     if (!empty($username1) && !empty($password1)) {
+		<?php
+session_start();
+include_once('dbConnect.php');
+require 'password.php';
+$_SESSION["id"];
+$id;
+
+
+
+
+
+if (isset($_POST)) {
+    $name = htmlspecialchars($_POST['name']);
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
+    $address = htmlspecialchars($_POST['address']);
+    $email = htmlspecialchars($_POST['email']);
+	$username1 = htmlspecialchars($_POST['username1']);
+    $password1 = htmlspecialchars($_POST['password1']);
+	
+
+    if (!empty($username1) && !empty($password1)) {
+		$passwordHash = password_hash('$password1', PASSWORD_DEFAULT);
+		echo "$passwordHash";
 		
+		$id = getUserId($username1, $password1);
+		if (!empty($id)) {
+        header('Location: Week06.php');
+        }
+    }
+    if (empty($username1 ) && !empty($name)) {
+		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
+			echo "must enter all the fields";
+		}
+		else {
+			$id = setUser($name, $username, $password, $address, $email);
+			if(isset($_POST['submit'])) {
+				if (!empty($id)) {
+                header('Location: Week06.php');
+                }
+			}
+		}
+		
+	}
+	$_SESSION["id"] = $id;
+}
 		$id = getUserId($username1, $password1);
 		if (!empty($id)) {
         header('Location: Week06.php');
