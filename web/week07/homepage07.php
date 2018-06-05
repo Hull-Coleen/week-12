@@ -3,8 +3,7 @@ session_start();
 include_once('dbConnect.php');
 $_SESSION["id"];
 $id;
-$_SESSION["a"];
-$_SESSION["b"];
+
 
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
