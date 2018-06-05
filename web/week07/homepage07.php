@@ -18,7 +18,7 @@ if (isset($_POST)) {
 		//$passwordHash = password_hash('$password1', PASSWORD_DEFAULT);
 		//echo "$passwordHash";
 		$hashAndSalt = password_hash($password1, PASSWORD_BCRYPT);
-		echo $hashAndSalt;
+		//echo $hashAndSalt;
 		$id = getUserId($username1, $password1);
 		if (!empty($id)) {
         header('Location: Week06.php');
@@ -29,7 +29,8 @@ if (isset($_POST)) {
 			echo "must enter all the fields";
 		}
 		else {
-			$id = setUser($name, $username, $password, $address, $email);
+			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+			$id = setUser($name, $username, $hashedPassword, $address, $email);
 			if(isset($_POST['submit'])) {
 				if (!empty($id)) {
                 header('Location: Week06.php');
