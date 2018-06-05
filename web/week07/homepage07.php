@@ -15,10 +15,7 @@ if (isset($_POST)) {
 	
 
     if (!empty($username1) && !empty($password1)) {
-		//$passwordHash = password_hash('$password1', PASSWORD_DEFAULT);
-		//echo "$passwordHash";
-		$hashAndSalt = password_hash($password1, PASSWORD_BCRYPT);
-		//echo $hashAndSalt;
+		
 		$id = getUserId($username1, $password1);
 		if (!empty($id)) {
         header('Location: Week06.php');
@@ -26,7 +23,8 @@ if (isset($_POST)) {
     }
     if (empty($username1 ) && !empty($name)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
-			echo "must enter all the fields";
+			$error "you must fill in all the text fields";
+			echo "<script type='text/javascript'>alert(\"$error\");</script>";
 		}
 		else {
 			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
