@@ -73,9 +73,9 @@ if (isset($_POST)) {
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password1" name="password1" value="<?php echo $pass ?>"><span class="error"> <?php echo $error ?></span>
+  <input type="password" placeholder="Password" id="password1" name="password1"><span class="error"> <?php echo $error ?></span><br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password2" name="password2" value="<?php echo $pass2 ?>"><span class="error"> <?php echo $error ?></span>
+  <input type="password" placeholder="Password" id="password2" name="password2"><span class="error"> <?php echo $error ?></span>
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
