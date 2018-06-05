@@ -145,7 +145,8 @@ function updateCart ($user_id, $flower_id, $num) {
 function getCart ($id) {
 	global $db;
     try {
-        $query = 'SELECT f.flower_id, f.description, f.flower_price, f.image, c.amount
+        $query = 'SELECT f.flower_id, f.description, f.flower_price, f.image, 
+		          c.amount, (f.flower_price * c.amount) as total
                      FROM flower f
 					 INNER JOIN cart c ON f.flower_id = c.flower_id
 					 WHERE c.user_id = :user_id';
