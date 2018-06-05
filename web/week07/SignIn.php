@@ -13,14 +13,10 @@ if (isset($_POST)) {
     $email = htmlspecialchars($_POST['email']);
 	$username1 = htmlspecialchars($_POST['username1']);
     $password1 = htmlspecialchars($_POST['password1']);
-	$_SESSION["a"] = $password1;
 
     if (!empty($username1) && !empty($password1)) {
-		//echo "pass " . $password1;
-		//$pass = getUserPassword($username1);
-		//echo "hash " . $pass;
 		$pass = getUserPassword($username1);
-		$_SESSION["b"] = $pass;
+		
 		if (password_verify($password1, $pass)) {
 		
 		   $id = getUserId($username1, $pass);
@@ -60,11 +56,6 @@ if (isset($_POST)) {
 </head>
 <body>
 <a href="Week06.php">Homepage</a><br>
-<?php  
-echo "pass " . $_SESSION["a"];
-		
-		echo "hash " . $_SESSION["b"];
-?>
 
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
