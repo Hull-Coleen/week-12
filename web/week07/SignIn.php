@@ -6,6 +6,7 @@ $id;
 $passError = "";
 $error = "";
 $pass = "";
+$pattern = '/^(?=\D*\d)[^ ]{6,}$/';
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
     $username = htmlspecialchars($_POST['username']);
@@ -41,7 +42,7 @@ if (isset($_POST)) {
 			echo "first if";
 		} 
 		else {
-		   if (!preg_match("/^[0-9]*$/", $password)) {
+		   if (!preg_match($pattern, $password)) {
 			   $pass = "Password needs at least one number";
 			   echo "second if";
 		   }
