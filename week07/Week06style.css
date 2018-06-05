@@ -1,0 +1,130 @@
+body {
+	background-color: #ffffcc;
+	font-family: Agency FB;
+	font-size: 120%;
+	color: #000080;
+	min-height:100%;
+}
+html {
+	height: 100%;
+}
+h1 {
+	text-align: center;
+}
+
+div#flowers {
+	float: right;
+	padding: 20px;
+}
+div#flowers1 {
+	float: left;
+	padding: 40px;
+}
+
+div#sub {
+	text-align: center;
+}
+
+p {
+	
+	text-align: center;
+	font-family: Agency FB;
+}
+p#form {
+	text-align: left;
+	margin-left: 20px;
+}
+div#after {
+	clear: both;
+}
+p#confirm {
+	font-size: 180%;
+	
+}
+
+img#flower {
+	border: 1px solid #000080;
+	height: 300px;
+	width: 260px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	
+}
+h1#form {
+	text-align: left;
+	margin-left: 20px;
+}
+img#cart {
+	border: 1px solid brown;
+	height: 200px;
+	width: 160px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.link {
+//	border: 5px solid black;
+	//margin-left: 20px;
+	//padding: 15px;
+}
+
+div#row {
+	width: 50%;
+	padding: 10px;
+	display: inline-block;
+}
+
+body {
+	padding: 40px;
+	overflow-x: hidden; /* For Opera */
+	-webkit-box-shadow:
+		inset #19d4ff 0 0 0 5px,
+		inset #18cdf7 0 0 0 1px,
+		inset #53dfff 0 0 0 10px,
+		inset #50d8f7 0 0 0 11px,
+		inset #8ce9ff 0 0 0 16px,
+		inset #88e2f7 0 0 0 17px,
+		inset #c5f4ff 0 0 0 22px,
+		inset #bfecf7 0 0 0 23px;
+	-moz-box-shadow:
+		inset #19d4ff 0 0 0 5px,
+		inset #18cdf7 0 0 0 1px,
+		inset #53dfff 0 0 0 10px,
+		inset #50d8f7 0 0 0 11px,
+		inset #8ce9ff 0 0 0 16px,
+		inset #88e2f7 0 0 0 17px,
+		inset #c5f4ff 0 0 0 22px,
+		inset #bfecf7 0 0 0 23px;
+	box-shadow:
+		inset #19d4ff 0 0 0 5px,
+		inset #18cdf7 0 0 0 1px,
+		inset #53dfff 0 0 0 10px,
+		inset #50d8f7 0 0 0 11px,
+		inset #8ce9ff 0 0 0 16px,
+		inset #88e2f7 0 0 0 17px,
+		inset #c5f4ff 0 0 0 22px,
+		inset #bfecf7 0 0 0 23px;
+}
+
+a img.link {
+	margin-left: 20px;
+	border: 1px solid brown;
+	padding: 5px;
+	height: 32px;
+	width: 40px;
+}
+div#row2 {
+	width: 40%;
+	padding: 10px;
+	display: inline-block;
+}
+span {
+	margin-left: 20px;
+}
+
+
+
+
+
+
