@@ -154,8 +154,8 @@ function getFlowerId($flower_id) {
 function addCart($user_id, $flower_id) {
 	global $db;
     try {
-        $query = "INSERT INTO cart (user_id, flower_id)
-            VALUES ($user_id, $flower_id)";
+        $query = "INSERT INTO cart (user_id, flower_id, amount)
+            VALUES ($user_id, $flower_id, 1)";
         $db->exec($query);
     } catch (PDOException $e) {
         $e->getMessage();
