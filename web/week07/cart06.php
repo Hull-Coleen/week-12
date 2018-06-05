@@ -40,11 +40,10 @@ foreach ($cart as $c) { ?>
     </div>
 	<?php
 	if (!empty($_POST[$c['flower_id']])) {
-	$_SESSION['a'] = $_POST[$c['flower_id']];
-	echo $c['flower_id'];
+	     updateCart($_SESSION['id'], $c['flower_id'], $_POST[$c['flower_id']]); 
 	}
 }
-echo $_SESSION['a'];
+
 ?>
 <a href="Week06confirm.php">Complete Transaction</a><br>
 
