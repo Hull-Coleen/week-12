@@ -78,6 +78,18 @@ if (isset($_POST)) {
 <head>
 <title>Sign In Page</title>
 <link rel="stylesheet" type="text/css" href="Week06style.css">
+<script>
+var check = function() {
+  if (document.getElementById('password1').value ==
+    document.getElementById('password2').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+</script>
 </head>
 <body>
 <a href="Week06.php">Homepage</a><br>
@@ -91,9 +103,13 @@ if (isset($_POST)) {
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password1" name="password1"><span class="error"> <?php echo $passError ?></span><br>
+  <input type="password" oninput="check() placeholder="Password" id="password1" name="password1">
+  <span id='message'></span>
+  <span class="error"> <?php echo $passError ?></span><br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password2" name="password2"><span class="error"> <?php echo $passError ?></span>
+  <input type="password" oninput="check() placeholder="Password" id="password2" name="password2">
+  <span id='message'></span>
+  <span class="error"> <?php echo $passError ?></span>
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
