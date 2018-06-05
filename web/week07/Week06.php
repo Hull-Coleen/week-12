@@ -20,7 +20,7 @@ $items = getFlowers();
 
 <body>
 <a href="search06.php">Search Page</a><br>
-<a href="homepage.php">Sign In</a><br>
+<a href="SignIn.php">Sign In</a><br>
 
  <form method="POST" action="info06.php">
    <div>
