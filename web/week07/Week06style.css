@@ -74,6 +74,21 @@ div#row {
 	padding: 10px;
 	display: inline-block;
 }
+a img.link {
+	margin-left: 20px;
+	border: 1px solid brown;
+	padding: 5px;
+	height: 32px;
+	width: 40px;
+}
+div#row2 {
+	width: 40%;
+	padding: 10px;
+	display: inline-block;
+}
+span {
+	margin-left: 20px;
+}
 span.error {
     color: red;
 //	background-color:red;
@@ -110,21 +125,7 @@ body {
 		inset #bfecf7 0 0 0 23px;
 }
 
-a img.link {
-	margin-left: 20px;
-	border: 1px solid brown;
-	padding: 5px;
-	height: 32px;
-	width: 40px;
-}
-div#row2 {
-	width: 40%;
-	padding: 10px;
-	display: inline-block;
-}
-span {
-	margin-left: 20px;
-}
+
 
 
 

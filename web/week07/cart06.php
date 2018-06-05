@@ -4,13 +4,13 @@ include_once('dbConnect.php');
 
 $id = $_SESSION["id"];
 $t = $_GET['_delete'];
-
+$_SESSION = $_POST[
 if (!empty($t)) {
 	deleteFromCart($_SESSION["id"], $t);
 }
 
 $cart= getCart($id);
-
+// testing to see if this changes other file
 ?>
 
 <!DOCTYPE html>
@@ -26,16 +26,22 @@ $cart= getCart($id);
 
 <?php
 foreach ($cart as $c) { ?>
-	<div ><p>
+	<div ><form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>""><p>
       <img id="cart" src="<?php echo $c['image'] ?>" alt="Flower">
       <?php echo $c['description'] ?><br />
 	  <?php echo $c['flower_price']  ?><br />
 	  <?php echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['flower_id']}'>Delete</a>"; ?>
+	  <input type="number" placeholder="1" id="<?php echo $c['flower_id'] ?>"
+	  name="<?php echo $c['flower_id'] ?>">
+  <span id='message'></span><input type="submit" name="update" value="Update">
+  
 	  </p> 
-	  
+	 </form> 
     </div>
 	<?php
+	$_SESSION['a'] = $_POST[$c['flower_id']];
 }
+echo $_SESSION['a'];
 ?>
 <a href="Week06confirm.php">Complete Transaction</a><br>
 
