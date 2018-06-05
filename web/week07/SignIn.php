@@ -90,7 +90,7 @@ var check = function() {
 </script>
 </head>
 <body>
-<a href="Week06.php">Homepage</a><br>
+
 
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
@@ -109,7 +109,7 @@ var check = function() {
   <input type="password" onkeyup="check();" placeholder="Password" id="password2" name="password2">
   <span id='message'></span>
   <span class="error"> <?php echo $passError ?></span>
-  <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In"><span id='message'></span>
+  <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
 </div>
