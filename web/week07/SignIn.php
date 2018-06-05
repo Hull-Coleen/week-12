@@ -119,7 +119,7 @@ var check = function() {
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p id="form">
   <label for="name">Name</label>
-  <input type="text" placeholder="Name" id="name" name="name">
+  <input type="text" placeholder="Name" id="name" name="name" required >
   <br /><br />
   <label for="username">User Name</label>
   <input type="text" placeholder="user Name" id="username" name="username">
