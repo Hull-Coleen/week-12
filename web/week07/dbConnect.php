@@ -127,7 +127,7 @@ function getUserInfo($id) {
 function updateCart ($user_id, $flower_id, $num) {
 	global $db;
     try {
-        $query = 'UPDATE TABLE cart
+        $query = 'UPDATE cart
 		SET amount = $num
 		WHERE user_id = :user_id
 		AND flower_id = :flower_id';
