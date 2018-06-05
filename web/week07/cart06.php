@@ -8,7 +8,7 @@ $t = $_GET['_delete'];
 if (!empty($t)) {
 	deleteFromCart($_SESSION["id"], $t);
 }
-$_SESSION['id'] = 45;
+
 $cart= getCart($_SESSION['id']);
 // testing to see if this changes other file
 ?>
