@@ -14,7 +14,7 @@ if (isset($_POST)) {
     $password1 = htmlspecialchars($_POST['password1']);
 	
 
-    if (!empty($username1) && !empty($password1)) {
+    //if (!empty($username1) && !empty($password1)) {
 		echo "pass " . $password1;
 		$pass = getUserPassword($username1);
 		echo "hash " . $pass;
@@ -28,7 +28,7 @@ if (isset($_POST)) {
 		} else {
 			echo "wrong password";
 		}
-    }
+//    }
     if (empty($username1 ) && !empty($name)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			$error "you must fill in all the text fields";
