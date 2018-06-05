@@ -65,7 +65,7 @@ if (isset($_POST)) {
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
-  <input type="text" placeholder="Password" id="password1" name="password1"><br><br>
+  <input type="password" placeholder="Password" id="password1" name="password1"><br><br>
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
@@ -81,7 +81,7 @@ if (isset($_POST)) {
   <input type="text" placeholder="user Name" id="username" name="username">
   <br /><br />
   <label for="password">Passwork</label>
-  <input type="text" placeholder="Password" id="password" name="password">
+  <input type="password" placeholder="Password" id="password" name="password">
 			
   <br /><br />
 
