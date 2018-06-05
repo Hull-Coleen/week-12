@@ -74,7 +74,9 @@ div#row {
 	padding: 10px;
 	display: inline-block;
 }
-
+span.error (
+    color: red;
+}
 body {
 	padding: 40px;
 	overflow-x: hidden; /* For Opera */
