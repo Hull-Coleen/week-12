@@ -41,6 +41,7 @@ foreach ($cart as $c) { ?>
 	<?php
 	if (!empty($_POST[$c['flower_id']])) {
 	$_SESSION['a'] = $_POST[$c['flower_id']];
+	echo $c['flower_id'];
 	}
 }
 echo $_SESSION['a'];
