@@ -20,7 +20,7 @@ if (isset($_POST)) {
 	
 
     if (!empty($username1) && !empty($password1)) {
-		$passwordHash = password_hash('$password', PASSWORD_DEFAULT);
+		$passwordHash = password_hash('$password1', PASSWORD_DEFAULT);
 		echo "$passwordHash";
 		
 		$id = getUserId($username1, $password1);
