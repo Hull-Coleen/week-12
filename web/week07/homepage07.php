@@ -39,7 +39,7 @@ if (isset($_POST)) {
     if (!empty($username1) && !empty($password1)) {
 		//$passwordHash = password_hash('$password1', PASSWORD_DEFAULT);
 		//echo "$passwordHash";
-		$hashAndSalt = password_hash($password1, PASSWORD_BCRYPT);
+		//$hashAndSalt = password_hash($password1, PASSWORD_BCRYPT);
 		$id = getUserId($username1, $password1);
 		if (!empty($id)) {
         header('Location: Week06.php');
