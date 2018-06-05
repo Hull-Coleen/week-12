@@ -8,8 +8,6 @@ $error = "";
 $pass = "";
 $pattern = '/^(?=\D*\d)[^ ]{6,}$/';
 
-//Tammy Dresen<input type="password" name="password" id="password" 
-//required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
     $username = htmlspecialchars($_POST['username']);
@@ -101,7 +99,8 @@ var check = function() {
 <p id="form">
   
   <label for="username">User Name</label>
-  <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
+  <input type="text" placeholder="Name" id="username1" name="username1" 
+  value="<?php echo $username1 ?>" ><br><br>
   <label for="password">Password</label>
   <input type="password" onkeyup="check();" placeholder="Password" id="password1" name="password1">
   <span id='message'></span>
@@ -110,7 +109,7 @@ var check = function() {
   <input type="password" onkeyup="check();" placeholder="Password" id="password2" name="password2">
   <span id='message'></span>
   <span class="error"> <?php echo $passError ?></span>
-  <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
+  <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In"><span id='message'></span>
   </p>
 </form>
 </div>
@@ -126,7 +125,8 @@ var check = function() {
   <br /><br />
   <label for="password">Passwork</label>
   <input type="password" placeholder="Password" id="password" name="password" 
-  required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"><span class="error"> <?php echo $pass ?></span>
+  required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+  <span class="error"> <?php echo $pass ?></span>
 			
   <br /><br />
 
