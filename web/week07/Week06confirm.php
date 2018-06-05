@@ -25,6 +25,7 @@ foreach ($cart as $c) { ?>
       <img id="cart" src="<?php echo $c['image'] ?>" alt="Flower">
       <?php echo $c['description'] ?><br />
 	  <?php echo $c['flower_price']  ?><br />
+	  <?php echo $c['amount']  ?><br />
 	  </p> 
 	  
     </div>
