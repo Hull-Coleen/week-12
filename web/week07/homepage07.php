@@ -16,7 +16,7 @@ if (isset($_POST)) {
 
     if (!empty($username1) && !empty($password1)) {
 		$pass = getUserPassword($username1);
-		echo $password1 . $pass;
+		echo "pass " . $password1 . $pass;
 		if (password_verify($password1, $pass)) {
 		
 		   $id = getUserId($username1, $password1);
