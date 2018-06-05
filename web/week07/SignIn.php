@@ -23,7 +23,7 @@ if (isset($_POST)) {
 		$_SESSION["b"] = $pass;
 		if (password_verify($password1, $pass)) {
 		
-		   $id = getUserId($username1, $password1);
+		   $id = getUserId($username1, $pass);
 		   if (!empty($id)) {
               header('Location: Week06.php');
            }
