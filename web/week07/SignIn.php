@@ -102,7 +102,7 @@ if (isset($_POST)) {
   <input type="text" placeholder="user Name" id="username" name="username">
   <br /><br />
   <label for="password">Passwork</label>
-  <input type="password" placeholder="Password" id="password" name="password">
+  <input type="password" placeholder="Password" id="password" name="password"><span class="error"> <?php echo $pass ?></span>
 			
   <br /><br />
 
