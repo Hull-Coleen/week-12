@@ -4,7 +4,7 @@ include_once('dbConnect.php');
 
 $id = $_SESSION["id"];
 $t = $_GET['_delete'];
-$_SESSION = $_POST[
+
 if (!empty($t)) {
 	deleteFromCart($_SESSION["id"], $t);
 }
@@ -39,9 +39,11 @@ foreach ($cart as $c) { ?>
 	 </form> 
     </div>
 	<?php
-	
+	if (!empty($_POST[$c['flower_id']])) {
+	$_SESSION['a'] = $_POST[$c['flower_id']];
+	}
 }
-
+echo $_SESSION['a'];
 ?>
 <a href="Week06confirm.php">Complete Transaction</a><br>
 
