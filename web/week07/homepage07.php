@@ -3,6 +3,8 @@ session_start();
 include_once('dbConnect.php');
 $_SESSION["id"];
 $id;
+$_SESSION["a"];
+$_SESSION["b"];
 
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
@@ -12,13 +14,14 @@ if (isset($_POST)) {
     $email = htmlspecialchars($_POST['email']);
 	$username1 = htmlspecialchars($_POST['username1']);
     $password1 = htmlspecialchars($_POST['password1']);
-	
+	$_SESSION["a"] = $password1;;
 
-    //if (!empty($username1) && !empty($password1)) {
+    if (!empty($username1) && !empty($password1)) {
 		//echo "pass " . $password1;
 		//$pass = getUserPassword($username1);
 		//echo "hash " . $pass;
-		
+		$pass = getUserPassword($username1);
+		$_SESSION["b"] = $pass;
 		if (password_verify($password1, $pass)) {
 		
 		   $id = getUserId($username1, $password1);
@@ -28,7 +31,7 @@ if (isset($_POST)) {
 		} else {
 			echo "wrong password";
 		}
-//    }
+    }
     if (empty($username1 ) && !empty($name)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			$error "you must fill in all the text fields";
@@ -59,9 +62,9 @@ if (isset($_POST)) {
 <body>
 <a href="Week06.php">Homepage</a><br>
 <?php  
-echo "pass " . $password1;
-		$pass = getUserPassword($username1);
-		echo "hash " . $pass;
+echo "pass " . $_SESSION["a"];
+		
+		echo "hash " . $_SESSION["b"];
 ?>
 
 <div id="row">
