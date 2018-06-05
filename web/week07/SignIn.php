@@ -103,11 +103,11 @@ var check = function() {
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
-  <input type="password" oninput="check() placeholder="Password" id="password1" name="password1">
+  <input type="password" onkeyup="check();" placeholder="Password" id="password1" name="password1">
   <span id='message'></span>
   <span class="error"> <?php echo $passError ?></span><br>
   <label for="password">Password</label>
-  <input type="password" oninput="check() placeholder="Password" id="password2" name="password2">
+  <input type="password" onkeyup="check();" placeholder="Password" id="password2" name="password2">
   <span id='message'></span>
   <span class="error"> <?php echo $passError ?></span>
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
