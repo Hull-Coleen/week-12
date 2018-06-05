@@ -14,8 +14,13 @@ if (isset($_POST)) {
 	$username1 = htmlspecialchars($_POST['username1']);
     $password1 = htmlspecialchars($_POST['password1']);
 	$password2 = htmlspecialchars($_POST['password2']);
+	if (preg_match($password1 $password2)) {
+	echo "working";
+	
+   }
 
     if (!empty($username1) && !empty($password1)) {
+		
 		$pass = getUserPassword($username1);
 		
 		if (password_verify($password1, $pass)) {
@@ -62,7 +67,10 @@ $pass;
 $pass2;
 if (preg_match($pass, $pass2)) {
 	echo "working";
+	
 }
+echo $pass;
+echo $pass2;
 ?>
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
