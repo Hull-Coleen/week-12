@@ -1,13 +1,8 @@
 <?php
 session_start();
 include_once('dbConnect.php');
-require 'password.php';
 $_SESSION["id"];
 $id;
-
-
-
-
 
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
@@ -20,8 +15,6 @@ if (isset($_POST)) {
 	
 
     if (!empty($username1) && !empty($password1)) {
-		//$passwordHash = password_hash('$password1', PASSWORD_DEFAULT);
-		//echo "$passwordHash";
 		
 		$id = getUserId($username1, $password1);
 		if (!empty($id)) {
