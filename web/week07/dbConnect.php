@@ -124,6 +124,23 @@ function getUserInfo($id) {
         echo $e;
     }
 }
+function updateCart ($user_id, $flower_id, $num) {
+	global $db;
+    try {
+        $query = 'UPDATE TABLE cart
+		SET amount = $num
+		WHERE user_id = :user_id
+		AND flower_id = :flower_id';
+        $statement = $db->prepare($query);
+		$statement->bindValue(':user_id', $user_id);
+		$statement->bindValue(':flower_id', $flower_id);
+        $statement->execute();
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
+	
 function getCart ($id) {
 	global $db;
     try {
