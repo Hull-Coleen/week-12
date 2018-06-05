@@ -128,12 +128,13 @@ function updateCart ($user_id, $flower_id, $num) {
 	global $db;
     try {
         $query = 'UPDATE cart
-		SET amount = $num
+		SET amount = :amount
 		WHERE user_id = :user_id
 		AND flower_id = :flower_id';
         $statement = $db->prepare($query);
 		$statement->bindValue(':user_id', $user_id);
 		$statement->bindValue(':flower_id', $flower_id);
+		$statement->bindValue(':amount', $num, PDO::PARAM_INT);
         $statement->execute();
     } catch (PDOException $e) {
         $e->getMessage();
