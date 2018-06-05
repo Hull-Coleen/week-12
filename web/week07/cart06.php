@@ -31,10 +31,10 @@ foreach ($cart as $c) { ?>
       <?php echo $c['description'] ?><br />
 	  <?php echo $c['flower_price']  ?><br />
 	  <?php echo "<a href='{$_SERVER["PHP_SELF"]}?_delete={$c['flower_id']}'>Delete</a>"; ?>
-	  <input type="number" maxlength="4" size="4" placeholder="<?php echo $c['amount'] ?>" 
+	  <input type="number" placeholder="<?php echo $c['amount'] ?>" 
 	  id="<?php echo $c['flower_id'] ?>"
 	  name="<?php echo $c['flower_id'] ?>">
-      <span id='message'></span><input type="submit" name="update" value="Update">
+      <input type="submit" name="update" value="Update">
   
 	  </p> 
 	 </form> 
