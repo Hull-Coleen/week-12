@@ -14,7 +14,7 @@ if (isset($_POST)) {
 	$username1 = htmlspecialchars($_POST['username1']);
     $password1 = htmlspecialchars($_POST['password1']);
 	$password2 = htmlspecialchars($_POST['password2']);
-	if ($password1 == $password2)) {
+	if ($password1 == $password2) {
 	echo "working";
 	
    }
