@@ -39,7 +39,7 @@ $items = getFlowers();
   
    </div>
    <div id="after"></div>
-   <br><br><br><div id="sub" ><input type="submit" name="submit" value="Submit"></div>  		
+   <br><br><br><div id="sub" ><input class="button" type="submit" name="submit" value="Submit"></div>  		
 			
 </form>
  </body>
