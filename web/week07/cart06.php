@@ -47,7 +47,7 @@ foreach ($cart as $c) { ?>
 }
 
 ?>
-<a href="Week06confirm.php">Complete Transaction</a><br>
+<p><a href="Week06confirm.php">Complete Transaction</a></p><br>
 
 </body>
 </html>
