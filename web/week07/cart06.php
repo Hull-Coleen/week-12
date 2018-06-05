@@ -39,9 +39,9 @@ foreach ($cart as $c) { ?>
 	 </form> 
     </div>
 	<?php
-	$_SESSION['a'] = $_POST[$c['flower_id']];
+	
 }
-echo $_SESSION['a'];
+
 ?>
 <a href="Week06confirm.php">Complete Transaction</a><br>
 
