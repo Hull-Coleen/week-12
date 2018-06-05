@@ -13,6 +13,7 @@ if (isset($_POST)) {
     $email = htmlspecialchars($_POST['email']);
 	$username1 = htmlspecialchars($_POST['username1']);
     $password1 = htmlspecialchars($_POST['password1']);
+	$password2 = htmlspecialchars($_POST['password2']);
 
     if (!empty($username1) && !empty($password1)) {
 		$pass = getUserPassword($username1);
@@ -56,7 +57,10 @@ if (isset($_POST)) {
 </head>
 <body>
 <a href="Week06.php">Homepage</a><br>
-
+<?php 
+$pass;
+$pass2;
+?>
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
@@ -65,9 +69,9 @@ if (isset($_POST)) {
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password1" name="password1">
+  <input type="password" placeholder="Password" id="password1" name="password1" value="<?php echo $pass ?>">
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password2" name="password2">
+  <input type="password" placeholder="Password" id="password2" name="password2" value="<?php echo $pass2 ?>">
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
