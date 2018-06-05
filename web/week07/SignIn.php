@@ -31,7 +31,7 @@ if (isset($_POST)) {
 		   }
         }
 		else {
-			$error = "* Passwords don't match";
+			$passError = "* Passwords don't match";
 		}
 	}
     if (empty($username1 ) && !empty($name)) {
@@ -73,9 +73,9 @@ if (isset($_POST)) {
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password1" name="password1"><span class="error"> <?php echo $error ?></span><br>
+  <input type="password" placeholder="Password" id="password1" name="password1"><span class="error"> <?php echo $passError ?></span><br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password2" name="password2"><span class="error"> <?php echo $error ?></span>
+  <input type="password" placeholder="Password" id="password2" name="password2"><span class="error"> <?php echo $passError ?></span>
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
