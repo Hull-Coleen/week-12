@@ -15,9 +15,9 @@ if (isset($_POST)) {
 	
 
     //if (!empty($username1) && !empty($password1)) {
-		echo "pass " . $password1;
-		$pass = getUserPassword($username1);
-		echo "hash " . $pass;
+		//echo "pass " . $password1;
+		//$pass = getUserPassword($username1);
+		//echo "hash " . $pass;
 		
 		if (password_verify($password1, $pass)) {
 		
@@ -58,6 +58,11 @@ if (isset($_POST)) {
 </head>
 <body>
 <a href="Week06.php">Homepage</a><br>
+<?php  
+echo "pass " . $password1;
+		$pass = getUserPassword($username1);
+		echo "hash " . $pass;
+?>
 
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
