@@ -5,7 +5,7 @@ $_SESSION["id"];
 $id;
 $passError = "";
 $error = "";
-
+$pass = "";
 if (isset($_POST)) {
     $name = htmlspecialchars($_POST['name']);
     $username = htmlspecialchars($_POST['username']);
