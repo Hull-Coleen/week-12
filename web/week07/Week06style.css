@@ -74,9 +74,9 @@ div#row {
 	padding: 10px;
 	display: inline-block;
 }
-span.error (
+span.error {
     color: red;
-	background-color:red;
+//	background-color:red;
 }
 body {
 	padding: 40px;
