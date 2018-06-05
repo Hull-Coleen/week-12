@@ -41,6 +41,7 @@ foreach ($cart as $c) { ?>
 	<?php
 	if (!empty($_POST[$c['flower_id']])) {
 	     updateCart($_SESSION['id'], $c['flower_id'], $_POST[$c['flower_id']]); 
+	     echo $_SESSION['id'] . "  " . $c['flower_id'] . "  " . $_POST[$c['flower_id']];
 	}
 }
 
