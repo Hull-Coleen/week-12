@@ -67,21 +67,15 @@ if (isset($_POST)) {
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-<?php
-if(isset($error) && !empty($error)){
-    ?>
-    <span class="error"><?= $error; ?></span>
-    <?php
-}
-?>
+
 <p id="form">
   
   <label for="username">User Name</label>
   <input type="text" placeholder="Name" id="username1" name="username1"><br><br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password1" name="password1" value="<?php echo $pass ?>"><span class="error"> <?php echo "*"?></span>
+  <input type="password" placeholder="Password" id="password1" name="password1" value="<?php echo $pass ?>"><span class="error"> <?php echo $error ?></span>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password2" name="password2" value="<?php echo $pass2 ?>"><span class="error"> <?php echo "*"?></span>
+  <input type="password" placeholder="Password" id="password2" name="password2" value="<?php echo $pass2 ?>"><span class="error"> <?php echo $error ?></span>
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
 </form>
