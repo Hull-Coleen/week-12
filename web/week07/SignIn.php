@@ -60,6 +60,9 @@ if (isset($_POST)) {
 <?php 
 $pass;
 $pass2;
+if (preg_match($pass, $pass2)) {
+	echo "working";
+}
 ?>
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
