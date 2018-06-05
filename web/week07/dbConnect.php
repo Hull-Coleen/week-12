@@ -175,6 +175,21 @@ function setUser ($name, $username, $password, $address, $email) {
         echo $e;
     }
 }
+function getUserPassword($username) {
+	global $db;
+    $query = 'SELECT user_password FROM public.user WHERE (user_user_name = :user_user_name)';
+    try {
+        $statement = $db->prepare($query);
+		$statement->bindValue(':user_user_name', $username);
+        $statement->execute();
+        $result = $statement->fetch()[user_password];
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $e->getMessage();
+        echo $e;
+    }
+}
 function getUserId($username, $password) {
 	global $db;
     $query = 'SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)

@@ -15,11 +15,16 @@ if (isset($_POST)) {
 	
 
     if (!empty($username1) && !empty($password1)) {
+		$pass = getUserPassword($username1);
+		if (password_verify('password1', $pass)) {
 		
-		$id = getUserId($username1, $password1);
-		if (!empty($id)) {
-        header('Location: Week06.php');
-        }
+		   $id = getUserId($username1, $password1);
+		   if (!empty($id)) {
+              header('Location: Week06.php');
+           }
+		} else {
+			echo "wrong password";
+		}
     }
     if (empty($username1 ) && !empty($name)) {
 		if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
