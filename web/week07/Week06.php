@@ -21,6 +21,7 @@ $items = getFlowers();
 <body>
 <?php
 echo "Welcome " . $_SESSION['name'] . "<br>";
+echo $_SESSION['id'];
 ?>
 <a href="search06.php">Search Page</a><br>
 <a href="SignIn.php">Sign In</a><br>
