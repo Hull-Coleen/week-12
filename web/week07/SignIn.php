@@ -60,9 +60,10 @@ if (isset($_POST)) {
              }else {
 				 echo "else statement";
 			    $id = "";
+				
 			    $error = "unable to create account, Please reenter your information";
-            }					 
-			 
+            	echo "<script type='text/javascript'>alert(\"$error\");</script>";				 
+			 }
 		  }
 		
 		}
@@ -135,7 +136,7 @@ var check = function() {
   
   <label for="email">Address</label>
   <input type="text" placeholder="Address" id="address" name="address" required>
-  <br /><br />
+  <br /><span class="error"> <?php echo $error ?></span><br />
   </p><p><input type="submit" name="submit" value="Create Account">
   
  
