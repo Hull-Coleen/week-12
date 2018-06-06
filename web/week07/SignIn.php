@@ -58,6 +58,7 @@ if (isset($_POST)) {
                 //header('Location: Week06.php');
 				//die();
              }else {
+				 echo "else statement";
 			    $id = "";
 			    $error = "unable to create account, Please reenter your information";
             }					 
