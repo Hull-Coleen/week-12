@@ -118,7 +118,7 @@ var check = function() {
   <br /><br />
   <label for="password">Passwork</label>
   <input type="password" placeholder="Password" id="password" name="password" 
-  required pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+  required pattern="$pattern">
   <span class="error"> <?php echo $pass ?></span>
 			
   <br /><br />
