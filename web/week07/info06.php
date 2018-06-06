@@ -5,9 +5,9 @@ include_once('dbConnect.php');
 
 if (empty(htmlspecialchars($_POST["item2"])) {
 	
-	htmlspecialchars($_POST["item"]
+	$_SESSION['item'] = htmlspecialchars($_POST["item"]);
 }else 
-	htmlspecialchars($_POST["item2"]
+	$_SESSION['item'] = htmlspecialchars($_POST["item2"]);
 }
 $description = $_SESSION["item"];
 $price = getPrice($description);
