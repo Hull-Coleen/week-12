@@ -209,7 +209,7 @@ function getUserPassword($username) {
         echo $e;
     }
 }
-function getUserId($username) {
+function checkUserId($username) {
 	global $db;
     $query = 'SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)';
     try {
@@ -217,8 +217,15 @@ function getUserId($username) {
 		$statement->bindValue(':user_user_name', $username);
         $statement->execute();
         $result = $statement->fetch()[user_id];
-        $statement->closeCursor();
-        return $result;
+		$statement->closeCursor();
+		if(empty($result))  {
+			return false;
+		}
+		else {
+			return true;
+		}
+        
+        
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
