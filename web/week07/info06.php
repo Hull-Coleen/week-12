@@ -3,7 +3,7 @@
 session_start();
 include_once('dbConnect.php');
 
-if (empty(htmlspecialchars($_POST["item2"])) {
+if (empty(htmlspecialchars($_POST["item2"]))) {
 	
 	$_SESSION['item'] = htmlspecialchars($_POST["item"]);
 }else 
