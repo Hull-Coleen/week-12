@@ -51,8 +51,10 @@ if (isset($_POST)) {
 			 $id1 = getUserId($username, $hashedPassword);
 			 echo $id1;
 			 if($id1 != "") {
-				echo $_SESSION["id"] = $id;
-			    echo $_SESSION['name'] = $username;
+				$_SESSION["id"] = $id;
+			    $_SESSION['name'] = $username;
+				echo $_SESSION["id"];
+				echo $_SESSION["name"];
                 //header('Location: Week06.php');
 				//die();
              }else {
