@@ -2,6 +2,7 @@
 session_start();
 include_once('dbConnect.php');
 $_SESSION["id"];
+$_SESSION["name"];
 $id;
 $passError = "";
 $error = "";
@@ -24,6 +25,7 @@ if (isset($_POST)) {
 		if (password_verify($password1, $pass)) {
 		   $id = getUserId($username1, $pass);
 		   if (!empty($id)) {
+			   $_SESSION['name'] = $username1;
               header('Location: Week06.php');
 			  die();
            }
@@ -46,8 +48,9 @@ if (isset($_POST)) {
 			 $id = setUser($name, $username, $hashedPassword, $address, $email);
 			  if(isset($_POST['submit'])) {
 			     if (!empty($id)) {
-                   header('Location: Week06.php');
-				   die();
+					 $_SESSION['name'] = $username;
+                     header('Location: Week06.php');
+				     die();
                  }
                  else {
 					 $error = "unable to create account, Please reenter your information";
@@ -94,11 +97,10 @@ var check = function() {
   value="<?php echo $username1 ?>" ><br><br>
   <label for="password">Password</label>
   <input type="password" onkeyup="check();" placeholder="Password" id="password1" name="password1">
-  <span id='message'></span>
-  <span class="error"> <?php echo $passError ?></span><br>
+  <span id='message'></span><br>
   <label for="password">Password</label>
   <input type="password" onkeyup="check();" placeholder="Password" id="password2" name="password2">
-  <span id='message'></span>
+  <span id='message'></span><br>
   <span class="error"> <?php echo $passError ?></span>
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
   </p>
