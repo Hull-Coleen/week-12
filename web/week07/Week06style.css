@@ -113,7 +113,7 @@ input[type=name], input[type=password],  input[type=text], input[type=email] , s
     box-sizing: border-box;
     
 }
-input[type=name] {
+input[type=text] {
     margin-left: 18px;
 }
 
