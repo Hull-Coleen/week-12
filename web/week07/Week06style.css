@@ -103,11 +103,11 @@ input[type=number], select {
     box-sizing: border-box;
     
 }
-input[type=name], input[type=password],  input[type=text], select {
-      width: 60px;
+input[type=name], input[type=password],  input[type=text], input[type=email] , select {
+      //width: 60px;
       padding: 10px 10px;
       margin: 8px 8px;
-      display: inline-block;
+      //display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
