@@ -48,7 +48,8 @@ if (isset($_POST)) {
 		  else {
 		     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 			 $id = setUser($name, $username, $hashedPassword, $address, $email);
-			  //if(isset($_POST['submit'])) {
+			 $checkPassword = getUserPassword($username);
+			 if(!empty($checkPassword)) {
 			     if (!empty($id)) {
 					 $_SESSION["id"] = $id;
 					 $_SESSION['name'] = $username;
@@ -59,7 +60,7 @@ if (isset($_POST)) {
 					 $id = "";
 					 $error = "unable to create account, Please reenter your information";
                  }					 
-			  //}
+			  }
 		  }
 		
 		}
