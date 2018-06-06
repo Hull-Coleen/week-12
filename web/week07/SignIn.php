@@ -117,8 +117,7 @@ var check = function() {
   <input type="text" placeholder="user Name" id="username" name="username" required>
   <br /><br />
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password" name="password" 
-  required pattern="$pattern">
+  <input type="password" placeholder="Password" id="password" name="password">
   <span class="error"> <?php echo $pass ?></span>
 			
   <br /><br />
