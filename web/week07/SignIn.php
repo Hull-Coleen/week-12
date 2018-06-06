@@ -25,11 +25,13 @@ if (isset($_POST)) {
 		if (password_verify($password1, $pass)) {
 		   $id = getUserId($username1, $pass);
 		   if (!empty($id)) {
+			   $_SESSION["id"] = $id;
 			   $_SESSION['name'] = $username1;
               header('Location: Week06.php');
 			  die();
            }
 		} else {
+			$id = "";
 		   $passError =  "Password does not match";
 		}
     
@@ -46,21 +48,23 @@ if (isset($_POST)) {
 		  else {
 		     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 			 $id = setUser($name, $username, $hashedPassword, $address, $email);
-			  if(isset($_POST['submit'])) {
+			  //if(isset($_POST['submit'])) {
 			     if (!empty($id)) {
+					 $_SESSION["id"] = $id;
 					 $_SESSION['name'] = $username;
                      header('Location: Week06.php');
 				     die();
                  }
                  else {
+					 $id = "";
 					 $error = "unable to create account, Please reenter your information";
                  }					 
-			  }
+			  //}
 		  }
 		
 		}
 	}
-	$_SESSION["id"] = $id;
+	
 }
 	
 
