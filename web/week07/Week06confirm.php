@@ -46,7 +46,7 @@ foreach ($cart as $c) { ?>
 }
 ?>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-<p><input type="submit" name="submit" value="Confirm Transaction"></p>
+<p><input class="button" type="submit" name="submit" value="Confirm Transaction"></p>
 </form>
 </body>
 </html>

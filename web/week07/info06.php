@@ -3,8 +3,12 @@
 session_start();
 include_once('dbConnect.php');
 
-$_SESSION["item"] = htmlspecialchars($_POST["item"]);
-
+if (empty(htmlspecialchars($_POST["item2"])) {
+	
+	htmlspecialchars($_POST["item"]
+}else 
+	htmlspecialchars($_POST["item2"]
+}
 $description = $_SESSION["item"];
 $price = getPrice($description);
 $image =getImage($description); 

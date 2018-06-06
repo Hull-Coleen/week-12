@@ -13,10 +13,10 @@ $items = searchFlowers($occasion);
 <body>
 <?php 
  
- if (!empty(htmlspecialchars($_POST["item2"]))) {
-	$id = getFlowerId($_POST["item2"]);
-	addCart($_SESSION["id"], $id);
- }
+// if (!empty(htmlspecialchars($_POST["item2"]))) {
+	//$id = getFlowerId($_POST["item2"]);
+	//addCart($_SESSION["id"], $id);
+// }
  
 ?>
 
@@ -38,7 +38,7 @@ $items = searchFlowers($occasion);
     <input type="submit" value="ENTER">
   </p>
 </form>
-<form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
+<form method="POST" action="info06.php">
   <div>
    <?php
   foreach ($items as $item)
