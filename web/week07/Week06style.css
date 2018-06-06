@@ -81,6 +81,19 @@ a img.link {
 	height: 28px;
 	width: 40px;
 }
+a#word {
+	background-color: #18cdf7; 
+	border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 div#row2 {
 	width: 40%;
 	padding: 10px;

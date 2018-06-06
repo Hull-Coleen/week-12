@@ -11,14 +11,6 @@ $items = searchFlowers($occasion);
 <link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
-<?php 
- 
-// if (!empty(htmlspecialchars($_POST["item2"]))) {
-	//$id = getFlowerId($_POST["item2"]);
-	//addCart($_SESSION["id"], $id);
-// }
- 
-?>
 
 <div><a id="link" href="cart06.php">
   <img class="link" src="cart.png" alt="Cart">

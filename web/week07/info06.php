@@ -35,8 +35,13 @@ if (empty($image)) {
 <link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
-<a href="Week06.php">Continue Shopping</a><br>
-<a href="cart06.php">Cart</a><br>
+<div><a id="link" href="cart06.php">
+  <img class="link" src="cart.png" alt="Cart">
+</a></div>
+<div><a id="link" href="Week06.php">
+  <img class="link" src="flower.jpg" alt="Home"><br>
+  <span>Home</span>
+</a></div>
 
 <h1>Product Information</h1><br>
 <img id ="flower" src="<?php echo $_SESSION['image']; ?>"  alt="World">
