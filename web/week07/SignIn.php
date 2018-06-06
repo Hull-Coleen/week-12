@@ -97,7 +97,7 @@ if (isset($_POST)) {
   <input type="password" onkeyup="check(password1, password2);" placeholder="Password" id="password2" name="password2">
   <span id='message1'></span><br>
   <span class="error"> <?php echo $passError ?></span>
-  <br><br><br><br><br><br><br><br></p><p><input class="button" type="submit" name="submit" value="Sign In">
+  <br><br><br><br><br><br><br><br></p><p><input id="sign" class="button" type="submit" name="submit" value="Sign In">
   </p>
 </form>
 </div>

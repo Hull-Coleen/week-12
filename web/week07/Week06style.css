@@ -94,6 +94,10 @@ a#word {
     margin: 4px 2px;
     cursor: pointer;
 }
+input#sign {
+	margin-left: 20%;
+}
+
 div#row2 {
 	width: 40%;
 	padding: 10px;
