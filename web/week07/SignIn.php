@@ -38,7 +38,7 @@ if (isset($_POST)) {
 	}
     if (empty($username1 ) && !empty($name)) {
 		if ((strlen($password) < 7) || (!preg_match($pattern, $password))) {
-			$pass = "Password needs to be at least 7 chaaracters long and have one number";
+			$pass = "Password needs to be at least 7" . "<br>" . " characters long and have one number";
 		} 
 		else {
 		  if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
@@ -53,12 +53,10 @@ if (isset($_POST)) {
 			 if($id1 != "") {
 				$_SESSION["id"] = $id;
 			    $_SESSION['name'] = $username;
-				echo $_SESSION["id"];
-				echo $_SESSION["name"];
-                //header('Location: Week06.php');
-				//die();
+		
+                header('Location: Week06.php');
+				die();
              }else {
-				 echo "else statement";
 			    $id = "";
 				
 			    $error = "unable to create account, Please reenter your information";
@@ -78,17 +76,19 @@ if (isset($_POST)) {
 <head>
 <title>Sign In Page</title>
 <link rel="stylesheet" type="text/css" href="Week06style.css">
+
+<script type="text/javascript" src="prove.js"></script>
 <script>
-var check = function() {
-  if (document.getElementById('password1').value ==
-    document.getElementById('password2').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = 'matching';
-  } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'not matching';
-  }
-}
+//var check = function() {
+  //if (document.getElementById('password1').value ==
+    //document.getElementById('password2').value) {
+    //document.getElementById('message').style.color = 'green';
+    //document.getElementById('message').innerHTML = 'matching';
+  //} else {
+    //document.getElementById('message').style.color = 'red';
+    //document.getElementById('message').innerHTML = 'not matching';
+ // }
+//}
 </script>
 </head>
 <body>
@@ -104,10 +104,10 @@ var check = function() {
   <input type="text" placeholder="Name" id="username1" name="username1" 
   value="<?php echo $username1 ?>" ><br><br>
   <label for="password">Password</label>
-  <input type="password" onkeyup="check();" placeholder="Password" id="password1" name="password1">
+  <input type="password" onkeyup="check(password1, password2);" placeholder="Password" id="password1" name="password1">
   <span id='message'></span><br>
   <label for="password">Password</label>
-  <input type="password" onkeyup="check();" placeholder="Password" id="password2" name="password2">
+  <input type="password" onkeyup="check(password1, password2);" placeholder="Password" id="password2" name="password2">
   <span id='message'></span><br>
   <span class="error"> <?php echo $passError ?></span>
   <br><br><br><br><br><br><br><br></p><p><input type="submit" name="submit" value="Sign In">
