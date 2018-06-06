@@ -53,7 +53,7 @@ if (empty($image)) {
   <p> <?php echo htmlspecialchars($_SESSION['desc']);
 	        echo "<br>";
 			echo $_SESSION['price']; ?> <br>
-    <input type="submit" name="submit" value="Add to Cart">  
+    <input class="button" type="submit" name="submit" value="Add to Cart">  
   </p>
 </form>
 	  
