@@ -19,52 +19,43 @@ if (isset($_POST)) {
 	$password2 = htmlspecialchars($_POST['password2']);
 	
 	 if (!empty($username1) && !empty($password1)) {
-		if ($password1 == $password2) {
+		$pass = getUserPassword($username1);
 		
-		   $pass = getUserPassword($username1);
-		
-		   if (password_verify($password1, $pass)) {
-		
-		      $id = getUserId($username1, $pass);
-		      if (!empty($id)) {
-                 header('Location: Week06.php');
-              }
-		   } else {
-			   $passError =  "wrong password";
-		   }
-        }
-		else {
-			$passError = "* Passwords don't match";
+		if (password_verify($password1, $pass)) {
+		   $id = getUserId($username1, $pass);
+		   if (!empty($id)) {
+              header('Location: Week06.php');
+			  die();
+           }
+		} else {
+		   $passError =  "Password does not match";
 		}
+    
 	}
     if (empty($username1 ) && !empty($name)) {
-		if (strlen($password) < 7) {
-			$pass = "Password not long enough";
-			echo "first if";
+		if ((strlen($password) < 7) || (!preg_match($pattern, $password))) {
+			$pass = "Password needs to be at least 7 chaaracters long and have one number";
 		} 
 		else {
-		   if (!preg_match($pattern, $password)) {
-			   $pass = "Password needs at least one number";
-			   echo "second if";
-		   }
-		   else {
-		      if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
+		  if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			     $error = "you must fill in all the text fields";
 			     echo "<script type='text/javascript'>alert(\"$error\");</script>";
-		      }
-		      else {
-		         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-			     $id = setUser($name, $username, $hashedPassword, $address, $email);
-			     if(isset($_POST['submit'])) {
-				   if (!empty($id)) {
-                      header('Location: Week06.php');
-                   } 
-			     }
-		      }
+		  }
+		  else {
+		     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+			 $id = setUser($name, $username, $hashedPassword, $address, $email);
+			  if(isset($_POST['submit'])) {
+			     if (!empty($id)) {
+                   header('Location: Week06.php');
+				   die();
+                 }
+                 else {
+					 $error = "unable to create account, Please reenter your information";
+                 }					 
+			  }
+		  }
 		
-		    }
 		}
-		
 	}
 	$_SESSION["id"] = $id;
 }
@@ -121,7 +112,7 @@ var check = function() {
   <input type="text" placeholder="Name" id="name" name="name" required >
   <br /><br />
   <label for="username">User Name</label>
-  <input type="text" placeholder="user Name" id="username" name="username">
+  <input type="text" placeholder="user Name" id="username" name="username" required>
   <br /><br />
   <label for="password">Passwork</label>
   <input type="password" placeholder="Password" id="password" name="password" 
@@ -131,11 +122,11 @@ var check = function() {
   <br /><br />
 
   <label for="email">Email</label>
-  <input type="email" placeholder="Email Address" id="email" name="email">
+  <input type="email" placeholder="Email Address" id="email" name="email" required>
   <br /><br />
   
   <label for="email">Address</label>
-  <input type="text" placeholder="Address" id="address" name="address">
+  <input type="text" placeholder="Address" id="address" name="address" required>
   <br /><br />
   </p><p><input type="submit" name="submit" value="Create Account">
   
