@@ -20,8 +20,11 @@ $cart= getCart($_SESSION['id']);
 <link rel="stylesheet" type="text/css" href="Week06style.css">
 </head>
 <body>
-<a href="Week06.php">Continue Shopping</a><br>
 
+<div><a id="link" href="Week06.php">
+  <img class="link" src="flower.jpg" alt="Home"><br>
+  <span>Home</span>
+</a></div>
 <h1>Shopping Cart</h1><br><br>
 
 <?php
