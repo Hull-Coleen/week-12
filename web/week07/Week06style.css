@@ -76,9 +76,9 @@ div#row {
 }
 a img.link {
 	margin-left: 20px;
-	border: 1px solid brown;
+	border: 1px solid #000080;
 	padding: 5px;
-	height: 32px;
+	height: 28px;
 	width: 40px;
 }
 div#row2 {
@@ -103,19 +103,17 @@ input[type=number], select {
     box-sizing: border-box;
     
 }
-input[type=name], input[type=password],  input[type=text], input[type=email] , select {
+input[type=password],  input[type=text], input[type=email] , select {
       //width: 60px;
       padding: 10px 10px;
-      //margin: 8px 8px;
+      margin: 8px 8px;
       //display: inline-block;
     border: 1px solid #000080;
-    border-radius: 4px;
+    border-radius: 2px;
     box-sizing: border-box;
     
 }
-input[type=text] {
-    margin-left: 18px;
-}
+
 
 .button {
     background-color: #18cdf7; 

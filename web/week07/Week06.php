@@ -20,8 +20,8 @@ $items = getFlowers();
 
 <body>
 <?php
-echo "Welcome " . $_SESSION['name'] . "<br>";
-echo $_SESSION['id'];
+echo "Welcome " . $_SESSION['name'] . "<br><br>";
+
 ?>
 <a href="search06.php">Search Page</a><br>
 <a href="SignIn.php">Sign In</a><br>
