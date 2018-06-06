@@ -48,10 +48,10 @@ if (isset($_POST)) {
 		  else {
 		     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 			 $id = setUser($name, $username, $hashedPassword, $address, $email);
-			 $id = getUserId($username);
+			 $id1 = getUserId($username);
 			 //if(!empty($checkPassword)) {
-			     if (!empty($id)) {
-					 $_SESSION["id"] = $id;
+			     if (!empty($id1)) {
+					 $_SESSION["id"] = $id1;
 					 $_SESSION['name'] = $username;
                      header('Location: Week06.php');
 				     die();
