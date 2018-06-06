@@ -23,8 +23,8 @@ $items = getFlowers();
 echo "Welcome " . $_SESSION['name'] . "<br><br>";
 
 ?>
-<a href="search06.php">Search Page</a><br>
-<a href="SignIn.php">Sign In</a><br>
+<a id="word" href="search06.php">Search Page</a><br>
+<a id="word" href="SignIn.php">Sign In</a><br>
 
  <form method="POST" action="info06.php">
    <div>
