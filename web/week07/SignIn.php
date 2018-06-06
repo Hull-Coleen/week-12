@@ -48,7 +48,7 @@ if (isset($_POST)) {
 		  else {
 		     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 			 //$id = setUser($name, $username, $hashedPassword, $address, $email);
-			 $id1 = getUserId($username, $hashedPassword);
+			 $id1 = checkUserId($username);
 			 echo $id1;
 			 if($id1 != "") {
 				$_SESSION["id"] = $id;

@@ -218,13 +218,13 @@ function checkUserId($username) {
         $statement->execute();
         $result = $statement->fetch()[user_id];
 		$statement->closeCursor();
-		if(empty($result))  {
-			return false;
-		}
-		else {
-			return true;
-		}
-        
+		//if(empty($result))  {
+			//return false;
+		//}
+		//else {
+			//return true;
+		//}
+        return $result;
         
     } catch (PDOException $e) {
         $e->getMessage();
