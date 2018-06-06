@@ -79,6 +79,7 @@ if (isset($_POST)) {
 
 <script type="text/javascript" src="prove.js"></script>
 <script>
+// adding a change to make sure it reset
 //var check = function() {
   //if (document.getElementById('password1').value ==
     //document.getElementById('password2').value) {
