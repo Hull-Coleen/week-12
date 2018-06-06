@@ -106,12 +106,15 @@ input[type=number], select {
 input[type=name], input[type=password],  input[type=text], input[type=email] , select {
       //width: 60px;
       padding: 10px 10px;
-      margin: 8px 8px;
+      //margin: 8px 8px;
       //display: inline-block;
-    border: 2px solid #000080;
+    border: 1px solid #000080;
     border-radius: 4px;
     box-sizing: border-box;
     
+}
+input[type=name] {
+    margin-left: 18px;
 }
 
 .button {
