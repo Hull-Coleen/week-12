@@ -22,7 +22,7 @@ function deleteUserCart ($id) {
 	    $statement = $db->prepare($query);
 		$statement->bindValue(':user_id', $id);
         $statement->execute();
-        return $result;
+		$statement->closeCursor();
 		
     } catch (PDOException $e) {
         $e->getMessage();
@@ -39,7 +39,7 @@ function deleteFromCart ($id, $flower_id) {
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
-		
+		$statement->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -57,7 +57,7 @@ function searchFlowers($occ) {
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
-		
+		$statement->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -71,7 +71,7 @@ function getFlowers() {
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
-		
+		$statement->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -86,7 +86,7 @@ function getPrice($desc) {
         $statement->execute();
         $result = $statement->fetch()['flower_price'];
         return $result;
-		
+		$statement->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -101,7 +101,7 @@ function getImage($desc) {
         $statement->execute();
         $result = $statement->fetch()['image'];
         return $result;
-		
+		$statement->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -118,7 +118,7 @@ function getUserInfo($id) {
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
-		
+		$statement->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -136,6 +136,7 @@ function updateCart ($user_id, $flower_id, $num) {
 		$statement->bindValue(':flower_id', $flower_id);
 		$statement->bindValue(':amount', $num, PDO::PARAM_INT);
         $statement->execute();
+		$statement->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -155,7 +156,7 @@ function getCart ($id) {
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
-		
+		$statement->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -167,6 +168,7 @@ function getFlowerId($flower_id) {
 	$stmt2->bindValue(':description', $flower_id);
     $stmt2->execute();
     $id = $stmt2->fetch()['flower_id'];
+	$stmt2->closeCursor();
 	return $id;
 	
 }
@@ -176,6 +178,7 @@ function addCart($user_id, $flower_id) {
         $query = "INSERT INTO cart (user_id, flower_id, amount)
             VALUES ($user_id, $flower_id, 1)";
         $db->exec($query);
+		$db->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -189,6 +192,7 @@ function setUser ($name, $username, $password, $address, $email) {
         $db->exec($query);
 		$newId = $db->lastInsertId('user_user_id_seq');
         return $newId;
+		$db->closeCursor();
     } catch (PDOException $e) {
         $e->getMessage();
         echo $e;
@@ -209,28 +213,7 @@ function getUserPassword($username) {
         echo $e;
     }
 }
-function checkUserId($username) {
-	global $db;
-    $query = 'SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)';
-    try {
-        $statement = $db->prepare($query);
-		$statement->bindValue(':user_user_name', $username);
-        $statement->execute();
-        $result = $statement->fetch()[user_id];
-		$statement->closeCursor();
-		//if(empty($result))  {
-			//return false;
-		//}
-		//else {
-			//return true;
-		//}
-        return $result;
-        
-    } catch (PDOException $e) {
-        $e->getMessage();
-        echo $e;
-    }
-}
+
 function getUserId($username, $password) {
 	global $db;
     $query = 'SELECT user_id FROM public.user WHERE (user_user_name = :user_user_name)

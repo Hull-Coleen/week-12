@@ -35,7 +35,7 @@ $items = searchFlowers($occasion);
     <label for="name">Occasion</label>
     <input type="text" placeholder="Occasion" id="occasion" name="occasion">
     <br /><br />
-    <input type="submit" value="ENTER">
+    <input class="button" type="submit" value="ENTER">
   </p>
 </form>
 <form method="POST" action="info06.php">

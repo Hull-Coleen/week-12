@@ -76,24 +76,10 @@ if (isset($_POST)) {
 <head>
 <title>Sign In Page</title>
 <link rel="stylesheet" type="text/css" href="Week06style.css">
-
 <script type="text/javascript" src="prove.js"></script>
-<script>
-// adding a change to make sure it reset
-//var check = function() {
-  //if (document.getElementById('password1').value ==
-    //document.getElementById('password2').value) {
-    //document.getElementById('message').style.color = 'green';
-    //document.getElementById('message').innerHTML = 'matching';
-  //} else {
-    //document.getElementById('message').style.color = 'red';
-    //document.getElementById('message').innerHTML = 'not matching';
- // }
-//}
-</script>
 </head>
 <body>
-
+<h1>Sign In Page</h1>
 
 <div id="row">
 <h1 id="form" >If you have an account, Please sign in</h1>
