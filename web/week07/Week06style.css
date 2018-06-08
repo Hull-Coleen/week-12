@@ -131,7 +131,7 @@ input[type=password],  input[type=text], input[type=email] , select {
     
 }
 select#occasion {
-	
+	width: 200px;
 }
 /*the container must be positioned relative:*/
 .custom-select {
