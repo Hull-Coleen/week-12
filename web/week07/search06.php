@@ -1,7 +1,8 @@
 <?php
 session_start();
 include_once('dbConnect.php');
-$occasion = htmlspecialchars($_POST["occasion"]);
+//$occasion = htmlspecialchars($_POST["occasion"]);
+$occasion = htmlspecialchars($_POST["Occasion"]);
 $items = searchFlowers($occasion);
 ?>
 <!DOCTYPE html>
@@ -28,6 +29,16 @@ $items = searchFlowers($occasion);
     <input type="text" placeholder="Occasion" id="occasion" name="occasion">
     <br /><br />
     <input class="button" type="submit" value="ENTER">
+  </p>
+</form>
+<form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
+  <p>
+    <select name="0ccasion">
+    <option value="Mother Day">Mother's Day</option>
+    <option value="Birthday">Birthday</option>
+    <option value="Anniversary">Anniversary</option>
+    </select>
+    <input type="submit" name="submit" value="Enter" />
   </p>
 </form>
 <form method="POST" action="info06.php">
