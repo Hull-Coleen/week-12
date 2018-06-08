@@ -141,9 +141,8 @@ select#occasion {
 //select:focus > option:checked { 
   //  background: #18cdf7 !important;
 //}
-select:hover {
-color: #444645;
-background: #ddd;
+div#option:hover {
+	background-color: #18cdf7;
 }
 .button {
     background-color: #18cdf7; 
