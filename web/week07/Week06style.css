@@ -136,7 +136,7 @@ select#occasion {
 	font-family: Agency FB;
 	font-size: 110%;
 }
-select.decoration option:hover {
+select.option option:hover {
     box-shadow: 0 0 10px 100px red inset;
 }
 .button {
