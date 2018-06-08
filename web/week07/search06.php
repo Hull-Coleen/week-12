@@ -34,9 +34,9 @@ $items = searchFlowers($occasion);
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
   <p>
     <select id="occasion" class="custom-select" name="Occasion">
-    <div id="option" ><option class="option" value="Mother Day">Mother's Day</option></div>
-    <div id="option"><option value="Birthday">Birthday</option></div>
-    <div id="option" ><option value="Anniversary">Anniversary</option></div>
+    <div class="option" ><option class="option" value="Mother Day">Mother's Day</option></div>
+    <div class="option"><option value="Birthday">Birthday</option></div>
+    <div class="option" ><option value="Anniversary">Anniversary</option></div>
     </select>
     <input class="button" type="submit" name="submit" value="Enter" />
   </p>
