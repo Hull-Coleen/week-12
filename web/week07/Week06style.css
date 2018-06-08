@@ -134,12 +134,16 @@ select#occasion {
 	width: 200px;
 	//background-color: #000080;
 	font-family: Agency FB;
-	font-size: 120%;
+	font-size: 110%;
 }
 //.custom-select:hover { background-color: red; border:1px solid red; }
 //.option:hover {  background-color: #18cdf7; border:1px solid #000080; }
-select:focus > option:checked { 
-    background: #18cdf7 !important;
+//select:focus > option:checked { 
+  //  background: #18cdf7 !important;
+//}
+select:hover {
+color: #444645;
+background: #ddd;
 }
 .button {
     background-color: #18cdf7; 
