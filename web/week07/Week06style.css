@@ -137,7 +137,7 @@ select#occasion {
 	font-size: 110%;
 }
 select.decoration option:hover {
-    box-shadow: 0 0 10px 100px #1882A8 inset;
+    box-shadow: 0 0 10px 100px red inset;
 }
 .button {
     background-color: #18cdf7; 
