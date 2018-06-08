@@ -21,16 +21,8 @@ $items = searchFlowers($occasion);
   <span>Home</span>
 </a></div>
 
-<h1>Please Enter your search criteria</h1>
-<p>Enter either Mother's Day, Birthday, or Anniversary</p>
-<form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
-  <p>
-    <label for="name">Occasion</label>
-    <input type="text" placeholder="Occasion" id="occasion" name="occasion">
-    <br /><br />
-    <input class="button" type="submit" value="ENTER">
-  </p>
-</form>
+<h1>Please Select From the Options Below</h1>
+
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
   <p>
     <select id="occasion" class="custom-select" name="Occasion">
