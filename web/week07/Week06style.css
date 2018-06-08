@@ -132,6 +132,8 @@ input[type=password],  input[type=text], input[type=email] , select {
 }
 select#occasion {
 	width: 200px;
+	background-color: #000080;
+	font-family: Arial;
 }
 /*the container must be positioned relative:*/
 .custom-select {
