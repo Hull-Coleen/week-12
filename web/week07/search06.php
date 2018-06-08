@@ -38,7 +38,7 @@ $items = searchFlowers($occasion);
     <option value="Birthday">Birthday</option>
     <option value="Anniversary">Anniversary</option>
     </select>
-    <input type="submit" name="submit" value="Enter" />
+    <input class="button" type="submit" name="submit" value="Enter" />
   </p>
 </form>
 <form method="POST" action="info06.php">
