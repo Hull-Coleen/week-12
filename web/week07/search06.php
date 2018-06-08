@@ -33,7 +33,7 @@ $items = searchFlowers($occasion);
 </form>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
   <p>
-    <select name="Occasion">
+    <select id="occasion" class="custom-select" name="Occasion">
     <option value="Mother Day">Mother's Day</option>
     <option value="Birthday">Birthday</option>
     <option value="Anniversary">Anniversary</option>
