@@ -136,7 +136,7 @@ select#occasion {
 	font-family: Agency FB;
 	font-size: 120%;
 }
-
+.custom-select:hover { background-color: red; border:1px solid red }
 .button {
     background-color: #18cdf7; 
 	border-radius: 12px;
