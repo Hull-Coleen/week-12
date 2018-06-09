@@ -33,8 +33,12 @@ function test() {
 	document.getElementById('email').value == "" ||
 	document.getElementById('address').value == "") {
 	document.getElementById('create').style.color = 'red';
-	document.getElementById('create').disabled;
+	document.getElementById('create').disabled = true;
 	
+	}
+	else {
+		document.getElementById('create').style.color = 'white';
+	document.getElementById('create').disabled = false;
 	}
 }
 
