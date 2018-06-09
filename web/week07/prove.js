@@ -26,4 +26,13 @@ function check() {
     document.getElementById('message3').innerHTML = 'not matching';
   }
 }
+function test() {
+	if(document.getElementById('password').value == "" ||
+	document.getElementById('name').value == "" ||
+	document.getElementById('username').value == "" ||
+	document.getElementById('email').value == "" ||
+	document.getElementById('address').value == "") {
+	document.getElementById('create').style.color = 'red';
+	}
+}
 
