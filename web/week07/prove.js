@@ -13,7 +13,7 @@ function signinCheck() {
   }
 }
 function check() {
-	var pattern = new RegExp(/^(?=\D*\d)[^ ]{6,}$/);
+	var pattern = new RegExp('/^(?=\D*\d)[^ ]{6,}$/');
 	if (pattern.test(password)) {
 		document.getElementById('passwordText').innerHTML = '';
 	}
