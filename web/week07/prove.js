@@ -12,6 +12,20 @@ function signinCheck() {
     document.getElementById('message1').innerHTML = 'not matching';
   }
 }
+function testCheck(a,b,c,d) {
+  if (document.getElementById(a).value ==
+    document.getElementById(b).value) {
+    document.getElementById(c).style.color = 'green';
+    document.getElementById(c).innerHTML = 'matching';
+	 document.getElementByI(d).style.color = 'green';
+    document.getElementById(d).innerHTML = 'matching';
+  } else {
+    document.getElementById(c).style.color = 'red';
+    document.getElementById(c).innerHTML = 'not matching';
+	document.getElementById(d).style.color = 'red';
+    document.getElementById(d).innerHTML = 'not matching';
+  }
+}
 function check() {
 	var pattern = new RegExp(/^(?=\D*\d)\S{7,}$/);
 	if (pattern.test(password)) {
