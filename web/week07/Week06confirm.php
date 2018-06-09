@@ -26,30 +26,21 @@ foreach ($cart as $c) { ?>
       <?php echo $c['description'] ?><br />
 	  <?php echo $c['flower_price']  ?><br />
 	  <?php echo $c['amount']  ?><br />  <?php echo $c['total']  ?><br />
-	  <script>
-	  var total += <?php echo $c['total']  ?>;
-	  </script>
 	  </p> 
 	  
     </div>
 	<?php
 }
-?>
-<script>
-document.getElementById("total").innerHTML = total
-</script>
-<p id="total" ></p>
-<?php
+
  if(isset($_POST['submit'])) {
     deleteUserCart($_SESSION['id']);
-	echo "Thanks for your purchase";
+	echo "<p> Thank you for your purchase</p>";
     
 	// remove all session variables
     session_unset(); 
 
     // destroy the session 
     session_destroy();	
-	echo "session variable" . $_SESSION['id'];
                 
 }
 ?>
