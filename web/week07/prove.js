@@ -27,14 +27,6 @@ function testCheck(a,b,c,d) {
   }
 }
 function check() {
-	var pattern = new RegExp(/^(?=\D*\d)\S{7,}$/);
-	if (pattern.test(password)) {
-		document.getElementById('passwordText').style.visibility = "hidden";
-	}
-	else {
-	    document.getElementById('passwordText').innerHTML = 'Password must have one number and be at least 7 characters';
-	}
-  
   if (document.getElementById('password').value ==
     document.getElementById('1password').value) {
     document.getElementById('message2').style.color = 'green';
