@@ -119,13 +119,11 @@ if (isset($_POST)) {
   <label for="address">Address</label>
   <input onkeyup="test();" type="text" placeholder="Address" id="address" name="address" required>
   <br>
-  <span id="idpassText">use at least one number and 7 characters</span>
+  <span id="idpassText">use at least one number and 7 characters</span><br>
   <label for="password">Password</label>
   <input type="password" onkeyup="check();" oninput="passwordCheck();" pattern="^(?=\D*\d)\S{7,}$" placeholder="Password" id="password" name="password">
   <span id='message2'></span><br>
   <br>
-  <span class="error" id="passwordText" ></span>
-  <br />
   <label for="password">Password</label>
   <input type="password" onkeyup="check();"placeholder="Password" id="1password" name="1password">
   <span id='message3'></span><br>
