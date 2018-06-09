@@ -13,9 +13,9 @@ function signinCheck() {
   }
 }
 function passwordCheck() {
-	var pattern = new RegExp('/^(?=\D*\d)[^ ]{6,}$/');
+	var pattern = new RegExp(^(?=\D*\d)\S{7,}$);
 	if (pattern.test(password)) {
-		document.getElementById('passwordText').style.visibility;
+		document.getElementById('passwordText').style.visibility = "hidden";
 	}
 	else {
 	    document.getElementById('passwordText').innerHTML = 'Password must have one number and be at least 7 characters';
