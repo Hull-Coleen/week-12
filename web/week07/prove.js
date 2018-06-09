@@ -33,6 +33,8 @@ function test() {
 	document.getElementById('email').value == "" ||
 	document.getElementById('address').value == "") {
 	document.getElementById('create').style.color = 'red';
+	document.getElementById('create').disabled;
+	
 	}
 }
 
