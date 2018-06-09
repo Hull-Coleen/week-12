@@ -26,3 +26,24 @@ function check() {
     document.getElementById('message3').innerHTML = 'not matching';
   }
 }
+function checkForm() {
+	
+}
+   $(document).ready(function (){
+        validate();
+        $('input').on('keyup', validate);
+    });
+
+    function validate(){
+
+        $("input[type=text], input[type=email], inpute[type=password]").each(function(){
+            if($(this).val().length > 0)
+            {
+                $("input[type=submit]").prop("disabled", false);
+            }
+            else
+            {
+                $("input[type=submit]").prop("disabled", true);
+            }
+        });
+    } 

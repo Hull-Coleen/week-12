@@ -76,6 +76,7 @@ if (isset($_POST)) {
 <head>
 <title>Sign In Page</title>
 <link rel="stylesheet" type="text/css" href="Week06style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="prove.js"></script>
 </head>
 <body>
