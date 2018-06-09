@@ -41,6 +41,7 @@ if (isset($_POST)) {
 			$pass = "Password needs to be at least 7 characters long and have one number";
 		} 
 		else {
+	      $pass = "";
 		  if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
 			     $error = "you must fill in all the text fields";
 			     echo "<script type='text/javascript'>alert(\"$error\");</script>";
@@ -129,6 +130,7 @@ if (isset($_POST)) {
   <span id='message3'></span><br>
   <br /><span class="error"> <?php echo $error ?></span><br />
   </p><p><input class="button" id="create" type="submit" name="submit" value="Create Account">
+  <p id="submitWarning" ></p>
   
  
 </p>
