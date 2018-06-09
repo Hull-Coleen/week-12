@@ -99,7 +99,7 @@ if (isset($_POST)) {
   <input type="password" onkeyup="signinCheck(password1, password2, message, message1); " placeholder="Password" id="password2" name="password2">
   <span id='message1'></span><br>
   <span class="error"> <?php echo $passError ?></span><br><br>
-  <br><br><br><br><br><br><br><br></p><p><input id="sign" class="button" type="submit" name="submit" value="Sign In">
+  <br><br><br><br><br><br><br><br><br></p><p><input id="sign" class="button" type="submit" name="submit" value="Sign In">
   </p>
 </form>
 </div>
@@ -123,7 +123,6 @@ if (isset($_POST)) {
   <label for="password">Password</label>
   <input type="password" onkeyup="check();" oninput="passwordCheck();" pattern="^(?=\D*\d)\S{7,}$" placeholder="Password" id="password" name="password">
   <span id='message2'></span><br>
-  <br>
   <label for="password">Password</label>
   <input type="password" onkeyup="check();"placeholder="Password" id="1password" name="1password">
   <span id='message3'></span><br>
