@@ -38,7 +38,7 @@ if (isset($_POST)) {
 	}
     if (empty($username1 ) && !empty($name)) {
 		if ((strlen($password) < 7) || (!preg_match($pattern, $password))) {
-			$pass = "Password needs to be at least 7" . "<br>" . " characters long and have one number";
+			$pass = "Password needs to be at least 7 characters long and have one number";
 		} 
 		else {
 		  if (empty($name) || empty($username) || empty($password) || empty($email) || empty($address)) {
@@ -111,18 +111,18 @@ if (isset($_POST)) {
   <label for="username">User Name</label>
   <input type="text" placeholder="user Name" id="username" name="username" required>
   <br /><br />
-  <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password" name="password">
-  <span class="error"> <?php echo $pass ?></span>
-			
-  <br /><br />
-
   <label for="email">Email</label>
   <input type="email" placeholder="Email Address" id="email" name="email" required>
   <br /><br />
-  
   <label for="email">Address</label>
   <input type="text" placeholder="Address" id="address" name="address" required>
+  <label for="password">Password</label>
+  <input type="password" placeholder="Password" id="password" name="password"><br>
+  <span class="error"><?php echo $pass ?></span>
+  <br /><br />
+  <label for="password">Password</label>
+  <input type="password" placeholder="Password" id="password" name="password">
+
   <br /><span class="error"> <?php echo $error ?></span><br />
   </p><p><input class="button" type="submit" name="submit" value="Create Account">
   

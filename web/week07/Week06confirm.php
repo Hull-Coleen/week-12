@@ -19,13 +19,18 @@ foreach ($user as $u) { ?>
 <?php	
 	
 }
-
+<script>
+var total;
+</script>
 foreach ($cart as $c) { ?>
 	<div ><p>
       <img id="cart" src="<?php echo $c['image'] ?>" alt="Flower">
       <?php echo $c['description'] ?><br />
 	  <?php echo $c['flower_price']  ?><br />
 	  <?php echo $c['amount']  ?><br />  <?php echo $c['total']  ?><br />
+	  <script>
+	  total += <?php echo $c['total']  ?>;
+	  </script>
 	  </p> 
 	  
     </div>
