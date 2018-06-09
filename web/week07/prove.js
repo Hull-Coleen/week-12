@@ -1,10 +1,15 @@
 function check(pass, pass2, mess, mess1) {
-  if (document.getElementById('pass').value ==
-    document.getElementById('pass2').value) {
-    document.getElementById('mess').style.color = 'green';
-    document.getElementById('mess').innerHTML = 'matching';
-	 document.getElementById('mess1').style.color = 'green';
-    document.getElementById('mess1').innerHTML = 'matching';
+	var a = pass;
+	var b= pass1;
+	
+	var c= mess;
+	var d=mess1;
+  if (document.getElementById(a).value ==
+    document.getElementById(b).value) {
+    document.getElementById(c).style.color = 'green';
+    document.getElementById(c).innerHTML = 'matching';
+	 document.getElementById(d).style.color = 'green';
+    document.getElementById(d).innerHTML = 'matching';
   } else {
     document.getElementById('mess').style.color = 'red';
     document.getElementById('mess').innerHTML = 'not matching';
