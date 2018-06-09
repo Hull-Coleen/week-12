@@ -34,7 +34,12 @@ foreach ($cart as $c) { ?>
     </div>
 	<?php
 }
-
+?>
+<script>
+document.getElementById("total").innerHTML = total
+</script>
+<p id="total" ></p>
+<?php
  if(isset($_POST['submit'])) {
     deleteUserCart($_SESSION['id']);
 	echo "Thanks for your purchase";
