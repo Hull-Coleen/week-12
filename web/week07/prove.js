@@ -5,6 +5,8 @@ function check(password1, password2) {
     document.getElementById('message').innerHTML = 'matching';
 	 document.getElementById('message1').style.color = 'green';
     document.getElementById('message1').innerHTML = 'matching';
+	 document.getElementById('message2').style.color = 'green';
+    document.getElementById('message2').innerHTML = 'matching';
   } else {
     document.getElementById('message').style.color = 'red';
     document.getElementById('message').innerHTML = 'not matching';

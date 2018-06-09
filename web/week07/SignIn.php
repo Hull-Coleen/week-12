@@ -119,7 +119,7 @@ if (isset($_POST)) {
   <br>
   <label for="password">Password</label>
   <input type="password" onkeyup="check(password, 1password);" placeholder="Password" id="password" name="password">
-  <span id='message'></span><br>
+  <span id='message2'></span><br>
   <br>
   <span class="error"><?php echo $pass ?></span>
   <br />
