@@ -15,7 +15,10 @@ function signinCheck() {
 function check() {
 	var pattern = new RegExp(/^(?=\D*\d)[^ ]{6,}$/);
 	if (pattern.test(password)) {
-		document.getElementById('passwordText').innerHTML = 'Password must have one number and be at least 7 characters';
+		document.getElementById('passwordText').innerHTML = '';
+	}
+	else {
+	    document.getElementById('passwordText').innerHTML = 'Password must have one number and be at least 7 characters';
 	}
   
   if (document.getElementById('password').value ==
