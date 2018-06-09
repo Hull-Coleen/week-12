@@ -107,22 +107,25 @@ if (isset($_POST)) {
 <p id="form">
   <label for="name">Name</label>
   <input type="text" placeholder="Name" id="name" name="name" required >
-  <br /><br />
+  <br />
   <label for="username">User Name</label>
   <input type="text" placeholder="user Name" id="username" name="username" required>
-  <br /><br />
+  <br />
   <label for="email">Email</label>
   <input type="email" placeholder="Email Address" id="email" name="email" required>
-  <br /><br />
+  <br />
   <label for="email">Address</label>
   <input type="text" placeholder="Address" id="address" name="address" required>
+  <br>
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password" name="password"><br>
+  <input type="password" onkeyup="check(password, 1password);" placeholder="Password" id="password" name="password">
+  <span id='message'></span><br>
+  <br>
   <span class="error"><?php echo $pass ?></span>
-  <br /><br />
+  <br />
   <label for="password">Password</label>
-  <input type="password" placeholder="Password" id="password" name="password">
-
+  <input type="password" onkeyup="check(password, 1password);"placeholder="Password" id="1password" name="1password">
+  <span id='message1'></span><br>
   <br /><span class="error"> <?php echo $error ?></span><br />
   </p><p><input class="button" type="submit" name="submit" value="Create Account">
   
