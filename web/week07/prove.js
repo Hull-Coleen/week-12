@@ -34,11 +34,13 @@ function test() {
 	document.getElementById('address').value == "") {
 	document.getElementById('create').style.color = 'red';
 	document.getElementById('create').disabled = true;
+	document.getElementById('submitWarning').innerHTML = "You must fill in all the fields";
 	
 	}
 	else {
 		document.getElementById('create').style.color = 'white';
 	document.getElementById('create').disabled = false;
+	document.getElementById('submitWarning').innerHTML = "";
 	}
 }
 
