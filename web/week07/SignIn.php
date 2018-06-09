@@ -91,10 +91,10 @@ if (isset($_POST)) {
   <input type="text" placeholder="Name" id="username1" name="username1" 
   value="<?php echo $username1 ?>" ><br><br>
   <label for="password">Password</label>
-  <input type="password" onkeyup="check(password1, password2,message,message1);" placeholder="Password" id="password1" name="password1">
+  <input type="password" onkeyup="signinCheck();" placeholder="Password" id="password1" name="password1">
   <span id='message'></span><br>
   <label for="password">Password</label>
-  <input type="password" onkeyup="check(password1, password2,message,message1);" placeholder="Password" id="password2" name="password2">
+  <input type="password" onkeyup="signinCheck();" placeholder="Password" id="password2" name="password2">
   <span id='message1'></span><br>
   <span class="error"> <?php echo $passError ?></span><br><br>
   <br><br><br><br><br><br><br><br></p><p><input id="sign" class="button" type="submit" name="submit" value="Sign In">
@@ -118,13 +118,13 @@ if (isset($_POST)) {
   <input type="text" placeholder="Address" id="address" name="address" required>
   <br>
   <label for="password">Password</label>
-  <input type="password" onkeyup="check(password, 1password,message2,message3);" placeholder="Password" id="password" name="password">
+  <input type="password" onkeyup="check();" placeholder="Password" id="password" name="password">
   <span id='message2'></span><br>
   <br>
   <span class="error"><?php echo $pass ?></span>
   <br />
   <label for="password">Password</label>
-  <input type="password" onkeyup="check(password, 1password,message2,message3);"placeholder="Password" id="1password" name="1password">
+  <input type="password" onkeyup="check();"placeholder="Password" id="1password" name="1password">
   <span id='message3'></span><br>
   <br /><span class="error"> <?php echo $error ?></span><br />
   </p><p><input class="button" type="submit" name="submit" value="Create Account">
