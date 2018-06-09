@@ -12,7 +12,7 @@ function signinCheck() {
     document.getElementById('message1').innerHTML = 'not matching';
   }
 }
-function check() {
+function passwordCheck() {
 	var pattern = new RegExp('/^(?=\D*\d)[^ ]{6,}$/');
 	if (pattern.test(password)) {
 		document.getElementById('passwordText').style.visibility;
@@ -20,7 +20,9 @@ function check() {
 	else {
 	    document.getElementById('passwordText').innerHTML = 'Password must have one number and be at least 7 characters';
 	}
-  
+}
+function check() {
+	
   if (document.getElementById('password').value ==
     document.getElementById('1password').value) {
     document.getElementById('message2').style.color = 'green';
