@@ -104,7 +104,7 @@ if (isset($_POST)) {
 </form>
 </div>
 <div id="row2">
-  <h1>To create an account, Please Enter your Fill in the Textboxes Below</h1>
+  <h1>To create an account, Please Fill in the Textboxes Below</h1>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p id="form">
   <label for="name">Name</label>
