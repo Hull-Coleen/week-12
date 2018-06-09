@@ -26,24 +26,36 @@ function check() {
     document.getElementById('message3').innerHTML = 'not matching';
   }
 }
-function checkForm() {
-	
+
+var sbmtBtn = document.getElementById("create");
+sbmtBtn.disabled = true; 
+
+function checkFormsValidity(){
+var myforms = document.forms["myform"];   
+    if (myforms.checkValidity()) {
+        sbmtBtn.disabled = false;
+    } else {
+        sbmtBtn.disabled = true;
+    }
 }
-   $(document).ready(function (){
-        validate();
-        $('input').on('keyup', validate);
-    });
+//function checkForm() {
+	
+//}
+  // $(document).ready(function (){
+    //    validate();
+      //  $('input').on('keyup', validate);
+    //});
 
-    function validate(){
+    //function validate(){
 
-        $("input[type=text], input[type=email], inpute[type=password]").each(function(){
-            if($(this).val().length > 0)
-            {
-                $("input[type=submit]").prop("disabled", false);
-            }
-            else
-            {
-                $("input[type=submit]").prop("disabled", true);
-            }
-        });
-    } 
+      //  $("input[type=text], input[type=email], inpute[type=password]").each(function(){
+        //    if($(this).val().length > 0)
+          //  {
+            //    $("input[type=submit]").prop("disabled", false);
+            //}
+            //else
+           // {
+             //   $("input[type=submit]").prop("disabled", true);
+           // }
+        //});
+    //} 

@@ -107,7 +107,7 @@ if (isset($_POST)) {
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
 <p id="form">
   <label for="name">Name</label>
-  <input type="text" placeholder="Name" id="name" name="name" required >
+  <input onkeyup="checkFormsValidity();" type="text" placeholder="Name" id="name" name="name" required >
   <br />
   <label for="username">User Name</label>
   <input type="text" placeholder="user Name" id="username" name="username" required>
@@ -115,7 +115,7 @@ if (isset($_POST)) {
   <label for="email">Email</label>
   <input type="email" placeholder="Email Address" id="email" name="email" required>
   <br />
-  <label for="email">Address</label>
+  <label for="address">Address</label>
   <input type="text" placeholder="Address" id="address" name="address" required>
   <br>
   <label for="password">Password</label>
@@ -128,7 +128,7 @@ if (isset($_POST)) {
   <input type="password" onkeyup="check();"placeholder="Password" id="1password" name="1password">
   <span id='message3'></span><br>
   <br /><span class="error"> <?php echo $error ?></span><br />
-  </p><p><input class="button" type="submit" name="submit" value="Create Account">
+  </p><p><input class="button" id="create" type="submit" name="submit" value="Create Account">
   
  
 </p>
