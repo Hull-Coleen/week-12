@@ -120,7 +120,7 @@ if (isset($_POST)) {
   <input onkeyup="test();" type="text" placeholder="Address" id="address" name="address" required>
   <br>
   <label for="password">Password</label>
-  <input type="password" onkeyup="check(); passworCheck();" pattern="^(?=\D*\d)\S{7,}$" placeholder="Password" id="password" name="password">
+  <input type="password" onkeyup="check();" pattern="^(?=\D*\d)\S{7,}$" placeholder="Password" id="password" name="password">
   <span id='message2'></span><br>
   <br>
   <span class="error" id="passwordText" ></span>
