@@ -1,0 +1,25 @@
+1. Copy and paste the URL for your web application:
+https://enigmatic-anchorage-16927.herokuapp.com/Week05.php
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+https://github.com/chhull/CS313/blob/master/web/Week05.php
+https://github.com/chhull/CS313/blob/master/web/Week05checkout.php
+https://github.com/chhull/CS313/blob/master/web/Week05confirm.php
+https://github.com/chhull/CS313/blob/master/web/Week05style.css
+https://github.com/chhull/CS313/blob/master/web/dbConnect.php
+https://github.com/chhull/CS313/blob/master/web/info05.php
+https://github.com/chhull/CS313/blob/master/web/cart05.php
+https://github.com/chhull/CS313/blob/master/web/search.php
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+I think everything is functioning properly. You can search for flowers based on an occasion. I did not enter that many to begin with but I did list the ones you can use. I also did not list that many floral arrangements as of right now. I can add more later. I still cannot update the cart yet but wasn’t part of this assignment so I didn’t put much time into that this week. I did use the database to display the flowers.
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+Like I stated above everything for this assignment should be working. I left the user table blank because I thought that one would be the filled in next week when we edit tables. I did have a question from last week’s assignment. You had mentioned that I only need the user’s id for the cart. If I did that, wouldn’t I need to add the user’s id into the flower table then to track what they have purchased? I did change my tables to money instead of double precision.
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+The coolest thing was being able to query a table and only get the results you wanted.
+6. Why should you create a separate user account for your application to access the database?
+For my application. Since it is supposed to be a store often times sensitive information will be stored there. You do not want anyone else to be able to access their account and order unauthorized purchases. Also, if an unauthorized person gains access they steal personal information like credit card numbers, addresses, phone numbers, and any other information that was store there. This could lead to identity theft or other criminal acts.  
+
+7. Please select the category you feel best describes your assignment:
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I managed to tied this in with my older assignments and I did meet the requirements in that I can use my tables to display information. You can also search for specific information. I changed my table to use money as a data type instead of double precision. All other buttons I think I’ll need are in place.

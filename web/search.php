@@ -34,7 +34,7 @@ $stmt->execute();
 </a></div>
 
 <h1>Please Enter your search criteria</h1>
-<p>Enter either Mother Day, Birthday, or Anniversary</p>
+<p>Enter either Mother's Day, Birthday, or Anniversary</p>
 <form method="POST" action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"">
   <p>
     <label for="name">Occasion</label>
